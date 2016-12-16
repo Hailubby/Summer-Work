@@ -4,6 +4,9 @@
 /** jquery code common to all pages, eg hiding divs, page initialisations etc**/
 
 $(document).ready(function () {
+    //hides everything with the hide-all class
+    $(".hide-all").hide();
+
     //hides all divs except the first one
     $(".anim-panel-container > div").each(function (element) {
         if(element != 0){
