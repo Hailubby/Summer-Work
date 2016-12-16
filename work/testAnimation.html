@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Animation Testing</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Other style sheets-->
+    <link href="css/animationStyle.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <h1 id="heading">Animations with JQuery</h1>
+    <div class="row">
+        <div class="col-md-3 normal">
+            <h2>Code Snippet</h2>
+                <pre><code>
+<span id="line-1-code1">int i = 5;</span>
+                </code></pre>
+
+            <button type="button" class="btn btn-default" id="start-button1">Start</button>
+        </div>
+        <div class="col-md-9 normal">
+            <div class="col-md-4">
+                <div class="variable-container" id="variable-container-1">
+                    <div class="value-div" id="value-div-1"><h3 id="value1">5</h3></div>
+                    <div class="vname-div" id="vname-div-1"><h4 id="variable1">int i</h4></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="table-responsive">
+                    <table class="table table-stack">
+                        <tr class="row-height-1">
+                            <td>0x097</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-1">
+                            <td>0x098</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-1">
+                            <td>0x099</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-1">
+                            <td>0x100</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="col-md-1">#</th>
+                            <th class="col-md-11">Stack</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="table-responsive">
+                    <table class="table table-heap">
+                        <tr>
+                            <th class="col-md-1">#</th>
+                            <th class="col-md-11">Heap</th>
+                        </tr>
+                        <tr class="row-height-1">
+                            <td>0x000</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-1">
+                            <td>0x001</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-1">
+                            <td>0x002</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-1">
+                            <td>0x003</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--second part-->
+    <div class="row">
+        <div class="col-md-3 normal">
+            <h2>Code Snippet</h2>
+            <!--pre tag indentations-->
+                <pre><code>
+<span id="line-1-code2">main() {</span>
+    <span id="line-2-code2">int i = 5;</span>
+}
+                </code></pre>
+
+            <button type="button" class="btn btn-default" id="start-button2">Start</button>
+        </div>
+        <div class="col-md-9 normal">
+            <div class="col-md-4">
+                <div class="frame-container" id="frame-container-1">
+                    <h5>Main()</h5>
+                    <div class="local-var-container" id="local-var-container-1">
+                        <div class="variable-container" id="variable-container-2">
+                            <div class="value-div" id="value-div-2"><h3 id="value2">5</h3></div>
+                            <div class="vname-div" id="vname-div-2"><h4 id="variable2">int i</h4></div>
+                        </div>
+                    </div>
+                    <div class="param-container" id="param-container-1"><p class="stack-frame-heading">params</p></div>
+                    <div class="rtn-addr-container" id="rtn-addr-container-1"><p class="stack-frame-heading">return address</p></div>
+                    <div class="rtn-val-container" id="rtn-val-container-1"><p class="stack-frame-heading">return value</p></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="table-responsive">
+                    <table class="table table-stack">
+                        <tr class="row-height-2">
+                            <td>0x098</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-2">
+                            <td>0x099</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-2">
+                            <td>0x100</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="col-md-1">#</th>
+                            <th class="col-md-11">Stack</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="table-responsive">
+                    <table class="table table-heap">
+                        <tr>
+                            <th class="col-md-1">#</th>
+                            <th class="col-md-11">Heap</th>
+                        </tr>
+                        <tr class="row-height-2">
+                            <td>0x000</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-2">
+                            <td>0x001</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-2">
+                            <td>0x002</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--third part-->
+    <div class="row">
+        <div class="col-md-3 normal">
+            <h2>Code Snippet</h2>
+            <!--pre tag indentations-->
+                <pre><code>
+<button class="link" id="line-1-code3">int main() {</button>
+    <button class="link" id="line-2-code3">int i = 5;</button>
+    <button class="link" id="line-3-code3">int j = 6;</button>
+    <button class="link" id="line-4-code3">int k = 7;</button>
+    <button class="link" id="line-5-code3">return 0;</button>
+}
+                </code></pre>
+
+            <button type="button" class="btn btn-default" id="start-button3">Start</button>
+            <button type="button" class="btn btn-default disabled" id="step-button">Step</button>
+        </div>
+        <div class="col-md-9 normal">
+            <div class="col-md-4 col-md-offset-1">
+                <div class="table-responsive">
+                    <table class="table table-stack">
+                        <tr class="row-height-3">
+                            <td><span class="hide1" id="td-k">int k</span></td>
+                            <td><span class="hide1" id="td-k-val">7</span></td>
+                            <td>0x096</td>
+                        </tr>
+                        <tr class="row-height-3">
+                            <td><span class="hide1" id="td-j">int j</span></td>
+                            <td><span class="hide1" id="td-j-val">6</span></td>
+                            <td>0x097</td>
+                        </tr>
+                        <tr class="row-height-3">
+                            <td><span class="hide1" id="td-i">int i</span></td>
+                            <td><span class="hide1" id="td-i-val">5</span></td>
+                            <td>0x098</td>
+                        </tr>
+                        <tr class="row-height-3">
+                            <td><span class="hide1" id="td-rtn-add">rtn addr</span></td>
+                            <td></td>
+                            <td>0x099</td>
+                        </tr>
+                        <tr class="row-height-3">
+                            <td><span class="hide1" id="td-rtnval">rtn val</span></td>
+                            <td><span class="hide1" id="td-rtnval-val">0</span></td>
+                            <td>0x100</td>
+                        </tr>
+                        <tr class="row-height-3">
+                            <th class="col-md-3"></th>
+                            <th class="col-md-6">Stack</th>
+                            <th class="col-md-1">#</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+                <div class="table-responsive">
+                    <table class="table table-heap">
+                        <tr>
+                            <th class="col-md-1">#</th>
+                            <th class="col-md-11">Heap</th>
+                        </tr>
+                        <tr class="row-height-2">
+                            <td>0x000</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-2">
+                            <td>0x001</td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-height-2">
+                            <td>0x002</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--scripts needed-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/animateExample.js"></script>
+</body>
+</html>

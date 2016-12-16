@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Getting Started</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom style sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="gettingStarted.html">Getting Started</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Methods</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container content-container" style="margin-bottom: 100px;">
+    <h1>Getting Started</h1>
+    <p>A brief summary may go here... eg info about stack and heap</p>
+    <div class="panel panel-default anim-panel-container">
+        <div class="panel-body" id="anim-1" style="min-height: 400px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 style="margin-top: 0; margin-bottom: 25px;">Code Snippet 1</h2>
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link" id="code1-line-1">int main() {</button>
+    <button class="link" id="code1-line-2">int i = 5;</button>
+    <button class="link" id="code1-line-3">int j = 6;</button>
+    <button class="link" id="code1-line-4">int k = 7;</button>
+    <button class="link" id="code1-line-5">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="start-button1">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button1">Step</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-4 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table table-stack">
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-k">int k</span></td>
+                                    <td><span class="hide-all" id="td-k-val">7</span></td>
+                                    <td>0x096</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-j">int j</span></td>
+                                    <td><span class="hide-all" id="td-j-val">6</span></td>
+                                    <td>0x097</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-i">int i</span></td>
+                                    <td><span class="hide-all" id="td-i-val">5</span></td>
+                                    <td>0x098</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-rtn-add1">rtn addr</span></td>
+                                    <td></td>
+                                    <td>0x099</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-rtnval1">rtn val</span></td>
+                                    <td><span class="hide-all" id="td-rtnval-val1">0</span></td>
+                                    <td>0x100</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-4"></th>
+                                    <th class="col-md-6">Stack</th>
+                                    <th class="col-md-2">#</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body" id="anim-2" style="min-height: 400px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 style="margin-top: 0; margin-bottom: 25px;">Code Snippet 2</h2>
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link" id="code2-line-1">int main() {</button>
+    <button class="link" id="code2-line-2">int i = 5;</button>
+    <button class="link" id="code2-line-3">int j = 6;</button>
+    <button class="link" id="code2-line-4">int k = 7;</button>
+    <button class="link" id="code2-line-5">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="start-button2">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button2">Step</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-4 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table table-stack">
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-c2-l4">int k</span></td>
+                                    <td><span class="hide-all" id="td-c2-l4-val">7</span></td>
+                                    <td>0x096</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-c2-l3">int j</span></td>
+                                    <td><span class="hide-all" id="td-c2-l3-val">6</span></td>
+                                    <td>0x097</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-c2-l2">int i</span></td>
+                                    <td><span class="hide-all" id="td-c2-l2-val">5</span></td>
+                                    <td>0x098</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-rtn-add2">rtn addr</span></td>
+                                    <td></td>
+                                    <td>0x099</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td><span class="hide-all" id="td-rtnval2">rtn val</span></td>
+                                    <td><span class="hide-all" id="td-rtnval-val2">0</span></td>
+                                    <td>0x100</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-4"></th>
+                                    <th class="col-md-6">Stack</th>
+                                    <th class="col-md-2">#</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body" id="anim-3" style="min-height: 400px;">
+            <div class="row">
+                <div class="col-md-6">
+                    3<br />
+                    Panel content here... <br />
+                </div>
+                <div class="col-md-6">
+                    Animations go here
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group" role="group">
+            <button class="btn btn-default disabled" id="prev" type="button"><span class="glyphicon glyphicon-menu-left"></span></button>
+        </div>
+        <div class="btn-group" role="group">
+            <button class="btn btn-default active" id="anim-1-btn" type="button">1</button>
+            <button class="btn btn-default" id="anim-2-btn" type="button">2</button>
+            <button class="btn btn-default" id="anim-3-btn" type="button">3</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button class="btn btn-default" id="next" type="button"><span class="glyphicon glyphicon-menu-right"></span></button>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p id="footer-text">COMPYSYS 202 / MECHENG 270 <br> The University of Auckland <br> 2017</p>
+        <img src="images/uoa.png" id="footer-logo" />
+    </div>
+</footer>
+
+<!--scripts needed-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gettingStarted.js"></script>
+</body>
+</html>

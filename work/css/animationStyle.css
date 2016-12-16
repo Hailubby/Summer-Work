@@ -1,0 +1,200 @@
+#heading{
+    color: red;
+}
+
+/*Code styling*/
+code{
+    background-color: transparent;
+}
+
+button.link{
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/*Stack frame styling*/
+.stack-frame-heading{
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.frame-container{
+    border: 1px solid black;
+    width: 130px;
+    height: 163px;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+}
+
+.local-var-container{
+    border: 1px solid black;
+    width: 90%;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.param-container{
+    border: 1px solid black;
+    width: 90%;
+    height: 15px;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.rtn-addr-container{
+    border: 1px solid black;
+    width: 90%;
+    height: 15px;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.rtn-val-container{
+    border: 1px solid black;
+    width: 90%;
+    height: 15px;
+    margin: 0 auto 5px;
+    opacity: 0;
+}
+
+.variable-container{
+    border: 1px solid black;
+    width: 100px;
+    height: 90px;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+}
+
+.value-div{
+    border-bottom: 1px solid black;
+    height: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.value-div h3{
+    opacity: 0;
+    margin: 0;
+}
+
+.vname-div{
+    border: 1px solid black;
+    height: 30px;
+    width: 90%;
+    margin: 6px auto 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vname-div h4{
+    opacity: 0;
+    margin: 0;
+}
+
+/*Option 2 specific styling*/
+#variable-container-2{
+    /*opacity: 1;*/
+    height: 70px;
+    margin: 3px auto;
+}
+
+#value-div-2{
+    /*opacity: 1;*/
+    height: 25px;
+}
+
+/*option 3 editing*/
+#frame-container-2{
+    opacity: 1;
+}
+
+#local-var-container-2{
+    opacity: 1;
+}
+
+#variable-container-3{
+    opacity: 1;
+    height: 70px;
+    margin: 3px auto;
+}
+
+#value-div-3 {
+    opacity: 1;
+    height: 25px;
+}
+
+#value3{
+    opacity: 1;
+}
+
+#vname-div-3{
+    opacity: 1;
+}
+
+#variable3{
+    opacity: 1;
+}
+
+#param-container-2{
+    opacity: 1;
+}
+
+#rtn-addr-container-2{
+    opacity: 1;
+}
+
+#rtn-val-container-2{
+    opacity: 1;
+}
+
+.normal{
+    border: 2px solid black;
+}
+
+.row{
+    border: 2px solid red;
+}
+
+/*Styling for stack table*/
+.table {
+    border: 1px solid #dddddd;
+    z-index: 0;
+}
+
+.table-stack{
+    border-top: none;
+}
+
+.table-heap{
+    border-bottom: none;
+}
+
+.table td, .table th{
+    border-left: 1px solid #dddddd;
+}
+
+.row-height-1{
+    line-height: 100px;
+    min-height: 100px;
+    height: 100px;
+}
+
+.row-height-2{
+    line-height: 166px;
+    min-height: 166px;
+    height: 166px;
+}
+
+.row-height-3{
+    line-height: 40px;
+    min-height: 40px;
+    height: 40px;
+}
