@@ -20,7 +20,6 @@ button.link{
 
 /*Styling for stack table*/
 .table {
-    border: 1px solid #dddddd;
     z-index: 0;
 }
 
@@ -32,8 +31,15 @@ button.link{
     border-bottom: none;
 }
 
-.table td, .table th{
+.table .not-stack{
+    border-top: none;
+    border-bottom: none;
+}
+
+.table .stack{
     border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
 }
 
 .row-height-1{

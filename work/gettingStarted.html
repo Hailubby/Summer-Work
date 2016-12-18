@@ -44,9 +44,9 @@
                     <!--pre tag indentations-->
                     <pre><code>
 <button class="link" id="code1-line-1">int main() {</button>
-    <button class="link" id="code1-line-2">int i = 5;</button>
-    <button class="link" id="code1-line-3">int j = 6;</button>
-    <button class="link" id="code1-line-4">int k = 7;</button>
+    <button class="link" id="code1-line-2">string name = "Bob";</button>
+    <button class="link" id="code1-line-3">int age = 20;</button>
+    <button class="link" id="code1-line-4">int phoneNumber = 1234567;</button>
     <button class="link" id="code1-line-5">return 0;</button>
 }
                     </code></pre>
@@ -55,38 +55,48 @@
                     <button type="button" class="btn btn-default disabled" id="step-button1">Step</button>
                 </div>
                 <div class="col-md-8">
-                    <div class="col-md-4 col-md-offset-1">
+                    <div class="col-md-7 col-md-offset-1">
                         <div class="table-responsive">
                             <table class="table table-stack">
                                 <tr class="row-height-1">
-                                    <td><span class="hide-all" id="td-k">int k</span></td>
-                                    <td><span class="hide-all" id="td-k-val">7</span></td>
-                                    <td>0x096</td>
+                                    <td class="not-stack">0x0061ff04</td>
+                                    <td class="stack"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td><span class="hide-all" id="td-j">int j</span></td>
-                                    <td><span class="hide-all" id="td-j-val">6</span></td>
-                                    <td>0x097</td>
+                                    <td class="not-stack">0x0061ff08</td>
+                                    <td class="stack"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td><span class="hide-all" id="td-i">int i</span></td>
-                                    <td><span class="hide-all" id="td-i-val">5</span></td>
-                                    <td>0x098</td>
+                                    <td class="not-stack">0x0061ff0c</td>
+                                    <td class="stack"><span class="hide-all" id="td-k-val">1234567</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="td-k">int phoneNumber</span></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td><span class="hide-all" id="td-rtn-add1">rtn addr</span></td>
-                                    <td></td>
-                                    <td>0x099</td>
+                                    <td class="not-stack">0x0061ff10</td>
+                                    <td class="stack"><span class="hide-all" id="td-j-val">20</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="td-j">int age</span></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td><span class="hide-all" id="td-rtnval1">rtn val</span></td>
-                                    <td><span class="hide-all" id="td-rtnval-val1">0</span></td>
-                                    <td>0x100</td>
+                                    <td class="not-stack">0x0061ff14</td>
+                                    <td class="stack"><span class="hide-all" id="td-i-val">"Bob"</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="td-i">string name</span></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <th class="col-md-4"></th>
-                                    <th class="col-md-6">Stack</th>
-                                    <th class="col-md-2">#</th>
+                                    <td class="not-stack">0x0061ff18</td>
+                                    <td class="stack"></td>
+                                    <td class="not-stack"><span class="hide-all" id="td-rtn-add1">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack">0x0061ff1c</td>
+                                    <td class="stack"><span class="hide-all" id="td-rtnval-val1">0</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="td-rtnval1">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-3 not-stack"></th>
+                                    <th class="col-md-5 stack">Stack</th>
+                                    <th class="col-md-4 not-stack">#</th>
                                 </tr>
                             </table>
                         </div>
