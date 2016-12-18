@@ -271,34 +271,53 @@ $(document).ready(function () {
         $("#step-button2").removeClass("disabled");
         showBorders();
         $(".hide-all").hide();
+        $(".d2-show1").show();
         unhighlight_2();
         currentLine = 2;
     });
 
     $("#code2-line-3").click(function(){
         $("#step-button2").removeClass("disabled");
+        showBorders();
         $(".hide-all").hide();
+        $(".d2-show1").show();
+        $(".d2-show2").show();
         unhighlight_2();
         currentLine = 3;
     });
 
     $("#code2-line-4").click(function(){
         $("#step-button2").removeClass("disabled");
+        showBorders();
         $(".hide-all").hide();
+        $(".d2-show1").show();
+        $(".d2-show2").show();
+        $(".d2-show3").show();
         unhighlight_2();
         currentLine = 4;
     });
 
     $("#code2-line-5").click(function(){
         $("#step-button2").removeClass("disabled");
+        showBorders();
         $(".hide-all").hide();
+        $(".d2-show1").show();
+        $(".d2-show2").show();
+        $(".d2-show3").show();
+        $(".d2-show4").show();
         unhighlight_2();
         currentLine = 5;
     });
 
     $("#code2-line-6").click(function(){
         $("#step-button2").removeClass("disabled");
+        showBorders();
         $(".hide-all").hide();
+        $(".d2-show1").show();
+        $(".d2-show2").show();
+        $(".d2-show3").show();
+        $(".d2-show4").show();
+        $(".d2-show5").show();
         unhighlight_2();
         currentLine = 6;
     });
