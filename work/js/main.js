@@ -83,6 +83,19 @@ $(document).ready(function () {
             $("#"+currAnimId).show();
             $("#"+currAnimId+"-btn").addClass("active");
 
+            $("#next").removeClass("disabled");
+            $("#prev").removeClass("disabled");
+        }
+    });
+
+    $("#anim-4-btn").click(function () {
+        if (!($(this).attr('id') === (currAnimId+"-btn"))) {
+            $("#"+currAnimId+"-btn").removeClass("active");
+            $("#"+currAnimId).hide();
+            currAnimId = $(this).attr('id').slice(0,-4);
+            $("#"+currAnimId).show();
+            $("#"+currAnimId+"-btn").addClass("active");
+
             $("#next").addClass("disabled");
             $("#prev").removeClass("disabled");
         }
