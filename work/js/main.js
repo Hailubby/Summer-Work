@@ -17,34 +17,44 @@ $(document).ready(function () {
     var currAnimId = "anim-1";
     //next button click function, shows next div
     $("#next").click(function () {
-        $("#prev").removeClass("disabled");
+        if(!($("#next").hasClass("disabled"))){
+            $("#prev").removeClass("disabled");
 
-        var prevAnimId = $(".anim-panel-container > div:visible").attr('id');
-        $("#"+prevAnimId+"-btn").removeClass("active");
+            var prevAnimId = $(".anim-panel-container > div:visible").attr('id');
+            $("#"+prevAnimId+"-btn").removeClass("active");
 
-        currAnimId = $(".anim-panel-container > div:visible").next().attr('id');
-        $("#"+currAnimId+"-btn").addClass("active");
+            currAnimId = $(".anim-panel-container > div:visible").next().attr('id');
+            $("#"+currAnimId+"-btn").addClass("active");
 
 
-        $(".anim-panel-container > div:visible").next().show().prev().hide();
-        if ($(".anim-panel-container > div:visible").next().length == 0) {
-            $("#next").addClass("disabled");
+            $(".anim-panel-container > div:visible").next().show().prev().hide();
+            if ($(".anim-panel-container > div:visible").next().length == 0) {
+                $("#next").addClass("disabled");
+            }
+        }
+        else {
+            return;
         }
     });
 
     //prev button click function, shows previous div
     $("#prev").click(function () {
-        $("#next").removeClass("disabled");
+        if(!($("#prev").hasClass("disabled"))){
+            $("#next").removeClass("disabled");
 
-        var prevAnimId = $(".anim-panel-container > div:visible").attr('id');
-        $("#"+prevAnimId+"-btn").removeClass("active");
+            var prevAnimId = $(".anim-panel-container > div:visible").attr('id');
+            $("#"+prevAnimId+"-btn").removeClass("active");
 
-        currAnimId = $(".anim-panel-container > div:visible").prev().attr('id');
-        $("#"+currAnimId+"-btn").addClass("active");
+            currAnimId = $(".anim-panel-container > div:visible").prev().attr('id');
+            $("#"+currAnimId+"-btn").addClass("active");
 
-        $(".anim-panel-container > div:visible").prev().show().next().hide();
-        if ($(".anim-panel-container > div:visible").prev().length == 0) {
-            $("#prev").addClass("disabled");
+            $(".anim-panel-container > div:visible").prev().show().next().hide();
+            if ($(".anim-panel-container > div:visible").prev().length == 0) {
+                $("#prev").addClass("disabled");
+            }
+        }
+        else {
+            return;
         }
     });
 
