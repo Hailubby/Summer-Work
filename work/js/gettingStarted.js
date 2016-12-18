@@ -6,6 +6,24 @@
 
 $(document).ready(function () {
 
+    //code for all pages
+    //show stack border
+    var showBorders = function () {
+        $(".table .stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
+        $(".table .stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
+        $(".table .stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
+        $(".table .stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
+    }
+
+    //hide stack borders
+
+    var hideBorders = function () {
+        $(".table .stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
+        $(".table .stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
+        $(".table .stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
+        $(".table .stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
+    }
+
     //page 1 code
     $("#start-button1").click(function () {
         $(".hide-all").hide();
@@ -76,23 +94,6 @@ $(document).ready(function () {
         $("#code1-line-3").animate({backgroundColor: 'transparent'}, 0);
         $("#code1-line-4").animate({backgroundColor: 'transparent'}, 0);
         $("#code1-line-5").animate({backgroundColor: 'transparent'}, 0);
-    }
-
-    //show stack border
-    var showBorders = function () {
-        $(".table .stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
-        $(".table .stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
-        $(".table .stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
-        $(".table .stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
-    }
-
-    //hide stack borders
-
-    var hideBorders = function () {
-        $(".table .stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
-        $(".table .stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
-        $(".table .stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
-        $(".table .stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
     }
 
     //stepping function
@@ -245,5 +246,96 @@ $(document).ready(function () {
         $("#code2-line-6").animate({backgroundColor: '#ffff00'}, 1000);
         $("#d2-rtnval-val").delay(1000).show(400);
     }
+
+    //unhighlight all lines
+    var unhighlight_2 = function () {
+        $("#code2-line-1").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2-line-2").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2-line-3").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2-line-6").animate({backgroundColor: 'transparent'}, 0);
+    }
+
+    //stepping function
+    var currentLine;
+    $("#code2-line-1").click(function(){
+        $("#step-button2").removeClass("disabled");
+        $(".hide-all").hide();
+        hideBorders();
+        unhighlight_2();
+        currentLine = 1;
+    });
+
+    $("#code2-line-2").click(function(){
+        $("#step-button2").removeClass("disabled");
+        showBorders();
+        $(".hide-all").hide();
+        unhighlight_2();
+        currentLine = 2;
+    });
+
+    $("#code2-line-3").click(function(){
+        $("#step-button2").removeClass("disabled");
+        $(".hide-all").hide();
+        unhighlight_2();
+        currentLine = 3;
+    });
+
+    $("#code2-line-4").click(function(){
+        $("#step-button2").removeClass("disabled");
+        $(".hide-all").hide();
+        unhighlight_2();
+        currentLine = 4;
+    });
+
+    $("#code2-line-5").click(function(){
+        $("#step-button2").removeClass("disabled");
+        $(".hide-all").hide();
+        unhighlight_2();
+        currentLine = 5;
+    });
+
+    $("#code2-line-6").click(function(){
+        $("#step-button2").removeClass("disabled");
+        $(".hide-all").hide();
+        unhighlight_2();
+        currentLine = 6;
+    });
+
+
+    $("#step-button2").click(function () {
+        if (currentLine == 1) {
+            //do line 1 things here
+            b_line1();
+            currentLine = 2;
+        }
+        else if (currentLine == 2) {
+            //do line 2 things here
+            b_line2();
+            currentLine = 3;
+        }
+        else if (currentLine == 3) {
+            //do line 3 things here
+            b_line3();
+            currentLine = 4;
+        }
+        else if (currentLine == 4) {
+            //do line 4 things here
+            b_line4();
+            currentLine = 5;
+        }
+        else if (currentLine == 5) {
+            //do line 4 things here
+            b_line5();
+            currentLine = 6;
+        }
+        else if (currentLine == 6) {
+            b_line6();
+            $("#step-button2").addClass("disabled");
+            currentLine = 0;
+        }
+
+    });
 });
 
