@@ -428,5 +428,194 @@ $(document).ready(function () {
         }
 
     });
+
+
+    //page 3 code
+    $("#start-button3").click(function () {
+        $(".hide-all").hide();
+        $("#code3-line-5").animate({backgroundColor: 'transparent'}, 0);
+        c_line1();
+        $("#d3-rtn-addr-val").promise().done(function () {
+            c_line2();
+            $("#d3-bob-HPhone-val").promise().done(function () {
+                c_line3();
+                $("#d3-bob-MPhone-val").promise().done(function () {
+                    c_line4();
+                    $("#d3-alice-HPhone-val").promise().done(function () {
+                        c_line5();
+                    });
+                });
+            });
+        });
+    });
+
+    //line 1 function
+    var c_line1 = function () {
+        $("#code3-line-1").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
+        $(".table .d3-stack-bottom").delay(200).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},50);
+        $(".table .d3-stack-top").delay(200).animate({borderTopWidth: '2px', borderTopColor: 'black'},50);
+        $(".table .d3-stack-left").delay(200).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},50);
+        $(".table .d3-stack-right").delay(200).animate({borderRightWidth: '2px', borderRightColor: 'black'},50);
+        $("#d3-rtnval").delay(1200).show(400);
+        $("#d3-rtn-addr").delay(1200).show(400);
+        $("#d3-rtn-addr-val").delay(1600).show(400);
+
+    }
+
+    //line 2 function
+    var c_line2 = function () {
+        $("#code3-line-1").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3-line-2").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
+        $("#d3-bob-HPhone").delay(1000).show(400);
+        $("#d3-bob-HPhone-val").delay(1400).show(400);
+    }
+
+    //line 3 function
+    var c_line3 = function () {
+        $("#code3-line-2").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3-line-3").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
+        $("#d3-bob-MPhone").delay(1000).show(400);
+        $("#d3-bob-MPhone-val").delay(1400).show(400);
+    }
+
+    //line 4 function
+    var c_line4 = function () {
+        $("#code3-line-3").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3-line-4").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
+        $("#d3-alice-HPhone").delay(1000).show(400);
+        $("#d3-pointer-addr").delay(1400).animate({color: '#532A78'}, 150);
+        $("#d3-alice-HPhone-val").delay(1400).show(400);
+    }
+
+    //line 5 function
+    var c_line5 = function () {
+        $("#code3-line-4").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3-line-5").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
+        $("#d3-rtnval-val").delay(1000).show(400);
+    }
+
+    //unhighlight all lines
+    var unhighlight_3 = function () {
+        $("#code3-line-1").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3-line-2").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3-line-3").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3-line-5").animate({backgroundColor: 'transparent'}, 0);
+    }
+
+    //show stack border
+    var showBorders3 = function () {
+        $(".table .d3-stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
+        $(".table .d3-stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
+        $(".table .d3-stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
+        $(".table .d3-stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
+    }
+
+    //hide stack borders
+    var hideBorders3 = function () {
+        $(".table .d3-stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
+        $(".table .d3-stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
+        $(".table .d3-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
+        $(".table .d3-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
+    }
+
+    //stepping function
+    var currentLine;
+    $("#code3-line-1").click(function(){
+        $("#step-button3").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code3-line-1").addClass("yellow");
+
+        $(".hide-all").hide();
+        hideBorders3();
+        unhighlight_3();
+        currentLine = 1;
+    });
+
+    $("#code3-line-2").click(function(){
+        $("#step-button3").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code3-line-2").addClass("yellow");
+
+        showBorders3();
+        $(".hide-all").hide();
+        unhighlight_3();
+        currentLine = 2;
+    });
+
+    $("#code3-line-3").click(function(){
+        $("#step-button3").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code3-line-3").addClass("yellow");
+
+        showBorders3();
+        $(".hide-all").hide();
+
+        unhighlight_3();
+        currentLine = 3;
+    });
+
+    $("#code3-line-4").click(function(){
+        $("#step-button3").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code3-line-4").addClass("yellow");
+
+        showBorders3();
+        $(".hide-all").hide();
+
+        unhighlight_3();
+        currentLine = 4;
+    });
+
+    $("#code3-line-5").click(function(){
+        $("#step-button3").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code3-line-5").addClass("yellow");
+
+        showBorders3();
+        $(".hide-all").hide();
+
+        unhighlight_3();
+        currentLine = 5;
+    });
+
+    $("#step-button3").click(function () {
+        if (currentLine == 1) {
+            //do line 1 things here
+            c_line1();
+            currentLine = 2;
+        }
+        else if (currentLine == 2) {
+            //do line 2 things here
+            c_line2();
+            currentLine = 3;
+        }
+        else if (currentLine == 3) {
+            //do line 3 things here
+            c_line3();
+            currentLine = 4;
+        }
+        else if (currentLine == 4) {
+            //do line 4 things here
+            c_line4();
+            currentLine = 5;
+        }
+        else if (currentLine == 5) {
+            c_line5();
+            $("#step-button3").addClass("disabled");
+            currentLine = 0;
+        }
+
+    });
 });
 
