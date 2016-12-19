@@ -6,24 +6,6 @@
 
 $(document).ready(function () {
 
-    //code for all pages
-    //show stack border
-    var showBorders = function () {
-        $(".table .stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
-        $(".table .stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
-        $(".table .stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
-        $(".table .stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
-    }
-
-    //hide stack borders
-
-    var hideBorders = function () {
-        $(".table .stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
-        $(".table .stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
-        $(".table .stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
-        $(".table .stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
-    }
-
     //page 1 code
     $("#start-button1").click(function () {
         $(".hide-all").hide();
@@ -46,10 +28,11 @@ $(document).ready(function () {
     //line 1 function
     var a_line1 = function () {
         $("#code1-line-1").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".table .stack-bottom").delay(200).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},100);
-        $(".table .stack-top").delay(200).animate({borderTopWidth: '2px', borderTopColor: 'black'},100);
-        $(".table .stack-left").delay(200).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},100);
-        $(".table .stack-right").delay(200).animate({borderRightWidth: '2px', borderRightColor: 'black'},100);
+        $(".link").removeClass("yellow");
+        $(".table .d1-stack-bottom").delay(200).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},50);
+        $(".table .d1-stack-top").delay(200).animate({borderTopWidth: '2px', borderTopColor: 'black'},50);
+        $(".table .d1-stack-left").delay(200).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},50);
+        $(".table .d1-stack-right").delay(200).animate({borderRightWidth: '2px', borderRightColor: 'black'},50);
         $("#d1-rtnval").delay(1200).show(400);
         $("#d1-rtn-addr").delay(1200).show(400);
         $("#d1-rtn-addr-val").delay(1600).show(400);
@@ -60,6 +43,7 @@ $(document).ready(function () {
     var a_line2 = function () {
         $("#code1-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1-line-2").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d1-name").delay(1000).show(400);
         $("#d1-name-val").delay(1400).show(400);
     }
@@ -68,6 +52,7 @@ $(document).ready(function () {
     var a_line3 = function () {
         $("#code1-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1-line-3").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d1-age").delay(1000).show(400);
         $("#d1-age-val").delay(1400).show(400);
     }
@@ -76,6 +61,7 @@ $(document).ready(function () {
     var a_line4 = function () {
         $("#code1-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1-line-4").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d1-phn-num").delay(1000).show(400);
         $("#d1-phn-num-val").delay(1400).show(400);
     }
@@ -84,6 +70,7 @@ $(document).ready(function () {
     var a_line5 = function () {
         $("#code1-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1-line-5").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d1-rtnval-val").delay(1000).show(400);
     }
 
@@ -96,19 +83,43 @@ $(document).ready(function () {
         $("#code1-line-5").animate({backgroundColor: 'transparent'}, 0);
     }
 
+    //show stack border
+    var showBorders1 = function () {
+        $(".table .d1-stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
+        $(".table .d1-stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
+        $(".table .d1-stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
+        $(".table .d1-stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
+    }
+
+    //hide stack borders
+    var hideBorders1 = function () {
+        $(".table .d1-stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
+        $(".table .d1-stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
+        $(".table .d1-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
+        $(".table .d1-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
+    }
+
     //stepping function
     var currentLine;
     $("#code1-line-1").click(function(){
         $("#step-button1").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code1-line-1").addClass("yellow");
+
         $(".hide-all").hide();
-        hideBorders();
+        hideBorders1();
         unhighlight_1();
         currentLine = 1;
     });
 
     $("#code1-line-2").click(function(){
         $("#step-button1").removeClass("disabled");
-        showBorders();
+
+        $(".link").removeClass("yellow");
+        $("#code1-line-2").addClass("yellow");
+
+        showBorders1();
         $(".hide-all").hide();
         $(".d1-show1").show();
         unhighlight_1();
@@ -117,6 +128,11 @@ $(document).ready(function () {
 
     $("#code1-line-3").click(function(){
         $("#step-button1").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code1-line-3").addClass("yellow");
+
+        showBorders1();
         $(".hide-all").hide();
         $(".d1-show1").show();
         $(".d1-show2").show();
@@ -126,6 +142,11 @@ $(document).ready(function () {
 
     $("#code1-line-4").click(function(){
         $("#step-button1").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code1-line-4").addClass("yellow");
+
+        showBorders1();
         $(".hide-all").hide();
         $(".d1-show1").show();
         $(".d1-show2").show();
@@ -136,6 +157,11 @@ $(document).ready(function () {
 
     $("#code1-line-5").click(function(){
         $("#step-button1").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code1-line-5").addClass("yellow");
+
+        showBorders1();
         $(".hide-all").hide();
         $(".d1-show1").show();
         $(".d1-show2").show();
@@ -200,6 +226,7 @@ $(document).ready(function () {
     //line 1 function
     var b_line1 = function () {
         $("#code2-line-1").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $(".table .stack-bottom").delay(200).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},100);
         $(".table .stack-top").delay(200).animate({borderTopWidth: '2px', borderTopColor: 'black'},100);
         $(".table .stack-left").delay(200).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},100);
@@ -214,6 +241,7 @@ $(document).ready(function () {
     var b_line2 = function () {
         $("#code2-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2-line-2").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d2-name").delay(1000).show(400);
         $("#d2-name-val").delay(1400).show(400);
     }
@@ -222,6 +250,7 @@ $(document).ready(function () {
     var b_line3 = function () {
         $("#code2-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2-line-3").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d2-age").delay(1000).show(400);
         $("#d2-age-val").delay(1400).show(400);
     }
@@ -230,6 +259,7 @@ $(document).ready(function () {
     var b_line4 = function () {
         $("#code2-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2-line-4").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d2-name-alias").delay(1000).show(400);
     }
 
@@ -237,6 +267,7 @@ $(document).ready(function () {
     var b_line5 = function () {
         $("#code2-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2-line-5").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d2-age-alias").delay(1000).show(400);
     }
 
@@ -244,6 +275,7 @@ $(document).ready(function () {
     var b_line6 = function () {
         $("#code2-line-5").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2-line-6").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
         $("#d2-rtnval-val").delay(1000).show(400);
     }
 
@@ -257,19 +289,43 @@ $(document).ready(function () {
         $("#code2-line-6").animate({backgroundColor: 'transparent'}, 0);
     }
 
+    //show stack border
+    var showBorders2 = function () {
+        $(".table .d2-stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
+        $(".table .d2-stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
+        $(".table .d2-stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
+        $(".table .d2-stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
+    }
+
+    //hide stack borders
+    var hideBorders2 = function () {
+        $(".table .d2-stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
+        $(".table .d2-stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
+        $(".table .d2-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
+        $(".table .d2-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
+    }
+
     //stepping function
     var currentLine;
     $("#code2-line-1").click(function(){
         $("#step-button2").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code2-line-1").addClass("yellow");
+
         $(".hide-all").hide();
-        hideBorders();
+        hideBorders2();
         unhighlight_2();
         currentLine = 1;
     });
 
     $("#code2-line-2").click(function(){
         $("#step-button2").removeClass("disabled");
-        showBorders();
+
+        $(".link").removeClass("yellow");
+        $("#code2-line-2").addClass("yellow");
+
+        showBorders2();
         $(".hide-all").hide();
         $(".d2-show1").show();
         unhighlight_2();
@@ -278,7 +334,11 @@ $(document).ready(function () {
 
     $("#code2-line-3").click(function(){
         $("#step-button2").removeClass("disabled");
-        showBorders();
+
+        $(".link").removeClass("yellow");
+        $("#code2-line-3").addClass("yellow");
+
+        showBorders2();
         $(".hide-all").hide();
         $(".d2-show1").show();
         $(".d2-show2").show();
@@ -288,7 +348,11 @@ $(document).ready(function () {
 
     $("#code2-line-4").click(function(){
         $("#step-button2").removeClass("disabled");
-        showBorders();
+
+        $(".link").removeClass("yellow");
+        $("#code2-line-4").addClass("yellow");
+
+        showBorders2();
         $(".hide-all").hide();
         $(".d2-show1").show();
         $(".d2-show2").show();
@@ -299,7 +363,11 @@ $(document).ready(function () {
 
     $("#code2-line-5").click(function(){
         $("#step-button2").removeClass("disabled");
-        showBorders();
+
+        $(".link").removeClass("yellow");
+        $("#code2-line-5").addClass("yellow");
+
+        showBorders2();
         $(".hide-all").hide();
         $(".d2-show1").show();
         $(".d2-show2").show();
@@ -311,7 +379,11 @@ $(document).ready(function () {
 
     $("#code2-line-6").click(function(){
         $("#step-button2").removeClass("disabled");
-        showBorders();
+
+        $(".link").removeClass("yellow");
+        $("#code2-line-6").addClass("yellow");
+
+        showBorders2();
         $(".hide-all").hide();
         $(".d2-show1").show();
         $(".d2-show2").show();

@@ -18,6 +18,10 @@ button.link{
     padding: 0;
 }
 
+.yellow{
+    background-color: #ffff00 !important;
+}
+
 /*Styling for stack table*/
 .table {
     z-index: 0;
@@ -42,21 +46,6 @@ button.link{
     border-bottom: 1px solid #dddddd;
 }
 
-/*.table .stack-right{*/
-    /*border-right: 2px solid black;*/
-/*}*/
-
-/*.table .stack-left{*/
-    /*border-left: 2px solid black;*/
-/*}*/
-
-/*.table .stack-top{*/
-    /*border-top: 2px solid black;*/
-/*}*/
-
-/*.table .stack-bottom{*/
-    /*border-bottom: 2px solid black;*/
-/*}*/
 
 .row-height-1{
     line-height: 45px;
