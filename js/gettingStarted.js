@@ -434,6 +434,7 @@ $(document).ready(function () {
     $("#start-button3").click(function () {
         $(".hide-all").hide();
         $("#code3-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3-pointer-addr").animate({color: '#777'}, 0);
         c_line1();
         $("#d3-rtn-addr-val").promise().done(function () {
             c_line2();
@@ -533,6 +534,7 @@ $(document).ready(function () {
         $("#code3-line-1").addClass("yellow");
 
         $(".hide-all").hide();
+        $("#d3-pointer-addr").animate({color: '#777'}, 0);
         hideBorders3();
         unhighlight_3();
         currentLine = 1;
@@ -546,6 +548,8 @@ $(document).ready(function () {
 
         showBorders3();
         $(".hide-all").hide();
+        $(".d3-show1").show();
+        $("#d3-pointer-addr").animate({color: '#777'}, 0);
         unhighlight_3();
         currentLine = 2;
     });
@@ -558,7 +562,9 @@ $(document).ready(function () {
 
         showBorders3();
         $(".hide-all").hide();
-
+        $(".d3-show1").show();
+        $(".d3-show2").show();
+        $("#d3-pointer-addr").animate({color: '#777'}, 0);
         unhighlight_3();
         currentLine = 3;
     });
@@ -571,7 +577,10 @@ $(document).ready(function () {
 
         showBorders3();
         $(".hide-all").hide();
-
+        $(".d3-show1").show();
+        $(".d3-show2").show();
+        $(".d3-show3").show();
+        $("#d3-pointer-addr").animate({color: '#777'}, 0);
         unhighlight_3();
         currentLine = 4;
     });
@@ -584,7 +593,11 @@ $(document).ready(function () {
 
         showBorders3();
         $(".hide-all").hide();
-
+        $(".d3-show1").show();
+        $(".d3-show2").show();
+        $(".d3-show3").show();
+        $(".d3-show4").show();
+        $("#d3-pointer-addr").animate({color: '#532A78'}, 0);
         unhighlight_3();
         currentLine = 5;
     });
