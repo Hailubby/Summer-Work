@@ -29,13 +29,6 @@ button.link{
     z-index: 0;
 }
 
-.table-stack{
-    border-top: none;
-}
-
-.table-heap{
-    border-bottom: none;
-}
 
 .table .not-stack{
     border-top: none;
@@ -46,8 +39,15 @@ button.link{
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
+    border-top: none;
 }
 
+.table .heap{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    border-bottom: none;
+}
 
 .row-height-1{
     line-height: 45px;
