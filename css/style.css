@@ -35,14 +35,18 @@ button.link{
     border-bottom: none;
 }
 
-.table .stack{
+.table .stack-heap{
+    border: 1px solid #dddddd;
+}
+
+.table .stack-top{
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     border-top: none;
 }
 
-.table .heap{
+.table .heap-bottom{
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     border-top: 1px solid #dddddd;

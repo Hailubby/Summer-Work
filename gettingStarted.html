@@ -26,6 +26,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="gettingStarted.html">Getting Started</a></li>
+                <li><a href="#">Heap</a></li>
                 <li><a href="#">Classes</a></li>
                 <li><a href="#">Methods</a></li>
             </ul>
@@ -38,60 +39,141 @@
     <p>A brief summary may go here... eg info about stack and heap</p>
     <div class="panel panel-default anim-panel-container">
         <div class="panel-body" id="anim-1" style="min-height: 400px;">
+            <h2 style="margin: 0 0 25px 10px;">Declaring, initialising and assigning variables</h2>
             <div class="row">
-                <h2 style="margin: 0 0 25px 10px;">Declaring, initializing and assigning variables</h2>
                 <div class="col-md-4">
                     <!--pre tag indentations-->
                     <pre><code>
-<button class="link" id="code1-line-1">int main() {</button>
-    <button class="link" id="code1-line-2">string name = "Bob";</button>
-    <button class="link" id="code1-line-3">int age = 20;</button>
-    <button class="link" id="code1-line-4">int phoneNumber = 1234567;</button>
-    <button class="link" id="code1-line-5">return 0;</button>
+<button class="link" id="code1a-line-1">int main() {</button>
+    <button class="link" id="code1a-line-2">int age;    //declare</button>
+    <button class="link" id="code1a-line-3">age = 20;   //initialise</button>
+    <button class="link" id="code1a-line-4">cout << age;</button>
+    <button class="link" id="code1a-line-5">return 0;</button>
 }
                     </code></pre>
 
-                    <button type="button" class="btn btn-default" id="start-button1">Start</button>
-                    <button type="button" class="btn btn-default disabled" id="step-button1">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-1a">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button-1a">Step</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-7 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left d1-stack-top">20</td>
+                                    <td class="not-stack">int age;</td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left"><span class="hide-all" id="d1a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d1a-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left d1-stack-bottom"><span class="hide-all" id="d1a-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d1a-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-2 not-stack"></th>
+                                    <th class="col-md-5 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link" id="code1b-line-1">int main() {</button>
+    <button class="link" id="code1b-line-2">int age = 20;   //declare & initialise</button>
+    <button class="link" id="code1b-line-3">cout << age;</button>
+    <button class="link" id="code1b-line-4">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="start-button-1b">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button-1b">Step</button>
                 </div>
                 <div class="col-md-8" style="margin-top: 10px;">
                     <div class="col-md-7 col-md-offset-1">
                         <div class="table-responsive">
                             <table class="table">
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff04</i></td>
-                                    <td class="stack"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
-                                    <td class="stack"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack d1-stack-right d1-stack-left d1-stack-top"><span class="hide-all d1-show4" id="d1-phn-num-val">1234567</span></td>
-                                    <td class="not-stack"><span class="hide-all d1-show4" id="d1-phn-num">int phoneNumber</span></td>
-                                </tr>
-                                <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack d1-stack-right d1-stack-left"><span class="hide-all d1-show3" id="d1-age-val">20</span></td>
-                                    <td class="not-stack"><span class="hide-all d1-show3" id="d1-age">int age</span></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack d1-stack-right d1-stack-left"><span class="hide-all d1-show2" id="d1-name-val">"Bob"</span></td>
-                                    <td class="not-stack"><span class="hide-all d1-show2" id="d1-name">string name</span></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left"><span class="hide-all" id="d1b-age-val">20</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d1b-age">int age;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack d1-stack-right d1-stack-left" style="color: #777"><span class="hide-all d1-show1" id="d1-rtn-addr-val"><i>0x0061ff2d</i></span></td>
-                                    <td class="not-stack"><span class="hide-all d1-show1" id="d1-rtn-addr">rtn addr</span></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left" style="color: #777"><span class="hide-all" id="d1b-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d1b-rtn-addr">rtn addr</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack d1-stack-right d1-stack-left d1-stack-bottom"><span class="hide-all" id="d1-rtnval-val">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d1-show1" id="d1-rtnval">rtn val</span></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left d1-stack-bottom"><span class="hide-all" id="d1b-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d1b-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-2 not-stack"></th>
+                                    <th class="col-md-5 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link" id="code1c-line-1">int main() {</button>
+    <button class="link" id="code1c-line-2">int age;   //declare</button>
+    <button class="link" id="code1c-line-3">cout << age;</button>
+    <button class="link" id="code1c-line-4">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="start-button-1c">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button-1c">Step</button>
+                </div>
+                <div class="col-md-8" style="margin-top: 10px;">
+                    <div class="col-md-7 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left"><span class="hide-all" id="d1c-age-val">???</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d1c-age">int age;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left" style="color: #777"><span class="hide-all" id="d1c-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d1c-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap d1-stack-right d1-stack-left d1-stack-bottom"><span class="hide-all" id="d1c-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d1c-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <th class="col-md-2 not-stack"></th>
@@ -104,7 +186,77 @@
                 </div>
             </div>
         </div>
+
+        <!--panel 2-->
         <div class="panel-body" id="anim-2" style="min-height: 400px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 style="margin-top: 0; margin-bottom: 25px;">Code Snippet 2</h2>
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link" id="code2a-line-1">int main() {</button>
+    <button class="link" id="code2a-line-2">string name = "Bob";</button>
+    <button class="link" id="code2a-line-3">int age = 20;</button>
+    <button class="link" id="code2a-line-6">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="start-button-2a">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button-2a">Step</button>
+                </div>
+                <div class="col-md-8" style="margin-top: 20px;">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table table-stack">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap d2-stack-right d2-stack-left d2-stack-top"><span class="hide-all" id="d2a-age-val">20</span></td>
+                                    <td class="not-stack">
+                                        <span class="hide-all d2-show3" id="d2a-age">int age; </span><span class="hide-all" id="d2a-age-alias">int &bobsAge</span>
+                                    </td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d2-stack-right d2-stack-left"><span class="hide-all" id="d2a-name-val">"Bob"</span></td>
+                                    <td class="not-stack">
+                                        <span class="hide-all d2-show2" id="d2a-name">string name; </span><span class="hide-all" id="d2a-name-alias">string &bobsName</span>
+                                    </td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap d2-stack-right d2-stack-left" style="color: #777"><span class="hide-all" id="d2a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d2a-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap d2-stack-right d2-stack-left d2-stack-bottom"><span class="hide-all" id="d2a-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all" id="d2a-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-4 stack">Stack</th>
+                                    <th class="col-md-7 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- panel 3-->
+
+        <div class="panel-body" id="anim-3" style="min-height: 400px;">
             <div class="row">
                 <div class="col-md-4">
                     <h2 style="margin-top: 0; margin-bottom: 25px;">Code Snippet 2</h2>
@@ -128,36 +280,36 @@
                             <table class="table table-stack">
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
-                                    <td class="stack"></td>
+                                    <td class="stack-top"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack"></td>
+                                    <td class="stack-heap"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack d2-stack-right d2-stack-left d2-stack-top"><span class="hide-all d2-show3" id="d2-age-val">20</span></td>
+                                    <td class="stack-heap d2-stack-right d2-stack-left d2-stack-top"><span class="hide-all d2-show3" id="d2-age-val">20</span></td>
                                     <td class="not-stack">
                                         <span class="hide-all d2-show3" id="d2-age">int age; </span><span class="hide-all d2-show5" id="d2-age-alias">int &bobsAge</span>
                                     </td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack d2-stack-right d2-stack-left"><span class="hide-all d2-show2" id="d2-name-val">"Bob"</span></td>
+                                    <td class="stack-heap d2-stack-right d2-stack-left"><span class="hide-all d2-show2" id="d2-name-val">"Bob"</span></td>
                                     <td class="not-stack">
                                         <span class="hide-all d2-show2" id="d2-name">string name; </span><span class="hide-all d2-show4" id="d2-name-alias">string &bobsName</span>
                                     </td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack d2-stack-right d2-stack-left" style="color: #777"><span class="hide-all d2-show1" id="d2-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="stack-heap d2-stack-right d2-stack-left" style="color: #777"><span class="hide-all d2-show1" id="d2-rtn-addr-val"><i>0x0061ff2d</i></span></td>
                                     <td class="not-stack"><span class="hide-all d2-show1" id="d2-rtn-addr">rtn addr</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack d2-stack-right d2-stack-left d2-stack-bottom"><span class="hide-all" id="d2-rtnval-val">0</span></td>
+                                    <td class="stack-heap d2-stack-right d2-stack-left d2-stack-bottom"><span class="hide-all" id="d2-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d2-show1" id="d2-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -171,7 +323,7 @@
                 </div>
             </div>
         </div>
-        <div class="panel-body" id="anim-3" style="min-height: 400px;">
+        <div class="panel-body" id="anim-4" style="min-height: 400px;">
             <div class="row">
                 <div class="col-md-4">
                     <h2 style="margin-top: 0; margin-bottom: 25px;">Code Snippet 3</h2>
@@ -194,37 +346,37 @@
                             <table class="table table-stack">
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff04</i></td>
-                                    <td class="stack"></td>
+                                    <td class="stack-top"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
-                                    <td class="stack"></td>
+                                    <td class="stack-heap"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack d3-stack-right d3-stack-left d3-stack-top" style="color: #532A78;"><span class="hide-all d3-show4" id="d3-alice-HPhone-val"><i>0x0061ff14</i></span></td></td>
+                                    <td class="stack-heap d3-stack-right d3-stack-left d3-stack-top" style="color: #532A78;"><span class="hide-all d3-show4" id="d3-alice-HPhone-val"><i>0x0061ff14</i></span></td></td>
                                     <td class="not-stack"><span class="hide-all d3-show4" id="d3-alice-HPhone">int *aliceHomePhone</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack d3-stack-right d3-stack-left"><span class="hide-all d3-show3" id="d3-bob-MPhone-val">0211234567</span></td>
+                                    <td class="stack-heap d3-stack-right d3-stack-left"><span class="hide-all d3-show3" id="d3-bob-MPhone-val">0211234567</span></td>
                                     <td class="not-stack"><span class="hide-all d3-show3" id="d3-bob-MPhone">int bobMobilePhone</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d3-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack d3-stack-right d3-stack-left"><span class="hide-all  d3-show2" id="d3-bob-HPhone-val">1234567</span></td>
+                                    <td class="stack-heap d3-stack-right d3-stack-left"><span class="hide-all  d3-show2" id="d3-bob-HPhone-val">1234567</span></td>
                                     <td class="not-stack"><span class="hide-all d3-show2" id="d3-bob-HPhone">int bobHomePhone</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack d3-stack-right d3-stack-left" style="color: #777"><span class="hide-all d3-show1" id="d3-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="stack-heap d3-stack-right d3-stack-left" style="color: #777"><span class="hide-all d3-show1" id="d3-rtn-addr-val"><i>0x0061ff2d</i></span></td>
                                     <td class="not-stack"><span class="hide-all d3-show1" id="d3-rtn-addr">rtn addr</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack d3-stack-right d3-stack-left d3-stack-bottom"><span class="hide-all" id="d3-rtnval-val">0</span></td>
+                                    <td class="stack-heap d3-stack-right d3-stack-left d3-stack-bottom"><span class="hide-all" id="d3-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d3-show1" id="d3-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -238,7 +390,7 @@
                 </div>
             </div>
         </div>
-        <div class="panel-body" id="anim-4" style="min-height: 400px;">
+        <div class="panel-body" id="anim-5" style="min-height: 400px;">
             <div class="row">
                 <div class="col-md-4">
                     <h2 style="margin-top: 0; margin-bottom: 25px;">Code Snippet 4</h2>
@@ -271,6 +423,7 @@
             <button class="btn btn-default" id="anim-2-btn" type="button">2</button>
             <button class="btn btn-default" id="anim-3-btn" type="button">3</button>
             <button class="btn btn-default" id="anim-4-btn" type="button">4</button>
+            <button class="btn btn-default" id="anim-5-btn" type="button">5</button>
         </div>
         <div class="btn-group" role="group">
             <button class="btn btn-default" id="next" type="button"><span class="glyphicon glyphicon-menu-right"></span></button>
