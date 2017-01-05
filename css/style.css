@@ -29,6 +29,10 @@ button.link{
     background-color: #ffff00 !important;
 }
 
+.green{
+    background-color: #5CB85C !important;
+}
+
 /*Styling for stack table*/
 .table {
     z-index: 0;
@@ -42,6 +46,7 @@ button.link{
 
 .table .stack-heap{
     border: 1px solid #dddddd;
+    text-align: center;
 }
 
 .table .stack-top{
