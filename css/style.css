@@ -33,6 +33,10 @@ button.link{
     background-color: #5CB85C !important;
 }
 
+.red{
+    background-color: #D9534F !important;
+}
+
 /*Styling for stack table*/
 .table {
     z-index: 0;

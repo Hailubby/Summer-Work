@@ -322,6 +322,7 @@ $(document).ready(function () {
         $("#step-button-1b").removeClass("disabled");
 
         $(".link").removeClass("yellow");
+        $("#d1b-age-val").removeClass("green");
         $("#code1b-line-3").addClass("green");
 
         p1_c2_showBorders();
@@ -370,6 +371,174 @@ $(document).ready(function () {
             //do line 4 things here
             p1_c2_line4();
             $("#step-button-1b").addClass("disabled");
+            currentLine = 0;
+        }
+
+    });
+
+    //panel 1 code 3
+    $("#start-button-1c").click(function () {
+        $(".d1c-hide-all").hide();
+        p1_c3_hideBorders();
+        $("#code1c-line-4").animate({backgroundColor: 'transparent'}, 0);
+        p1_c3_line1();
+        $("#d1c-rtn-addr-val").promise().done(function () {
+            p1_c3_line2();
+            $("#d1c-age").promise().done(function () {
+                p1_c3_line3()
+                $("#d1c-age-val").promise().done(function () {
+                    p1_c3_line4()
+                });
+            });
+        });
+    });
+
+    //p1 c3 line 1 function
+    var p1_c3_line1 = function () {
+        $("#code1c-line-1").animate({backgroundColor: '#ffff00'}, 600);
+        $(".link").removeClass("yellow");
+        $(".table .d1c-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
+        $(".table .d1c-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
+        $(".table .d1c-stack-left").delay(50).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},30);
+        $(".table .d1c-stack-right").delay(50).animate({borderRightWidth: '2px', borderRightColor: 'black'},30);
+        $("#d1c-rtnval").delay(1200).show(400);
+        $("#d1c-rtn-addr").delay(1200).show(400);
+        $("#d1c-rtn-addr-val").delay(1600).show(400);
+    }
+
+    //p1 c3 line 2 function
+    var p1_c3_line2 = function () {
+        $("#code1c-line-1").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code1c-line-2").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
+        $("#d1c-age").delay(1000).show(400);
+    }
+
+    //p1 c2 line 3 function
+    var p1_c3_line3 = function () {
+        $("#code1c-line-2").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code1c-line-3").animate({backgroundColor: '#5CB85C'}, 1000);
+        $(".link").removeClass("yellow");
+        $("#d1c-age-val").delay(1000).animate({backgroundColor: '#D9534F'}, 500).show(500).delay(600);
+    }
+
+    //p1 c2 line 4 function
+    var p1_c3_line4 = function () {
+        $("#code1c-line-3").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d1c-age-val").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code1c-line-4").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".link").removeClass("yellow");
+        $(".link").removeClass("green");
+        $("#d1c-age-val").removeClass("red");
+        $("#d1c-rtnval-val").delay(1000).show(400);
+    }
+
+    //unhighlight all lines
+    var p1_c3_unhighlight = function () {
+        $("#code1c-line-1").animate({backgroundColor: 'transparent'}, 0);
+        $("#code1c-line-2").animate({backgroundColor: 'transparent'}, 0);
+        $("#code1c-line-3").animate({backgroundColor: 'transparent'}, 0);
+        $("#code1c-line-4").animate({backgroundColor: 'transparent'}, 0);
+    }
+
+    //show stack border
+    var p1_c3_showBorders = function () {
+        $(".table .d1c-stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
+        $(".table .d1c-stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
+        $(".table .d1c-stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
+        $(".table .d1c-stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
+    }
+
+    //hide stack borders
+    var p1_c3_hideBorders = function () {
+        $(".table .d1c-stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
+        $(".table .d1c-stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
+        $(".table .d1c-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
+        $(".table .d1c-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
+    }
+
+    //stepping function
+    var currentLine;
+    $("#code1c-line-1").click(function(){
+        $("#step-button-1c").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $(".link").removeClass("green");
+        $("#code1c-line-1").addClass("yellow");
+
+        $(".d1c-hide-all").hide();
+        p1_c3_hideBorders();
+        p1_c3_unhighlight();
+        currentLine = 1;
+    });
+
+    $("#code1c-line-2").click(function(){
+        $("#step-button-1c").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $(".link").removeClass("green");
+        $("#code1c-line-2").addClass("yellow");
+
+        p1_c3_showBorders();
+        $(".d1c-hide-all").hide();
+        $(".d1c-show1").show();
+        p1_c3_unhighlight();
+        currentLine = 2;
+    });
+
+    $("#code1c-line-3").click(function(){
+        $("#step-button-1c").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $("#code1c-line-3").addClass("green");
+
+        p1_c3_showBorders();
+        $(".d1c-hide-all").hide();
+        $(".d1c-show1").show();
+        $(".d1c-show2").show();
+        p1_c3_unhighlight();
+        currentLine = 3;
+    });
+
+    $("#code1c-line-4").click(function(){
+        $("#step-button-1c").removeClass("disabled");
+
+        $(".link").removeClass("yellow");
+        $(".link").removeClass("green");
+        $("#d1c-age-val").removeClass("red");
+        $("#code1c-line-4").addClass("yellow");
+
+        p1_c3_showBorders();
+        $(".d1c-hide-all").hide();
+        $(".d1c-show1").show();
+        $(".d1c-show2").show();
+        $(".d1c-show3").show();
+        $("#d1c-age-val").addClass("red");
+        p1_c3_unhighlight();
+        currentLine = 4;
+    });
+
+
+    $("#step-button-1c").click(function () {
+        if (currentLine == 1) {
+            //do line 1 things here
+            p1_c3_line1();
+            currentLine = 2;
+        }
+        else if (currentLine == 2) {
+            //do line 2 things here
+            p1_c3_line2();
+            currentLine = 3;
+        }
+        else if (currentLine == 3) {
+            //do line 3 things here
+            p1_c3_line3();
+            currentLine = 4;
+        }
+        else if (currentLine == 4) {
+            //do line 4 things here
+            p1_c3_line4();
+            $("#step-button-1c").addClass("disabled");
             currentLine = 0;
         }
 
