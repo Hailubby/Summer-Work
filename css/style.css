@@ -53,6 +53,19 @@ button.link{
     text-align: center;
 }
 
+.table .stack-string-top{
+    border-bottom: none !important;
+}
+
+.table .stack-string-middle{
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.table .stack-string-bottom{
+    border-top: none !important;
+}
+
 .table .stack-top{
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
