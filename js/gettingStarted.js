@@ -1276,6 +1276,7 @@ $(document).ready(function () {
         $("#code3b-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-4").animate({backgroundColor: '#ffff00'}, 1000);
         $(".d3b-link").removeClass("yellow");
+        $("#d3b-phone-val").html('1111111');
         $("#d3b-phone").delay(1000).show(400);
         $("#d3b-phone-val").delay(1400).show(400);
     }
@@ -1313,13 +1314,13 @@ $(document).ready(function () {
 
     //unhighlight all lines
     var p3_c2_unhighlight = function () {
-        $("#code3a-line-1").animate({backgroundColor: 'transparent'}, 0);
-        $("#code3a-line-2").animate({backgroundColor: 'transparent'}, 0);
-        $("#code3a-line-3").animate({backgroundColor: 'transparent'}, 0);
-        $("#code3a-line-4").animate({backgroundColor: 'transparent'}, 0);
-        $("#code3a-line-5").animate({backgroundColor: 'transparent'}, 0);
-        $("#code3a-line-6").animate({backgroundColor: 'transparent'}, 0);
-        $("#code3a-line-7").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3b-line-1").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3b-line-2").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3b-line-3").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3b-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3b-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3b-line-6").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3b-line-7").animate({backgroundColor: 'transparent'}, 0);
     }
 
     //show stack border
@@ -1340,131 +1341,148 @@ $(document).ready(function () {
 
     //stepping function
     var currentLine;
-    $("#code3a-line-1").click(function(){
-        $("#step-button-3a").removeClass("disabled");
+    $("#code3b-line-1").click(function(){
+        $("#step-button-3b").removeClass("disabled");
 
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#code3a-line-1").addClass("yellow");
+        $(".d3b-link").removeClass("yellow");
+        $("#code3b-line-1").addClass("yellow");
 
-        $(".d3a-hide-all").hide();
-        p3_c1_hideBorders();
-        p3_c1_unhighlight();
+        $(".d3b-hide-all").hide();
+        p3_c2_hideBorders();
+        p3_c2_unhighlight();
         currentLine = 1;
     });
 
-    $("#code3a-line-2").click(function(){
-        $("#step-button-3a").removeClass("disabled");
+    $("#code3b-line-2").click(function(){
+        $("#step-button-3b").removeClass("disabled");
 
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#code3a-line-2").addClass("yellow");
+        $(".d3b-link").removeClass("yellow");
+        $("#code3b-line-2").addClass("yellow");
 
-        p3_c1_showBorders();
-        $(".d3a-hide-all").hide();
-        $(".d3a-show1").show();
-        p3_c1_unhighlight();
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $(".d3b-show1").show();
+        p3_c2_unhighlight();
         currentLine = 2;
     });
 
-    $("#code3a-line-3").click(function(){
-        $("#step-button-3a").removeClass("disabled");
+    $("#code3b-line-3").click(function(){
+        $("#step-button-3b").removeClass("disabled");
 
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#d3a-id-val").removeClass("green");
-        $("#d3a-id-val").animate({backgroundColor: 'transparent'}, 0);
-        $("#code3a-line-3").addClass("green");
+        $(".d3b-link").removeClass("yellow");
+        $("#code3b-line-3").addClass("yellow");
 
-        p3_c1_showBorders();
-        $(".d3a-hide-all").hide();
-        $("#d3a-id-val").html('1');
-        $(".d3a-show1").show();
-        $(".d3a-show2").show();
-        p3_c1_unhighlight();
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $("#d3b-name-val").html('"Bob"');
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        p3_c2_unhighlight();
         currentLine = 3;
     });
 
-    $("#code3a-line-4").click(function(){
-        $("#step-button-3a").removeClass("disabled");
+    $("#code3b-line-4").click(function(){
+        $("#step-button-3b").removeClass("disabled");
 
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#code3a-line-4").addClass("yellow");
+        $(".d3b-link").removeClass("yellow");
+        $("#code3b-line-4").addClass("yellow");
 
-        p3_c1_showBorders();
-        $(".d3a-hide-all").hide();
-        $("#d3a-id-val").html('1');
-        $(".d3a-show1").show();
-        $(".d3a-show2").show();
-        $("#d3a-id-val").addClass("green");
-        p3_c1_unhighlight();
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $("#d3b-name-val").html('"Bob"');
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        p3_c2_unhighlight();
         currentLine = 4;
     });
 
-    $("#code3a-line-5").click(function(){
-        $("#step-button-3a").removeClass("disabled");
+    $("#code3b-line-5").click(function(){
+        $("#step-button-3b").removeClass("disabled");
 
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#d3a-id-val").removeClass("green");
-        $("#d3a-id-val").animate({backgroundColor: 'transparent'}, 0);
-        $("#code3a-line-5").addClass("green");
+        $(".d3b-link").removeClass("yellow");
+        $("#code3b-line-5").addClass("yellow");
 
-        p3_c1_showBorders();
-        $(".d3a-hide-all").hide();
-        $("#d3a-id-val").html('2');
-        $(".d3a-show1").show();
-        $(".d3a-show2").show();
-        p3_c1_unhighlight();
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $("#d3b-name-val").html('"Bob"');
+        $("#d3b-phone-val").html('1111111');
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        $(".d3b-show4").show();
+        p3_c2_unhighlight();
         currentLine = 5;
     });
 
-    $("#code3a-line-6").click(function(){
-        $("#step-button-3a").removeClass("disabled");
+    $("#code3b-line-6").click(function(){
+        $("#step-button-3b").removeClass("disabled");
 
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#code3a-line-6").addClass("yellow");
+        $(".d3b-link").removeClass("yellow");
+        $("#code3b-line-6").addClass("yellow");
 
-        p3_c1_showBorders();
-        $(".d3a-hide-all").hide();
-        $("#d3a-id-val").html('2');
-        $(".d3a-show1").show();
-        $(".d3a-show2").show();
-        $("#d3a-id-val").addClass("green");
-        p3_c1_unhighlight();
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $("#d3b-name-val").html('"Bob Jones"');
+        $("#d3b-phone-val").html('1111111');
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        $(".d3b-show4").show();
+        p3_c2_unhighlight();
         currentLine = 6;
     });
 
-    $("#step-button-3a").click(function () {
+    $("#code3b-line-7").click(function(){
+        $("#step-button-3b").removeClass("disabled");
+
+        $(".d3b-link").removeClass("yellow");
+        $("#code3b-line-7").addClass("yellow");
+
+        p3_c2_showBorders();
+        $(".d3a-hide-all").hide();
+        $("#d3b-name-val").html('"Bob Jones"');
+        $("#d3b-phone-val").html('2222222');
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        $(".d3b-show4").show();
+        p3_c2_unhighlight();
+        currentLine = 7;
+    });
+
+    $("#step-button-3b").click(function () {
         if (currentLine == 1) {
             //do line 1 things here
-            p3_c1_line1();
+            p3_c2_line1();
             currentLine = 2;
         }
         else if (currentLine == 2) {
             //do line 2 things here
-            p3_c1_line2();
+            p3_c2_line2();
             currentLine = 3;
         }
         else if (currentLine == 3) {
             //do line 3 things here
-            p3_c1_line3();
+            p3_c2_line3();
             currentLine = 4;
         }
         else if (currentLine == 4) {
             //do line 4 things here
-            p3_c1_line4();
+            p3_c2_line4();
             currentLine = 5;
         }
         else if (currentLine == 5) {
-            p3_c1_line5();
+            p3_c2_line5();
             currentLine = 6;
         }
         else if (currentLine == 6) {
-            p3_c1_line6();
-            $("#step-button-3a").addClass("disabled");
+            p3_c2_line6();
+            currentLine = 7;
+        }
+        else if (currentLine == 7) {
+            p3_c2_line7();
+            $("#step-button-3b").addClass("disabled");
             currentLine = 0;
         }
 
