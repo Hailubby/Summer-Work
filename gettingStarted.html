@@ -45,10 +45,32 @@
                 <h4 class="modal-title">Modal Header</h4>
             </div>
             <div class="modal-body">
-                <p>Some text in the modal.</p>
+                <p><b>Declaration:</b> a declaration states the type of a variable, along with its name. A variable may be only declared once and must be declared before reading or assigning.</p>
+                <p><b>Initialisation:</b> the first assignment of a value to a variable. Initialisation of a variable may be done in conjuction with the declaration.</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--panel 3 modal-->
+<div id="d3-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p><b>Assignment:</b> throwing away the old value of a variable and replacing it with a new one.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
             </div>
         </div>
 
@@ -352,7 +374,7 @@
 
         <!-- panel 3-->
         <div class="panel-body" id="anim-3" style="min-height: 400px;">
-            <h2 style="margin-top: 0; margin-bottom: 25px;">Assigning variables</h2>
+            <h2 style="margin-top: 0; margin-bottom: 25px;">Assigning variables <a href="#" data-toggle="modal" data-target="#d3-modal"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
 
             <!--panel 3 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -565,55 +587,50 @@
                 <div class="col-md-4">
                     <!--pre tag indentations-->
                     <pre><code>
-<button class="link" id="code3-line-1">int main() {</button>
-    <button class="link" id="code3-line-2">int bobHomePhone = 1234567;</button>
-    <button class="link" id="code3-line-3">int bobMobilePhone = 0211234567;</button>
-    <button class="link" id="code3-line-4">int *aliceHomePhone = &amp;bobHomePhone;</button>
-    <button class="link" id="code3-line-5">return 0;</button>
+<button class="link d5a-link" id="code5a-line-1">int main() {</button>
+    <button class="link d5a-link" id="code5a-line-2">int bobHomePhone = 1234567;</button>
+    <button class="link d5a-link" id="code5a-line-3">int bobMobilePhone = 0211234567;</button>
+    <button class="link d5a-link" id="code5a-line-4">int *aliceHomePhone = &amp;bobHomePhone;</button>
+    <button class="link d5a-link" id="code5a-line-5">return 0;</button>
 }
                     </code></pre>
 
-                    <button type="button" class="btn btn-default" id="start-button3">Start</button>
-                    <button type="button" class="btn btn-default disabled" id="step-button3">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-5a">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button-5a">Step</button>
                 </div>
                 <div class="col-md-8">
                     <div class="col-md-8 col-md-offset-1">
                         <div class="table-responsive">
                             <table class="table">
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff04</i></td>
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
                                     <td class="stack-top"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
-                                    <td class="stack-heap"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                                <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-heap d3-stack-right d3-stack-left d3-stack-top" style="color: #532A78;"><span class="hide-all d3-show4" id="d3-alice-HPhone-val"><i>0x0061ff14</i></span></td></td>
-                                    <td class="not-stack"><span class="hide-all d3-show4" id="d3-alice-HPhone">int *aliceHomePhone</span></td>
+                                    <td class="stack-heap d5a-stack-right d5a-stack-left d5a-stack-top" style="color: #532A78;"><span class="hide-all d5a-hide-all d5a-show4" id="d5a-alice-HPhone-val"><i>0x0061ff14</i></span></td></td>
+                                    <td class="not-stack"><span class="hide-all d5a-hide-all d5a-show4" id="d5a-alice-HPhone">int *aliceHomePhone</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack-heap d3-stack-right d3-stack-left"><span class="hide-all d3-show3" id="d3-bob-MPhone-val">0211234567</span></td>
-                                    <td class="not-stack"><span class="hide-all d3-show3" id="d3-bob-MPhone">int bobMobilePhone</span></td>
+                                    <td class="stack-heap d5a-stack-right d5a-stack-left"><span class="hide-all d5a-hide-all d5a-show3" id="d5a-bob-MPhone-val">0211234567</span></td>
+                                    <td class="not-stack"><span class="hide-all d5a-hide-all d5a-show3" id="d5a-bob-MPhone">int bobMobilePhone</span></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" id="d3-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap d3-stack-right d3-stack-left"><span class="hide-all  d3-show2" id="d3-bob-HPhone-val">1234567</span></td>
-                                    <td class="not-stack"><span class="hide-all d3-show2" id="d3-bob-HPhone">int bobHomePhone</span></td>
+                                    <td class="not-stack" id="d5a-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d5a-stack-right d5a-stack-left"><span class="hide-all d5a-hide-all d5a-show2" id="d5a-bob-HPhone-val">1234567</span></td>
+                                    <td class="not-stack"><span class="hide-all d5a-hide-all d5a-show2" id="d5a-bob-HPhone">int bobHomePhone</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack-heap d3-stack-right d3-stack-left" style="color: #777"><span class="hide-all d3-show1" id="d3-rtn-addr-val"><i>0x0061ff2d</i></span></td>
-                                    <td class="not-stack"><span class="hide-all d3-show1" id="d3-rtn-addr">rtn addr</span></td>
+                                    <td class="stack-heap d5a-stack-right d5a-stack-left" style="color: #777"><span class="hide-all d5a-hide-all d5a-show1" id="d5a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d5a-hide-all d5a-show1" id="d5a-rtn-addr">rtn addr</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap d3-stack-right d3-stack-left d3-stack-bottom"><span class="hide-all" id="d3-rtnval-val">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d3-show1" id="d3-rtnval">rtn val</span></td>
+                                    <td class="stack-heap d5a-stack-right d5a-stack-left d5a-stack-bottom"><span class="hide-all d5a-hide-all" id="d5a-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d5a-hide-all d5a-show1" id="d5a-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <th class="col-md-1 not-stack"></th>
