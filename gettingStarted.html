@@ -355,7 +355,7 @@
             <h2 style="margin-top: 0; margin-bottom: 25px;">Assigning variables</h2>
 
             <!--panel 3 code 1-->
-            <div class="row">
+            <div class="row" style="margin-bottom: 25px;">
                 <div class="col-md-4">
                     <!--pre tag indentations-->
                     <pre><code>
@@ -376,13 +376,8 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-top"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                                <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack-heap"></td>
+                                    <td class="stack-top"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -426,11 +421,61 @@
 }
                     </code></pre>
 
-                    <button type="button" class="btn btn-default" id="start-button3b">Start</button>
-                    <button type="button" class="btn btn-default disabled" id="step-button3b">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-3b">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button-3b">Step</button>
                 </div>
                 <div class="col-md-8">
-                    Animations go here
+                    <div class="col-md-8 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff00</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff04</i></td>
+                                    <td class="stack-heap d3b-stack-right d3b-stack-left d3b-stack-top"><span class="hide-all d3b-hide-all" id="d3b-phone-val">1111111</span></td>
+                                    <td class="not-stack"><span class="hide-all d3b-hide-all" id="d3b-phone">int phoneNumber;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="stack-heap d3b-stack-right d3b-stack-left"><span class="hide-all d3b-hide-all" id="d3b-age-val">21</span></td>
+                                    <td class="not-stack"><span class="hide-all d3b-hide-all" id="d3b-age">int age;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
+                                    <td class="stack-heap d3b-stack-right d3b-stack-left" id="d3b-string-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap d3b-stack-right d3b-stack-left" id="d3b-string-mid"><span class="hide-all d3b-hide-all" id="d3b-name-val">"Bob"</span></td>
+                                    <td class="not-stack"><span class="hide-all d3b-hide-all" id="d3b-name">string name;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d3b-stack-right d3b-stack-left" id="d3b-string-bot"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap d3b-stack-right d3b-stack-left" style="color: #777"><span class="hide-all d3b-hide-all d3b-show1" id="d3b-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show1" id="d3b-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap d3b-stack-right d3b-stack-left d3b-stack-bottom"><span class="hide-all d3b-hide-all" id="d3b-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show1" id="d3b-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-4 stack">Stack</th>
+                                    <th class="col-md-7 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
