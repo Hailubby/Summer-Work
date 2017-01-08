@@ -489,55 +489,60 @@
                 <div class="col-md-4">
                     <!--pre tag indentations-->
                     <pre><code>
-<button class="link" id="code2-line-1">int main() {</button>
-    <button class="link" id="code2-line-2">string name = "Bob";</button>
-    <button class="link" id="code2-line-3">int age = 20;</button>
-    <button class="link" id="code2-line-4">string &bobsName = name;</button>
-    <button class="link" id="code2-line-5">int &bobsAge = age;</button>
-    <button class="link" id="code2-line-6">return 0;</button>
+<button class="link d4a-link" id="code4a-line-1">int main() {</button>
+    <button class="link d4a-link" id="code4a-line-2">string name = "Bob";</button>
+    <button class="link d4a-link" id="code4a-line-3">int age = 20;</button>
+    <button class="link d4a-link" id="code4a-line-4">string &bobsName = name;</button>
+    <button class="link d4a-link" id="code4a-line-5">int &bobsAge = age;</button>
+    <button class="link d4a-link" id="code4a-line-6">return 0;</button>
 }
                     </code></pre>
 
-                    <button type="button" class="btn btn-default" id="start-button2">Start</button>
-                    <button type="button" class="btn btn-default disabled" id="step-button2">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-4a">Start</button>
+                    <button type="button" class="btn btn-default disabled" id="step-button-4a">Step</button>
                 </div>
                 <div class="col-md-8">
                     <div class="col-md-8 col-md-offset-1">
                         <div class="table-responsive">
                             <table class="table">
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff04</i></td>
                                     <td class="stack-top"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left d4a-stack-top"><span class="hide-all d4a-hide-all d4a-show3" id="d4a-age-val">20</span></td>
+                                    <td class="not-stack">
+                                        <span class="hide-all d4a-hide-all d4a-show3" id="d4a-age">int age; </span><span class="hide-all d4a-hide-all d4a-show5" id="d4a-age-alias">int &bobsAge</span>
+                                    </td>
+                                </tr>
+                                <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-heap"></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left" id="d4a-string-top"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack-heap d2-stack-right d2-stack-left d2-stack-top"><span class="hide-all d2-show3" id="d2-age-val">20</span></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left" id="d4a-string-mid"><span class="hide-all d4a-hide-all d4a-show2" id="d4a-name-val">"Bob"</span></td>
                                     <td class="not-stack">
-                                        <span class="hide-all d2-show3" id="d2-age">int age; </span><span class="hide-all d2-show5" id="d2-age-alias">int &bobsAge</span>
+                                        <span class="hide-all d4a-hide-all d4a-show2" id="d4a-name">string name; </span><span class="hide-all d4a-hide-all d4a-show4" id="d4a-name-alias">string &bobsName</span>
                                     </td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap d2-stack-right d2-stack-left"><span class="hide-all d2-show2" id="d2-name-val">"Bob"</span></td>
-                                    <td class="not-stack">
-                                        <span class="hide-all d2-show2" id="d2-name">string name; </span><span class="hide-all d2-show4" id="d2-name-alias">string &bobsName</span>
-                                    </td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left" id="d4a-string-bot"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack-heap d2-stack-right d2-stack-left" style="color: #777"><span class="hide-all d2-show1" id="d2-rtn-addr-val"><i>0x0061ff2d</i></span></td>
-                                    <td class="not-stack"><span class="hide-all d2-show1" id="d2-rtn-addr">rtn addr</span></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left" style="color: #777"><span class="hide-all d4a-hide-all d4a-show1" id="d4a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all  d4a-hide-all d4a-show1" id="d4a-rtn-addr">rtn addr</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap d2-stack-right d2-stack-left d2-stack-bottom"><span class="hide-all" id="d2-rtnval-val">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d2-show1" id="d2-rtnval">rtn val</span></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left d4a-stack-bottom"><span class="hide-all d4a-hide-all" id="d4a-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d4a-hide-all d4a-show1" id="d4a-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <th class="col-md-1 not-stack"></th>
