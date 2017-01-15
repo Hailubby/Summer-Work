@@ -1209,7 +1209,10 @@ $(document).ready(function () {
     });
 
     //panel 3 code 2
+    $("#code3b-line-1").addClass("yellow");
+
     $("#start-button-3b").click(function () {
+        currentLine3b = 1;
         $(".d3b-hide-all").hide();
         p3_c2_hideBorders();
         $("#code3b-line-7").animate({backgroundColor: 'transparent'}, 0);
@@ -1345,10 +1348,7 @@ $(document).ready(function () {
 
     //stepping function
     var currentLine3b = 1;
-    $("#code3b-line-1").addClass("yellow");
     $("#code3b-line-1").click(function(){
-        $("#step-button-3b").removeClass("disabled");
-
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-1").addClass("yellow");
         $("#d3b-string-top").removeClass("stack-string-top");
@@ -1358,7 +1358,9 @@ $(document).ready(function () {
         $(".d3b-hide-all").hide();
         p3_c2_hideBorders();
         p3_c2_unhighlight();
-        currentLine3b = 1;
+
+        p3_c2_line1();
+        currentLine3b = 2;
     });
 
     $("#code3b-line-2").click(function(){
@@ -1374,7 +1376,9 @@ $(document).ready(function () {
         $(".d3b-hide-all").hide();
         $(".d3b-show1").show();
         p3_c2_unhighlight();
-        currentLine3b = 2;
+
+        p3_c2_line2();
+        currentLine3b = 3;
     });
 
     $("#code3b-line-3").click(function(){
@@ -1392,7 +1396,9 @@ $(document).ready(function () {
         $(".d3b-show1").show();
         $(".d3b-show2").show();
         p3_c2_unhighlight();
-        currentLine3b = 3;
+
+        p3_c2_line3();
+        currentLine3b = 4;
     });
 
     $("#code3b-line-4").click(function(){
@@ -1411,7 +1417,9 @@ $(document).ready(function () {
         $(".d3b-show2").show();
         $(".d3b-show3").show();
         p3_c2_unhighlight();
-        currentLine3b = 4;
+
+        p3_c2_line4();
+        currentLine3b = 5;
     });
 
     $("#code3b-line-5").click(function(){
@@ -1432,7 +1440,9 @@ $(document).ready(function () {
         $(".d3b-show3").show();
         $(".d3b-show4").show();
         p3_c2_unhighlight();
-        currentLine3b = 5;
+
+        p3_c2_line5();
+        currentLine3b = 6;
     });
 
     $("#code3b-line-6").click(function(){
@@ -1453,7 +1463,9 @@ $(document).ready(function () {
         $(".d3b-show3").show();
         $(".d3b-show4").show();
         p3_c2_unhighlight();
-        currentLine3b = 6;
+
+        p3_c2_line6();
+        currentLine3b = 7;
     });
 
     $("#code3b-line-7").click(function(){
@@ -1474,7 +1486,9 @@ $(document).ready(function () {
         $(".d3b-show3").show();
         $(".d3b-show4").show();
         p3_c2_unhighlight();
-        currentLine3b = 7;
+
+        p3_c2_line7();
+        currentLine3b = 1;
     });
 
     $("#step-button-3b").click(function () {
