@@ -26,9 +26,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gettingStarted.html">Getting Started</a></li>
-                <li class="active"><a href="active">Heap</a></li>
+                <li class="active"><a href="#">Heap</a></li>
                 <li><a href="#">Classes</a></li>
-                <li><a href="#">Methods</a></li>
+                <li><a href="methods.html">Methods</a></li>
             </ul>
         </div>
     </div>
@@ -47,15 +47,14 @@
                     <!--pre tag indentations-->
                     <pre><code>
 <button class="link d1a-link" id="code1a-line-1">int main() {</button>
-    <button class="link d1a-link" id="code1a-line-2">fdgdfh</button>
-    <button class="link d1a-link" id="code1a-line-3">dfhdfh</button>
-    <button class="link d1a-link" id="code1a-line-4">dfhdfh</button>
-    <button class="link d1a-link" id="code1a-line-5">return 0;</button>
+    <button class="link d1a-link" id="code1a-line-2">int *age = new int;</button>
+    <button class="link d1a-link" id="code1a-line-3">age = 18;</button>
+    <button class="link d1a-link" id="code1a-line-4">return 0;</button>
 }
                     </code></pre>
 
-                    <button type="button" class="btn btn-default" id="start-button-1a">Start</button>
                     <button type="button" class="btn btn-default disabled" id="step-button-1a">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-1a">Start</button>
                 </div>
                 <div class="col-md-8">
                     <div class="col-md-6">
@@ -68,18 +67,18 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap d1a-stack-right d1a-stack-left d1a-stack-top"><span class="hide-all d1a-hide-all d1a-show3" id="d1a-age-val">20</span></td>
-                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-age">int age;</span></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left d1a-stack-top"><span class="hide-all d1a-hide-all d1a-show3" id="d1a-age-val"></span></td>
+                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-age">int *age;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack-heap d1a-stack-right d1a-stack-left"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
                                     <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtn-addr">rtn addr</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap d1a-stack-right d1a-stack-left d1a-stack-bottom"><span class="hide-all d1a-hide-all">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show1"></span></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left d1a-stack-bottom"><span class="hide-all d1a-hide-all" id="d1a-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <th class="col-md-1 not-stack"></th>
@@ -104,18 +103,180 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap d1a-stack-right d1a-stack-left d1a-stack-top"><span class="hide-all d1a-hide-all d1a-show3" id="d1a-age-val">20</span></td>
-                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-age">int age;</span></td>
+                                    <td class="stack-heap d1a-stack-right d1a-stack-left d1a-stack-top"><</td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack-heap d1a-stack-right d1a-stack-left"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
-                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtn-addr">rtn addr</span></td>
+                                    <td class="stack-heap d1a-stack-right d1a-stack-left"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="heap-bottom d1a-stack-right d1a-stack-left d1a-stack-bottom"><span class="hide-all d1a-hide-all" id="d1a-rtnval-val">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtnval">rtn val</span></td>
+                                    <td class="heap-bottom d1a-stack-right d1a-stack-left d1a-stack-bottom"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--panel 1 code 2-->
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link d1b-link" id="code1b-line-1">int main() {</button>
+    <button class="link d1b-link" id="code1b-line-2">int *age = new int(23);</button>
+    <button class="link d1b-link" id="code1b-line-3">age = 24;</button>
+    <button class="link d1b-link" id="code1b-line-4">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default disabled" id="step-button-1b">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-1b">Start</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-top"><span class="hide-all d1b-hide-all d1b-show3" id="d1b-age-val"></span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-age">int *age;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left"><span class="hide-all d1b-hide-all d1a-show1" id="d1b-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show1" id="d1b-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-bottom"><span class="hide-all d1b-hide-all" id="d1b-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show1" id="d1b-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-top: -15px;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 not-stack">Heap</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d1a-stack-right d1a-stack-left d1a-stack-top"><</td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap d1a-stack-right d1a-stack-left"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="heap-bottom d1a-stack-right d1a-stack-left d1a-stack-bottom"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--panel 1 code 3-->
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link d1c-link" id="code1c-line-1">int main() {</button>
+    <button class="link d1c-link" id="code1c-line-2">int *age = new int(14);</button>
+    <button class="link d1c-link" id="code1c-line-3">int *drivingAge = new int(16);</button>
+    <button class="link d1c-link" id="code1c-line-4">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default disabled" id="step-button-1c">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-1c">Start</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-1a d1c-stack-right d1c-stack-left d1c-stack-top"><span class="hide-all d1c-hide-all d1c-show3" id="d1c-age-val"></span></td>
+                                    <td class="not-stack"><span class="hide-all d1c-hide-all d1c-show2" id="d1c-age">int *age;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-1c d1c-stack-right d1c-stack-left"><span class="hide-all d1c-hide-all d1c-show1" id="d1c-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d1c-hide-all d1c-show1" id="d1c-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-1c d1c-stack-right d1c-stack-left d1c-stack-bottom"><span class="hide-all d1c-hide-all" id="d1c-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d1c-hide-all d1c-show1" id="d1c-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-top: -15px;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 not-stack">Heap</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d1a-stack-right d1a-stack-left d1a-stack-top"><</td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap d1a-stack-right d1a-stack-left"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="heap-bottom d1a-stack-right d1a-stack-left d1a-stack-bottom"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                             </table>
                         </div>
