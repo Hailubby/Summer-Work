@@ -709,6 +709,157 @@
                     </div>
                 </div>
             </div>
+            <!--panel 5 code 2-->
+            <div class="row">
+                <div class="col-md-5">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link d5b-link" id="code5b-line-1">int main() {</button>
+    <button class="link d5b-link" id="code5b-line-2">int odd = 3;</button>
+    <button class="link d5b-link" id="code5b-line-3">int *prime = &amp;odd;</button>
+    <button class="link d5b-link" id="code5b-line-5">cout << "addr in prime var:" << prime << endl;</button>
+    <button class="link d5b-link" id="code5b-line-6">cout << "*prime val:" << *prime << endl;</button>
+    <button class="link d5b-link" id="code5b-line-7">*prime = 5;</button>
+    <button class="link d5b-link" id="code5b-line-8">cout << "odd val:" << odd << endl;</button>
+    <button class="link d5b-link" id="code5b-line-9">cout << "addr in prime var:" << prime << endl;</button>
+    <button class="link d5b-link" id="code5b-line-10">cout << "*prime val:" << *prime << endl;</button>
+    <button class="link d5b-link" id="code5b-line-11">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-5b">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-5b">Start</button>
+                </div>
+                <div class="col-md-7">
+                    <div class="col-md-7">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
+                                    <td class="stack-top"></td></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap stack-heap-5b d5b-stack-right d5b-stack-left d5a-stack-top" style="color: #532A78;"><span class="hide-all d5b-hide-all d5b-show3" id="d5b-prime-val">0x0061ff14</span></td>
+                                    <td class="not-stack"><span class="hide-all d5b-hide-all d5b-show3" id="d5a-prime">int *prime;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d5b-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-5b d5b-stack-right d5b-stack-left"><span class="hide-all d5b-hide-all d5b-show2" id="d5b-odd-val">3</span></td>
+                                    <td class="not-stack"><span class="hide-all d5b-hide-all d5b-show2" id="d5b-odd">int odd;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-5b d5b-stack-right d5b-stack-left" style="color: #777"><span class="hide-all d5b-hide-all d5b-show1" id="d5b-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d5b-hide-all d5b-show1" id="d5b-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-5b d5b-stack-right d5b-stack-left d5b-stack-bottom"><span class="hide-all d5b-hide-all" id="d5b-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d5b-hide-all d5b-show1" id="d5b-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <p>addr in prime var: 0x00000000</p>
+                    </div>
+                </div>
+            </div>
+            <!--panel 5 code 3-->
+            <div class="row">
+                <div class="col-md-5">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link d5b-link" id="code5c-line-1">int main() {</button>
+    <button class="link d5c-link" id="code5c-line-2">string colour1 = "red";</button>
+    <button class="link d5c-link" id="code5c-line-3">string colour2 = "blue";</button>
+    <button class="link d5c-link" id="code5c-line-5">string *favColour = &amp;colour1;</button>
+    <button class="link d5c-link" id="code5c-line-6">cout << "addr in favColour var:" << favColour << endl;</button>
+    <button class="link d5c-link" id="code5c-line-7">cout << "*favColour val:" << *favColour << endl;</button>
+    <button class="link d5c-link" id="code5c-line-8">favColour = &amp;colour2;</button>
+    <button class="link d5c-link" id="code5c-line-9">cout << "addr in favColour var:" << favColour << endl;</button>
+    <button class="link d5c-link" id="code5c-line-10">cout << "*favColour val:" << *favColour << endl;</button>
+    <button class="link d5c-link" id="code5c-line-11">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-5c">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-5c">Start</button>
+                </div>
+                <div class="col-md-7">
+                    <div class="col-md-7">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061fef8</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d5c-pointer-addr2" style="color: #777"><i>0x0061fefc</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left d5c-stack-top" style="color: #532A78;"><span class="hide-all d5c-hide-all" id="d5c-favColor-val">0x0061ff0c</span></td>
+                                    <td class="not-stack"><span class="hide-all d5c-hide-all" id="d5c-favColor">string *favColour;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff00</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left" id="d5c-string-top2"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff04</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left" id="d5c-string-mid2"><span class="hide-all d5c-hide-all" id="d5c-colour2-val">"blue"</span></td>
+                                    <td class="not-stack"><span class="hide-all d5c-hide-all" id="d5c-colour2">string colour2;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left" id="d5c-string-bot2"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d5c-pointer-addr1" style="color: #777"><i>0x0061ff0c</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left" id="d5c-string-top1"></td></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left" id="d5c-string-mid1"><span class="hide-all d5c-hide-all d5c-show3" id="d5c-colour1-val">"red"</span></td>
+                                    <td class="not-stack"><span class="hide-all d5c-hide-all d5c-show3" id="d5c-colour1">string colour1;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left" id="d5c-string-bot1"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left" style="color: #777"><span class="hide-all d5c-hide-all d5c-show1" id="d5c-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d5c-hide-all d5c-show1" id="d5c-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-5c d5c-stack-right d5c-stack-left d5c-stack-bottom"><span class="hide-all d5c-hide-all" id="d5c-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d5c-hide-all d5c-show1" id="d5c-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <p>addr in favColour var: 0x00000000</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
