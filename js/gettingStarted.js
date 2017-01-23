@@ -3161,5 +3161,333 @@ $(document).ready(function () {
         $(".table .stack-heap-5c").animate({backgroundColor: 'transparent'}, 0);
     };
 
+    //stepping function
+    $("#code5c-line-1").click(function(){
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#code5c-line-1").addClass("yellow");
+
+        $("#d5c-string-top1").removeClass("stack-string-top");
+        $("#d5c-string-mid1").removeClass("stack-string-middle");
+        $("#d5c-string-bot1").removeClass("stack-string-bottom");
+        $("#d5c-string-top2").removeClass("stack-string-top");
+        $("#d5c-string-mid2").removeClass("stack-string-middle");
+        $("#d5c-string-bot2").removeClass("stack-string-bottom");
+
+        $(".d5c-hide-all").hide();
+        $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
+        p5_c3_hideBorders();
+        p5_c3_unhighlight();
+
+        p5_c3_line1();
+        currentLine5c = 2;
+    });
+
+    $("#code5c-line-2").click(function(){
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#code5c-line-2").addClass("yellow");
+
+        $("#d5c-string-top1").removeClass("stack-string-top");
+        $("#d5c-string-mid1").removeClass("stack-string-middle");
+        $("#d5c-string-bot1").removeClass("stack-string-bottom");
+        $("#d5c-string-top2").removeClass("stack-string-top");
+        $("#d5c-string-mid2").removeClass("stack-string-middle");
+        $("#d5c-string-bot2").removeClass("stack-string-bottom");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $(".d5c-show1").show();
+        $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
+        p5_c3_unhighlight();
+
+        p5_c3_line2();
+        currentLine5c = 3;
+    });
+
+    $("#code5c-line-3").click(function(){
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#code5c-line-3").addClass("yellow");
+
+        $("#d5c-string-top1").addClass("stack-string-top");
+        $("#d5c-string-mid1").addClass("stack-string-middle");
+        $("#d5c-string-bot1").addClass("stack-string-bottom");
+        $("#d5c-string-top2").removeClass("stack-string-top");
+        $("#d5c-string-mid2").removeClass("stack-string-middle");
+        $("#d5c-string-bot2").removeClass("stack-string-bottom");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $(".d5c-show1").show();
+        $(".d5c-show2").show();
+        $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
+        p5_c3_unhighlight();
+
+        p5_c3_line3();
+        currentLine5c = 4;
+    });
+
+    $("#code5c-line-4").click(function(){
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#code5c-line-4").addClass("yellow");
+
+        $("#d5c-string-top1").addClass("stack-string-top");
+        $("#d5c-string-mid1").addClass("stack-string-middle");
+        $("#d5c-string-bot1").addClass("stack-string-bottom");
+        $("#d5c-string-top2").addClass("stack-string-top");
+        $("#d5c-string-mid2").addClass("stack-string-middle");
+        $("#d5c-string-bot2").addClass("stack-string-bottom");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $("#d5c-favColor-val").html('0x0061ff0c');
+        $(".d5c-show1").show();
+        $(".d5c-show2").show();
+        $(".d5c-show3").show();
+        $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
+        p5_c3_unhighlight();
+
+        p5_c3_line4();
+        currentLine5c = 5;
+    });
+
+    $("#code5c-line-5").click(function(){
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#d5c-favColor-val").removeClass("green");
+        $("#d5c-favColor-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#code5c-line-5").addClass("green");
+
+        $("#d5c-string-top1").addClass("stack-string-top");
+        $("#d5c-string-mid1").addClass("stack-string-middle");
+        $("#d5c-string-bot1").addClass("stack-string-bottom");
+        $("#d5c-string-top2").addClass("stack-string-top");
+        $("#d5c-string-mid2").addClass("stack-string-middle");
+        $("#d5c-string-bot2").addClass("stack-string-bottom");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $("#d5c-favColor-val").html('0x0061ff0c');
+        $(".d5c-show1").show();
+        $(".d5c-show2").show();
+        $(".d5c-show3").show();
+        $(".d5c-show4").show();
+        $("#d5c-pointer-addr1").animate({color: '#532A78'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
+        p5_c3_unhighlight();
+
+        p5_c3_line5();
+        currentLine5c = 6;
+    });
+
+    $("#code5c-line-6").click(function() {
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#d5c-colour1-val").removeClass("green");
+        $("#d5c-colour1-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#code5c-line-6").addClass("green");
+
+        $("#d5c-string-top1").addClass("stack-string-top");
+        $("#d5c-string-mid1").addClass("stack-string-middle");
+        $("#d5c-string-bot1").addClass("stack-string-bottom");
+        $("#d5c-string-top2").addClass("stack-string-top");
+        $("#d5c-string-mid2").addClass("stack-string-middle");
+        $("#d5c-string-bot2").addClass("stack-string-bottom");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $("#d5c-favColor-val").html('0x0061ff0c');
+        $(".d5c-show1").show();
+        $(".d5c-show2").show();
+        $(".d5c-show3").show();
+        $(".d5c-show4").show();
+        $("#d5c-favColor-val").addClass("green");
+        $("#d5c-pointer-addr1").animate({color: '#532A78'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
+        p5_c3_unhighlight();
+
+        p5_c3_line6();
+        currentLine5c = 7;
+    });
+
+    $("#code5c-line-7").click(function() {
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#code5c-line-7").addClass("yellow");
+
+        $("#d5c-string-top1").addClass("stack-string-top");
+        $("#d5c-string-mid1").addClass("stack-string-middle");
+        $("#d5c-string-bot1").addClass("stack-string-bottom");
+        $("#d5c-string-top2").addClass("stack-string-top");
+        $("#d5c-string-mid2").addClass("stack-string-middle");
+        $("#d5c-string-bot2").addClass("stack-string-bottom");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $("#d5c-favColor-val").html('0x0061ff0c');
+        $(".d5c-show1").show();
+        $(".d5c-show2").show();
+        $(".d5c-show3").show();
+        $(".d5c-show4").show();
+        $("#d5c-colour1-val").addClass("green");
+        $("#d5c-pointer-addr1").animate({color: '#532A78'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
+        p5_c3_unhighlight();
+
+        p5_c3_line7();
+        currentLine5c = 8;
+    });
+
+    $("#code5c-line-8").click(function() {
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#d5c-favColor-val").removeClass("green");
+        $("#d5c-favColor-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#code5c-line-8").addClass("green");
+
+        $("#d5c-string-top1").addClass("stack-string-top");
+        $("#d5c-string-mid1").addClass("stack-string-middle");
+        $("#d5c-string-bot1").addClass("stack-string-bottom");
+        $("#d5c-string-top2").addClass("stack-string-top");
+        $("#d5c-string-mid2").addClass("stack-string-middle");
+        $("#d5c-string-bot2").addClass("stack-string-bottom");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $("#d5c-favColor-val").html('0x0061ff00');
+        $(".d5c-show1").show();
+        $(".d5c-show2").show();
+        $(".d5c-show3").show();
+        $(".d5c-show4").show();
+        $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#532A78'}, 0);
+        p5_c3_unhighlight();
+
+        p5_c3_line8();
+        currentLine5c = 9;
+    });
+
+    $("#code5c-line-9").click(function() {
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#d5c-colour2-val").removeClass("green");
+        $("#d5c-colour2-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#code5c-line-9").addClass("green");
+
+        $("#d5c-string-top1").addClass("stack-string-top");
+        $("#d5c-string-mid1").addClass("stack-string-middle");
+        $("#d5c-string-bot1").addClass("stack-string-bottom");
+        $("#d5c-string-top2").addClass("stack-string-top");
+        $("#d5c-string-mid2").addClass("stack-string-middle");
+        $("#d5c-string-bot2").addClass("stack-string-bottom");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $("#d5c-favColor-val").html('0x0061ff00');
+        $(".d5c-show1").show();
+        $(".d5c-show2").show();
+        $(".d5c-show3").show();
+        $(".d5c-show4").show();
+        $("#d5c-favColor-val").addClass("green");
+        $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d5c-pointer-addr2").animate({color: '#532A78'}, 0);
+        p5_c3_unhighlight();
+
+        p5_c3_line9();
+        currentLine5c = 10;
+    });
+
+
+    $("#code5c-line-10").click(function(){
+        $(".d5c-link").removeClass("yellow");
+        $(".d5c-link").removeClass("green");
+        $("#code5c-line-10").addClass("yellow");
+
+        p5_c3_showBorders();
+        $(".d5c-hide-all").hide();
+        $("#d5c-favColor-val").html('0x0061ff00');
+        $(".d5c-show1").show();
+        $(".d5c-show2").show();
+        $(".d5c-show3").show();
+        $(".d5c-show4").show();
+        $("#d5c-colour2-val").addClass("green");
+        p5_c3_unhighlight();
+
+        p5_c3_line10();
+        currentLine5b = 1;
+    });
+
+    $("#step-button-5c").click(function () {
+        if (currentLine5c == 1) {
+            //do line 1 things here
+            $(".d5c-link").removeClass("yellow");
+            $(".d5c-link").removeClass("green");
+            $("#code5c-line-1").addClass("yellow");
+
+            $("#d5c-string-top1").removeClass("stack-string-top");
+            $("#d5c-string-mid1").removeClass("stack-string-middle");
+            $("#d5c-string-bot1").removeClass("stack-string-bottom");
+            $("#d5c-string-top2").removeClass("stack-string-top");
+            $("#d5c-string-mid2").removeClass("stack-string-middle");
+            $("#d5c-string-bot2").removeClass("stack-string-bottom");
+
+            $(".d5c-hide-all").hide();
+            $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
+            $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
+            p5_c3_hideBorders();
+            p5_c3_unhighlight();
+
+            p5_c3_line1();
+            currentLine5c = 2;
+        }
+        else if (currentLine5c == 2) {
+            //do line 2 things here
+            p5_c3_line2();
+            currentLine5c = 3;
+        }
+        else if (currentLine5c == 3) {
+            //do line 3 things here
+            p5_c3_line3();
+            currentLine5c = 4;
+        }
+        else if (currentLine5c == 4) {
+            //do line 4 things here
+            p5_c3_line4();
+            currentLine5c = 5;
+        }
+        else if (currentLine5c == 5) {
+            //do line 4 things here
+            p5_c3_line5();
+            currentLine5c = 6;
+        }
+        else if (currentLine5c == 6) {
+            p5_c3_line6();
+            currentLine5c = 7;
+        }
+        else if (currentLine5c == 7) {
+            p5_c3_line7();
+            currentLine5c = 8;
+        }
+        else if (currentLine5c == 8) {
+            p5_c3_line8();
+            currentLine5c = 9;
+        }
+        else if (currentLine5c == 9) {
+            p5_c3_line9();
+            currentLine5c = 10;
+        }
+        else if (currentLine5c == 10) {
+            p5_c3_line10();
+            currentLine5c = 1;
+        }
+
+    });
+
 });
 
