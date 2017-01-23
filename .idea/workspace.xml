@@ -20,7 +20,7 @@
     <favorites_list name="Summer research work" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5346113">
+    <splitter split-orientation="horizontal" split-proportion="0.49893504">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
@@ -36,8 +36,8 @@
           <file leaf-file-name="gettingStarted.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/gettingStarted.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="717">
-                  <caret line="852" column="55" selection-start-line="852" selection-start-column="55" selection-end-line="852" selection-end-column="55" />
+                <state relative-caret-position="299">
+                  <caret line="743" column="184" selection-start-line="743" selection-start-column="184" selection-end-line="743" selection-end-column="184" />
                   <folding>
                     <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -91,8 +91,8 @@
           <file leaf-file-name="gettingStarted.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/gettingStarted.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="482">
-                  <caret line="815" column="51" selection-start-line="815" selection-start-column="51" selection-end-line="815" selection-end-column="51" />
+                <state relative-caret-position="425">
+                  <caret line="2258" column="42" selection-start-line="2258" selection-start-column="42" selection-end-line="2258" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -105,8 +105,8 @@
           <file leaf-file-name="gettingStarted.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/gettingStarted.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="341">
-                  <caret line="2729" column="27" selection-start-line="2729" selection-start-column="27" selection-end-line="2729" selection-end-column="27" />
+                <state relative-caret-position="469">
+                  <caret line="2679" column="47" selection-start-line="2679" selection-start-column="47" selection-end-line="2679" selection-end-column="47" />
                   <folding />
                 </state>
               </provider>
@@ -264,12 +264,12 @@
       <workItem from="1482271273800" duration="60685000" />
       <workItem from="1484170718272" duration="2240000" />
       <workItem from="1484515944969" duration="31423000" />
-      <workItem from="1485046080709" duration="12039000" />
+      <workItem from="1485046080709" duration="14594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111605000" />
+    <option name="totallyTimeSpent" value="114160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1924" height="1038" extended-state="0" />
@@ -676,8 +676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gettingStarted.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="852" column="55" selection-start-line="852" selection-start-column="55" selection-end-line="852" selection-end-column="55" />
+        <state relative-caret-position="299">
+          <caret line="743" column="184" selection-start-line="743" selection-start-column="184" selection-end-line="743" selection-end-column="184" />
           <folding>
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -729,8 +729,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/gettingStarted.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="815" column="51" selection-start-line="815" selection-start-column="51" selection-end-line="815" selection-end-column="51" />
+        <state relative-caret-position="469">
+          <caret line="2679" column="47" selection-start-line="2679" selection-start-column="47" selection-end-line="2679" selection-end-column="47" />
           <folding />
         </state>
       </provider>
