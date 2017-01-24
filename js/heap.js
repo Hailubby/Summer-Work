@@ -690,97 +690,106 @@ $(document).ready(function () {
     };
 
     //stepping function
-    $("#code1b-line-1").click(function(){
-        $(".d1b-link").removeClass("yellow");
-        $("#code1b-line-1").addClass("yellow");
+    $("#code2a-line-1").click(function(){
+        $(".d2a-link").removeClass("yellow");
+        $("#code2a-line-1").addClass("yellow");
 
-        $(".d1b-hide-all").hide();
-        $("#d1b-pointer-addr").animate({color: '#777'}, 0);
-        p1_c2_hideBorders();
-        p1_c2_unhighlight();
+        $(".d2a-hide-all").hide();
+        $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2a-pointer-addr2").animate({color: '#777'}, 0);
+        p2_c1_hideBorders();
+        p2_c1_unhighlight();
 
-        p1_c2_line1();
-        currentLine1b = 2;
+        p2_c1_line1();
+        currentLine2a = 2;
     });
 
-    $("#code1b-line-2").click(function(){
-        $(".d1b-link").removeClass("yellow");
-        $("#code1b-line-2").addClass("yellow");
+    $("#code2a-line-2").click(function(){
+        $(".d2a-link").removeClass("yellow");
+        $("#code2a-line-2").addClass("yellow");
 
-        p1_c2_showBorders();
-        $(".d1b-hide-all").hide();
-        $(".table .d1b-heap1").animate({backgroundColor: 'transparent'}, 0);
-        $("#d1b-pointer-addr").animate({color: '#777'}, 0);
-        $(".d1b-show1").show();
-        p1_c2_unhighlight();
+        p2_c1_showBorders();
+        $(".d2a-hide-all").hide();
+        $(".table .d2a-heap1").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .d2a-heap2").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2a-pointer-addr2").animate({color: '#777'}, 0);
+        $(".d2a-show1").show();
+        p2_c1_unhighlight();
 
-        p1_c2_line2();
-        currentLine1b = 3;
+        p2_c1_line2();
+        currentLine2a = 3;
     });
 
-    $("#code1b-line-3").click(function(){
-        $(".d1b-link").removeClass("yellow");
-        $("#code1b-line-3").addClass("yellow");
+    $("#code2a-line-3").click(function(){
+        $(".d2a-link").removeClass("yellow");
+        $("#code2a-line-3").addClass("yellow");
 
-        p1_c2_showBorders();
-        $(".table .d1b-heap1").animate({backgroundColor: '#F5F5F5'}, 0);
-        $("#d1b-pointer-addr").animate({color: '#532A78'}, 0);
-        $("#d1b-heap-age-val").html('23');
-        $(".d1b-hide-all").hide();
-        $(".d1b-show1").show();
-        $(".d1b-show2").show();
-        p1_c2_unhighlight();
+        p2_c1_showBorders();
+        $(".table .d2a-heap1").animate({backgroundColor: '#F5F5F5'}, 0);
+        $(".table .d2a-heap2").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2a-pointer-addr1").animate({color: '#532A78'}, 0);
+        $("#d2a-pointer-addr2").animate({color: '#777'}, 0);
+        $(".d2a-hide-all").hide();
+        $("#d2a-faveNum-val").html('0x001d54f0');
+        $(".d2a-show1").show();
+        $(".d2a-show2").show();
+        p2_c1_unhighlight();
 
-        p1_c2_line3();
-        currentLine1b = 4;
+        p2_c1_line3();
+        currentLine2a = 4;
     });
 
-    $("#code1b-line-4").click(function(){
-        $(".d1b-link").removeClass("yellow");
-        $("#code1b-line-4").addClass("yellow");
+    $("#code2a-line-4").click(function(){
+        $(".d2a-link").removeClass("yellow");
+        $("#code2a-line-4").addClass("yellow");
 
-        p1_c2_showBorders();
-        $(".table .d1b-heap1").animate({backgroundColor: '#F5F5F5'}, 0);
-        $("#d1b-pointer-addr").animate({color: '#532A78'}, 0);
-        $("#d1b-heap-age-val").html('24');
-        $(".d1b-hide-all").hide();
-        $(".d1b-show1").show();
-        $(".d1b-show2").show();
-        p1_c2_unhighlight();
+        p2_c1_showBorders();
+        $(".table .d2a-heap1").animate({backgroundColor: '#F5F5F5'}, 0);
+        $(".table .d2a-heap2").animate({backgroundColor: '#F5F5F5'}, 0);
+        $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2a-pointer-addr2").animate({color: '#532A78'}, 0);
+        $(".d2a-hide-all").hide();
+        $("#d2a-faveNum-val").html('0x001d54f4');
+        $(".d2a-show1").show();
+        $(".d2a-show2").show();
+        $(".d2a-show3").show();
+        p2_c1_unhighlight();
 
-        p1_c2_line4();
-        currentLine1b = 1;
+        p2_c1_line4();
+        currentLine2a = 1;
     });
 
 
-    $("#step-button-1b").click(function () {
-        if (currentLine1b == 1) {
+    $("#step-button-2a").click(function () {
+        if (currentLine2a == 1) {
             //do line 1 things here
-            $(".d1b-link").removeClass("yellow");
-            $("#code1b-line-1").addClass("yellow");
+            $(".d2a-link").removeClass("yellow");
+            $("#code2a-line-1").addClass("yellow");
 
-            $(".d1b-hide-all").hide();
-            $("#d1b-pointer-addr").animate({color: '#777'}, 0);
-            p1_c2_hideBorders();
-            p1_c2_unhighlight();
+            $(".d2a-hide-all").hide();
+            $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
+            $("#d2a-pointer-addr2").animate({color: '#777'}, 0);
+            p2_c1_hideBorders();
+            p2_c1_unhighlight();
 
-            p1_c2_line1();
-            currentLine1b = 2;
+            p2_c1_line1();
+            currentLine2a = 2;
         }
-        else if (currentLine1b == 2) {
+        else if (currentLine2a == 2) {
             //do line 2 things here
-            p1_c2_line2();
-            currentLine1b = 3;
+            p2_c1_line2();
+            currentLine2a = 3;
         }
-        else if (currentLine1b == 3) {
+        else if (currentLine2a == 3) {
             //do line 3 things here
-            p1_c2_line3();
-            currentLine1b = 4;
+            p2_c1_line3();
+            currentLine2a = 4;
         }
-        else if (currentLine1b == 4) {
+        else if (currentLine2a == 4) {
             //do line 4 things here
-            p1_c2_line4();
-            currentLine1b = 1;
+            p2_c1_line4();
+            currentLine2a = 1;
         }
     });
 
