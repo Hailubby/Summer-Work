@@ -585,11 +585,11 @@
 <button class="link d4b-link" id="code4b-line-1">int main() {</button>
     <button class="link d4b-link" id="code4b-line-2">string name = "Bob";</button>
     <button class="link d4b-link" id="code4b-line-3">string &bobsName = name;</button>
-    <button class="link d4b-link" id="code4b-line-4">cout << name << endl;</button>
-    <button class="link d4b-link" id="code4b-line-5">cout << bobsName << endl;</button>
+    <button class="link d4b-link" id="code4b-line-4">cout << "name: " << name << endl;</button>
+    <button class="link d4b-link" id="code4b-line-5">cout << "bobsName: "  << bobsName << endl;</button>
     <button class="link d4b-link" id="code4b-line-6">bobsName = "Bob Jones";</button>
-    <button class="link d4b-link" id="code4b-line-7">cout << name << endl;</button>
-    <button class="link d4b-link" id="code4b-line-8">cout << bobsName << endl;</button>
+    <button class="link d4b-link" id="code4b-line-7">cout << "name: "  << name << endl;</button>
+    <button class="link d4b-link" id="code4b-line-8">cout << "bobsName: "  << bobsName << endl;</button>
     <button class="link d4b-link" id="code4b-line-9">return 0;</button>
 }
                     </code></pre>
@@ -640,6 +640,14 @@
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br />
+                        <br />
+                        <p class="hide-all d4b-hide-all d4b-show4" id="d4b-print-l4">name: "Bob"</p>
+                        <p class="hide-all d4b-hide-all d4b-show5" id="d4b-print-l5">bobsName: "Bob"</p>
+                        <p class="hide-all d4b-hide-all d4b-show7" id="d4b-print-l7">name: "Bob Jones"</p>
+                        <p class="hide-all d4b-hide-all d4b-show8" id="d4b-print-l8">bobsName: "Bob Jones"</p>
                     </div>
                 </div>
             </div>
@@ -768,6 +776,7 @@
                         </div>
                     </div>
                     <div class="col-md-5">
+                        <br />
                         <p class="hide-all d5b-hide-all d5b-show4" id="d5b-print-l4">addr in prime var: 0x0061ff14</p>
                         <p class="hide-all d5b-hide-all d5b-show5" id="d5b-print-l5">*prime val: 3</p>
                         <p class="hide-all d5b-hide-all d5b-show7" id="d5b-print-l7">odd val: 5</p>
@@ -860,6 +869,9 @@
                         </div>
                     </div>
                     <div class="col-md-5">
+                        <br />
+                        <br />
+                        <br />
                         <p class="hide-all d5c-hide-all d5c-show5" id="d5c-print-l5">addr in favCol var: 0x0061ff0c</p>
                         <p class="hide-all d5c-hide-all d5c-show6" id="d5c-print-l6">*favCol val: "red"</p>
                         <p class="hide-all d5c-hide-all d5c-show8" id="d5c-print-l8">addr in favCol var: 0x0061ff00</p>
