@@ -898,4 +898,114 @@ $(document).ready(function () {
         $(".table .d2b-heap1").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d2b-heap2").animate({backgroundColor: 'transparent'}, 0);
     };
+
+    //code 3
+    var currentLine2c = 1;
+    $("#code2c-line-1").addClass("yellow");
+
+    $("#start-button-2c").click(function () {
+        currentLine2c = 1;
+        $(".d2c-hide-all").hide();
+        p2_c3_hideBorders();
+        $("#code2c-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .d2c-heap1").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2c-pointer-addr").animate({color: '#777'}, 0);
+        p2_c3_line1();
+        $("#d2c-rtn-addr-val").promise().done(function () {
+            p2_c3_line2();
+            $("#d2c-heap-faveNum-val").promise().done(function () {
+                p2_c3_line3();
+                $(".table .d2c-heap1").promise().done(function () {
+                    p2_c3_line4();
+                    $("#d2c-faveNum-val").promise().done(function () {
+                        p2_c3_line5();
+                    });
+                });
+            });
+        });
+    });
+
+    //p2 c3 line 1 function
+    var p2_c3_line1 = function () {
+        $("#code2c-line-1").animate({backgroundColor: '#ffff00'}, 600);
+        $(".d2c-link").removeClass("yellow");
+        $(".table .stack-heap-2c").animate({backgroundColor: '#F5F5F5'}, 500);
+        $(".table .d2c-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
+        $(".table .d2c-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
+        $(".table .d2c-stack-left").delay(50).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},30);
+        $(".table .d2c-stack-right").delay(50).animate({borderRightWidth: '2px', borderRightColor: 'black'},30);
+        $("#d2c-rtnval").delay(1200).show(400);
+        $("#d2c-rtn-addr").delay(1200).show(400);
+        $("#d2c-rtn-addr-val").delay(1600).show(400);
+    };
+
+    //p2 c3 line 2 function
+    var p2_c3_line2 = function () {
+        $("#code2c-line-1").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code2c-line-2").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d2c-link").removeClass("yellow");
+        $("#d2c-faveNum").delay(1000).show(400);
+        $(".table .d2c-heap1").delay(1200).animate({backgroundColor: '#F5F5F5'},500);
+        $("#d2c-pointer-addr").delay(1600).animate({color: '#532A78', fontWeight: 'bold'}, 150);
+        $("#d2c-faveNum-val").css("color", "#532A78");
+        $("#d2c-faveNum-val").delay(1600).show(400);
+        $("#d2c-heap-faveNum-val").delay(2000).show(400);
+    };
+
+    //p2 c3 line 3 function
+    var p2_c3_line3 = function () {
+        $("#code2c-line-2").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code2c-line-3").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d2c-link").removeClass("yellow");
+        $("#d2c-pointer-addr").delay(1000).animate({color: '#777', fontWeight: 'bold'}, 150);
+        $("#d2c-faveNum-val").delay(1000).hide(400);
+        $("#d2c-heap-faveNum-val").delay(1000).hide(400);
+        $(".table .d2c-heap1").delay(1000).animate({backgroundColor: 'transparent'},500);
+    };
+
+    //p2 c3 line 4 function
+    var p2_c3_line4 = function () {
+        $("#code2c-line-3").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code2c-line-4").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d2c-link").removeClass("yellow");
+        $("#d2c-faveNum-val").html('NULL');
+        $("#d2c-faveNum-val").css("color", "#777");
+        $("#d2c-faveNum-val").delay(1000).show(400);
+    };
+
+    //p2 c3 line 5 function
+    var p2_c3_line5 = function () {
+        $("#code2c-line-4").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code2c-line-5").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d2c-link").removeClass("yellow");
+        $("#d2c-rtnval-val").delay(1000).show(400);
+    };
+
+    //unhighlight all lines
+    var p2_c3_unhighlight = function () {
+        $("#code2c-line-1").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2c-line-2").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2c-line-3").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2c-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2c-line-5").animate({backgroundColor: 'transparent'}, 0);
+    };
+
+    //show stack border
+    var p2_c3_showBorders = function () {
+        $(".table .d2c-stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
+        $(".table .d2c-stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
+        $(".table .d2c-stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
+        $(".table .d2c-stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
+        $(".table .stack-heap-2c").animate({backgroundColor: '#F5F5F5'}, 0);
+    };
+
+    //hide stack borders
+    var p2_c3_hideBorders = function () {
+        $(".table .d2c-stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
+        $(".table .d2c-stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
+        $(".table .d2c-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
+        $(".table .d2c-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
+        $(".table .stack-heap-2c").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .d2c-heap1").animate({backgroundColor: 'transparent'}, 0);
+    };
 });
