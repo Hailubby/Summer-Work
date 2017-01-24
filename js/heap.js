@@ -866,7 +866,7 @@ $(document).ready(function () {
         $(".d2b-link").removeClass("yellow");
         $(".table .d2b-heap2").delay(1200).animate({backgroundColor: '#F5F5F5'},500);
         $("#d2b-pointer-addr2").delay(1600).animate({color: '#532A78', fontWeight: 'bold'}, 150);
-        $("#d2b-faveNum-val").html('0x001d54f4');
+        $("#d2b-faveNum-val").html('0x001d54fc');
         $("#d2b-faveNum-val").delay(1800).show(400);
         $("#d2b-heap-faveNum-val2").delay(1800).show(400);
     };
@@ -907,6 +907,134 @@ $(document).ready(function () {
         $(".table .d2b-heap1").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d2b-heap2").animate({backgroundColor: 'transparent'}, 0);
     };
+
+    //stepping function
+    $("#code2b-line-1").click(function(){
+        $(".d2b-link").removeClass("yellow");
+        $("#code2b-line-1").addClass("yellow");
+
+        $(".d2b-hide-all").hide();
+        $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2b-pointer-addr2").animate({color: '#777'}, 0);
+        p2_c2_hideBorders();
+        p2_c2_unhighlight();
+
+        p2_c2_line1();
+        currentLine2b = 2;
+    });
+
+    $("#code2b-line-2").click(function(){
+        $(".d2b-link").removeClass("yellow");
+        $("#code2b-line-2").addClass("yellow");
+
+        p2_c2_showBorders();
+        $(".d2b-hide-all").hide();
+        $(".table .d2b-heap1").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .d2b-heap2").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2b-pointer-addr2").animate({color: '#777'}, 0);
+        $(".d2b-show1").show();
+        p2_c2_unhighlight();
+
+        p2_c2_line2();
+        currentLine2b = 3;
+    });
+
+    $("#code2b-line-3").click(function(){
+        $(".d2b-link").removeClass("yellow");
+        $("#code2b-line-3").addClass("yellow");
+
+        p2_c2_showBorders();
+        $(".table .d2b-heap1").animate({backgroundColor: '#F5F5F5'}, 0);
+        $(".table .d2b-heap2").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2b-pointer-addr1").animate({color: '#532A78'}, 0);
+        $("#d2b-pointer-addr2").animate({color: '#777'}, 0);
+        $(".d2b-hide-all").hide();
+        $(".d2b-show1").show();
+        $(".d2b-show2").show();
+        $(".d2b-show2-delete-temp").show();
+        $(".d2b-show2-delete").show();
+        p2_c2_unhighlight();
+
+        p2_c2_line3();
+        currentLine2b = 4;
+    });
+
+    $("#code2b-line-4").click(function(){
+        $(".d2b-link").removeClass("yellow");
+        $("#code2b-line-4").addClass("yellow");
+
+        p2_c2_showBorders();
+        $(".table .d2b-heap1").animate({backgroundColor: '#transparent'}, 0);
+        $(".table .d2b-heap2").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2b-pointer-addr2").animate({color: '#777'}, 0);
+        $(".d2b-hide-all").hide();
+        $(".d2b-show1").show();
+        $(".d2b-show2").show();
+        p2_c2_unhighlight();
+
+        p2_c2_line4();
+        currentLine2b = 5;
+    });
+
+    $("#code2b-line-5").click(function(){
+        $(".d2b-link").removeClass("yellow");
+        $("#code2b-line-5").addClass("yellow");
+
+        p2_c2_showBorders();
+        $(".table .d2b-heap1").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .d2b-heap2").animate({backgroundColor: '#F5F5F5'}, 0);
+        $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2b-pointer-addr2").animate({color: '#532A78'}, 0);
+        $(".d2b-hide-all").hide();
+        $(".d2b-show1").show();
+        $(".d2b-show2").show();
+        $(".d2b-show2-delete-temp").show();
+        $(".d2b-show4").show();
+        p2_c2_unhighlight();
+
+        p2_c2_line5();
+        currentLine2b = 1;
+    });
+
+
+    $("#step-button-2b").click(function () {
+        if (currentLine2b == 1) {
+            //do line 1 things here
+            $(".d2b-link").removeClass("yellow");
+            $("#code2b-line-1").addClass("yellow");
+
+            $(".d2b-hide-all").hide();
+            $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
+            $("#d2b-pointer-addr2").animate({color: '#777'}, 0);
+            p2_c2_hideBorders();
+            p2_c2_unhighlight();
+
+            p2_c2_line1();
+            currentLine2b = 2;
+        }
+        else if (currentLine2b == 2) {
+            //do line 2 things here
+            p2_c2_line2();
+            currentLine2b = 3;
+        }
+        else if (currentLine2b == 3) {
+            //do line 3 things here
+            p2_c2_line3();
+            currentLine2b = 4;
+        }
+        else if (currentLine2b == 4) {
+            //do line 4 things here
+            p2_c2_line4();
+            currentLine2b = 5;
+        }
+        else if (currentLine2b == 5) {
+            //do line 4 things here
+            p2_c2_line5();
+            currentLine2b = 1;
+        }
+    });
 
     //code 3
     var currentLine2c = 1;
