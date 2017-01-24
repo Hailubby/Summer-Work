@@ -2546,17 +2546,17 @@ $(document).ready(function () {
                 p5_c2_line3();
                 $("#d5b-prime-val").promise().done(function () {
                     p5_c2_line4();
-                    $("#d5b-prime-val").promise().done(function () {
+                    $("#d5b-print-l4").promise().done(function () {
                         p5_c2_line5();
-                        $("#d5b-odd-val").promise().done(function () {
+                        $("#d5b-print-l5").promise().done(function () {
                             p5_c2_line6();
                             $("#d5b-odd-val").promise().done(function () {
                                 p5_c2_line7();
-                                $("#d5b-odd-val").promise().done(function () {
+                                $("#d5b-print-l7").promise().done(function () {
                                     p5_c2_line8();
-                                    $("#d5b-prime-val").promise().done(function () {
+                                    $("#d5b-print-l8").promise().done(function () {
                                         p5_c2_line9();
-                                        $("#d5b-odd-val").promise().done(function () {
+                                        $("#d5b-print-l9").promise().done(function () {
                                             p5_c2_line10();
                                         });
                                     });
@@ -2609,6 +2609,7 @@ $(document).ready(function () {
         $("#code5b-line-4").animate({backgroundColor: '#5CB85C'}, 1000);
         $(".d5b-link").removeClass("yellow");
         $("#d5b-prime-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5b-print-l4").delay(1600).show(400);
     };
 
     //p5 c2 line 5 function
@@ -2621,6 +2622,7 @@ $(document).ready(function () {
         $("#d5b-prime-val").removeClass("green");
 
         $("#d5b-odd-val").delay(900).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5b-print-l5").delay(1400).show(400);
     };
 
     //p5 c2 line 6 function
@@ -2644,6 +2646,7 @@ $(document).ready(function () {
         $("#code5b-line-7").animate({backgroundColor: '#5CB85C'}, 1000);
         $(".d5b-link").removeClass("yellow");
         $("#d5b-odd-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5b-print-l7").delay(1500).show(400);
     };
 
     //p5 c2 line 8 function
@@ -2656,6 +2659,7 @@ $(document).ready(function () {
         $("#d5b-odd-val").removeClass("green");
 
         $("#d5b-prime-val").delay(900).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5b-print-l8").delay(1400).show(400);
     };
 
     //p5 c2 line 9 function
@@ -2668,6 +2672,7 @@ $(document).ready(function () {
         $("#d5b-prime-val").removeClass("green");
 
         $("#d5b-odd-val").delay(900).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5b-print-l9").delay(1400).show(400);
     };
 
     //p5 c2 line 10 function
@@ -2794,6 +2799,7 @@ $(document).ready(function () {
         $(".d5b-show1").show();
         $(".d5b-show2").show();
         $(".d5b-show3").show();
+        $(".d5b-show4").show();
         $("#d5b-prime-val").addClass("green");
         $("#d5b-pointer-addr").animate({color: '#532A78'}, 0);
         p5_c2_unhighlight();
@@ -2813,6 +2819,8 @@ $(document).ready(function () {
         $(".d5b-show1").show();
         $(".d5b-show2").show();
         $(".d5b-show3").show();
+        $(".d5b-show4").show();
+        $(".d5b-show5").show();
         $("#d5b-odd-val").addClass("green");
         $("#d5b-pointer-addr").animate({color: '#532A78'}, 0);
         p5_c2_unhighlight();
@@ -2834,6 +2842,8 @@ $(document).ready(function () {
         $(".d5b-show1").show();
         $(".d5b-show2").show();
         $(".d5b-show3").show();
+        $(".d5b-show4").show();
+        $(".d5b-show5").show();
         $("#d5b-pointer-addr").animate({color: '#532A78'}, 0);
         p5_c2_unhighlight();
 
@@ -2854,6 +2864,9 @@ $(document).ready(function () {
         $(".d5b-show1").show();
         $(".d5b-show2").show();
         $(".d5b-show3").show();
+        $(".d5b-show4").show();
+        $(".d5b-show5").show();
+        $(".d5b-show7").show();
         $("#d5b-odd-val").addClass("green");
         $("#d5b-pointer-addr").animate({color: '#532A78'}, 0);
         p5_c2_unhighlight();
@@ -2875,6 +2888,10 @@ $(document).ready(function () {
         $(".d5b-show1").show();
         $(".d5b-show2").show();
         $(".d5b-show3").show();
+        $(".d5b-show4").show();
+        $(".d5b-show5").show();
+        $(".d5b-show7").show();
+        $(".d5b-show8").show();
         $("#d5b-prime-val").addClass("green");
         $("#d5b-pointer-addr").animate({color: '#532A78'}, 0);
         p5_c2_unhighlight();
@@ -2894,6 +2911,11 @@ $(document).ready(function () {
         $(".d5b-show1").show();
         $(".d5b-show2").show();
         $(".d5b-show3").show();
+        $(".d5b-show4").show();
+        $(".d5b-show5").show();
+        $(".d5b-show7").show();
+        $(".d5b-show8").show();
+        $(".d5b-show9").show();
         $("#d5b-odd-val").addClass("green");
         p5_c2_unhighlight();
 
@@ -2987,15 +3009,15 @@ $(document).ready(function () {
                     p5_c3_line4();
                     $("#d5c-favColor-val").promise().done(function () {
                         p5_c3_line5();
-                        $("#d5c-favColor-val").promise().done(function () {
+                        $("#d5c-print-l5").promise().done(function () {
                             p5_c3_line6();
-                            $("#d5c-colour1-val").promise().done(function () {
+                            $("#d5c-print-l6").promise().done(function () {
                                 p5_c3_line7();
                                 $("#d5c-favColor-val").promise().done(function () {
                                     p5_c3_line8();
-                                    $("#d5c-favColor-val").promise().done(function () {
+                                    $("#d5c-print-l8").promise().done(function () {
                                         p5_c3_line9();
-                                        $("#d5c-colour2-val").promise().done(function () {
+                                        $("#d5c-print-l9").promise().done(function () {
                                             p5_c3_line10();
                                         });
                                     });
@@ -3066,6 +3088,7 @@ $(document).ready(function () {
         $("#code5c-line-5").animate({backgroundColor: '#5CB85C'}, 1000);
         $(".d5c-link").removeClass("yellow");
         $("#d5c-favColor-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5c-print-l5").delay(1500).show(400);
     };
 
     //p5 c3 line 6 function
@@ -3078,6 +3101,7 @@ $(document).ready(function () {
         $("#d5c-favColor-val").removeClass("green");
 
         $("#d5c-colour1-val").delay(900).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5c-print-l6").delay(1400).show(400);
     };
 
     //p5 c3 line 7 function
@@ -3103,6 +3127,7 @@ $(document).ready(function () {
         $("#code5c-line-8").animate({backgroundColor: '#5CB85C'}, 1000);
         $(".d5c-link").removeClass("yellow");
         $("#d5c-favColor-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5c-print-l8").delay(1500).show(400);
     }
 
     //p5 c3 line 9 function
@@ -3115,6 +3140,7 @@ $(document).ready(function () {
         $("#d5c-favColor-val").removeClass("green");
 
         $("#d5c-colour2-val").delay(900).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d5c-print-l9").delay(1400).show(400);
     };
 
     //p5 c3 line 10 function
@@ -3307,6 +3333,7 @@ $(document).ready(function () {
         $(".d5c-show2").show();
         $(".d5c-show3").show();
         $(".d5c-show4").show();
+        $(".d5c-show5").show();
         $("#d5c-favColor-val").addClass("green");
         $("#d5c-pointer-addr1").animate({color: '#532A78'}, 0);
         $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
@@ -3335,6 +3362,8 @@ $(document).ready(function () {
         $(".d5c-show2").show();
         $(".d5c-show3").show();
         $(".d5c-show4").show();
+        $(".d5c-show5").show();
+        $(".d5c-show6").show();
         $("#d5c-colour1-val").addClass("green");
         $("#d5c-pointer-addr1").animate({color: '#532A78'}, 0);
         $("#d5c-pointer-addr2").animate({color: '#777'}, 0);
@@ -3365,6 +3394,8 @@ $(document).ready(function () {
         $(".d5c-show2").show();
         $(".d5c-show3").show();
         $(".d5c-show4").show();
+        $(".d5c-show5").show();
+        $(".d5c-show6").show();
         $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
         $("#d5c-pointer-addr2").animate({color: '#532A78'}, 0);
         p5_c3_unhighlight();
@@ -3394,6 +3425,9 @@ $(document).ready(function () {
         $(".d5c-show2").show();
         $(".d5c-show3").show();
         $(".d5c-show4").show();
+        $(".d5c-show5").show();
+        $(".d5c-show6").show();
+        $(".d5c-show8").show();
         $("#d5c-favColor-val").addClass("green");
         $("#d5c-pointer-addr1").animate({color: '#777'}, 0);
         $("#d5c-pointer-addr2").animate({color: '#532A78'}, 0);
@@ -3416,6 +3450,10 @@ $(document).ready(function () {
         $(".d5c-show2").show();
         $(".d5c-show3").show();
         $(".d5c-show4").show();
+        $(".d5c-show5").show();
+        $(".d5c-show6").show();
+        $(".d5c-show8").show();
+        $(".d5c-show9").show();
         $("#d5c-colour2-val").addClass("green");
         p5_c3_unhighlight();
 

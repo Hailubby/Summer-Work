@@ -27,6 +27,7 @@ $(document).ready(function () {
             $("#"+currAnimId+"-btn").addClass("active");
 
 
+            $("html, body").animate({scrollTop: 0}, 100);
             $(".anim-panel-container > div:visible").next().show().prev().hide();
             if ($(".anim-panel-container > div:visible").next().length == 0) {
                 $("#next").addClass("disabled");
@@ -48,6 +49,7 @@ $(document).ready(function () {
             currAnimId = $(".anim-panel-container > div:visible").prev().attr('id');
             $("#"+currAnimId+"-btn").addClass("active");
 
+            $("html, body").animate({scrollTop: 0}, 100);
             $(".anim-panel-container > div:visible").prev().show().next().hide();
             if ($(".anim-panel-container > div:visible").prev().length == 0) {
                 $("#prev").addClass("disabled");
@@ -64,6 +66,7 @@ $(document).ready(function () {
             $("#"+currAnimId+"-btn").removeClass("active");
             $("#"+currAnimId).hide();
             currAnimId = $(this).attr('id').slice(0,-4);
+            $("html, body").animate({scrollTop: 0}, 100);
             $("#"+currAnimId).show();
             $("#"+currAnimId+"-btn").addClass("active");
 
@@ -77,6 +80,7 @@ $(document).ready(function () {
             $("#"+currAnimId+"-btn").removeClass("active");
             $("#"+currAnimId).hide();
             currAnimId = $(this).attr('id').slice(0,-4);
+            $("html, body").animate({scrollTop: 0}, 100);
             $("#"+currAnimId).show();
             $("#"+currAnimId+"-btn").addClass("active");
 
@@ -90,6 +94,7 @@ $(document).ready(function () {
             $("#"+currAnimId+"-btn").removeClass("active");
             $("#"+currAnimId).hide();
             currAnimId = $(this).attr('id').slice(0,-4);
+            $("html, body").animate({scrollTop: 0}, 100);
             $("#"+currAnimId).show();
             $("#"+currAnimId+"-btn").addClass("active");
 
@@ -103,6 +108,7 @@ $(document).ready(function () {
             $("#"+currAnimId+"-btn").removeClass("active");
             $("#"+currAnimId).hide();
             currAnimId = $(this).attr('id').slice(0,-4);
+            $("html, body").animate({scrollTop: 0}, 100);
             $("#"+currAnimId).show();
             $("#"+currAnimId+"-btn").addClass("active");
 
@@ -116,6 +122,7 @@ $(document).ready(function () {
             $("#"+currAnimId+"-btn").removeClass("active");
             $("#"+currAnimId).hide();
             currAnimId = $(this).attr('id').slice(0,-4);
+            $("html, body").animate({scrollTop: 0}, 100);
             $("#"+currAnimId).show();
             $("#"+currAnimId+"-btn").addClass("active");
 
