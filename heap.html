@@ -39,7 +39,7 @@
     <p>A brief summary may go here... eg info about stack and heap</p>
     <div class="panel panel-default anim-panel-container">
         <div class="panel-body" id="anim-1" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">Code 1... <a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">Allocating space on heap<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
 
             <!--panel 1 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -306,7 +306,7 @@
         </div>
 
         <div class="panel-body" id="anim-2" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">Code 1... <a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">Delete <a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
 
             <!--panel 2 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -550,6 +550,100 @@
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d2c-pointer-addr" style="color: #777"><i>0x001d54f8</i></td>
                                     <td class="stack-heap d2c-heap1"><span class="hide-all d2b-hide-all d2c-show2-delete" id="d2c-heap-faveNum-val">100</span></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54fc</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5500</i></td>
+                                    <td class="heap-bottom"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body" id="anim-3" style="min-height: 400px;">
+            <h2 style="margin: 0 0 25px 10px;">Dynamic Arrays <a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+
+            <!--panel 2 code 1-->
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link d2a-link" id="code3a-line-1">int main() {</button>
+    <button class="link d2a-link" id="code3a-line-2">int length = rand%10 + 1; //range 1-10</button>
+    <button class="link d2a-link" id="code3a-line-3">int *array = new int[length];</button>
+    <button class="link d2a-link" id="code3a-line-4">for(int i=0; i&lt;length; i++) {</button>
+    <button class="link d2a-link" id="code3a-line-5">   array[i] = i;</button>
+    <button class="link d2a-link" id="code3a-line-6">}</button>
+    <button class="link d2a-link" id="code3a-line-7">delete[] array;</button>
+    <button class="link d2a-link" id="code3a-line-8">return 0;</button>
+}
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-2a">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-2a">Start</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-faveNum-val">0x001d54f0</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-faveNum">int *age;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left"><span class="hide-all d2a-hide-all d2a-show1" id="d2a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show1" id="d2a-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-bottom"><span class="hide-all d2a-hide-all" id="d2a-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show1" id="d2a-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-top: -15px;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 not-stack">Heap</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d2a-pointer-addr1" style="color: #777"><i>0x001d54f0</i></td>
+                                    <td class="stack-heap d2a-heap1"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-heap-faveNum-val1">93</span></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d2a-pointer-addr2" style="color: #777"><i>0x001d54f4</i></td>
+                                    <td class="stack-heap d2a-heap2"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-heap-faveNum-val2">51</span></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f8</i></td>
+                                    <td class="stack-heap"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
