@@ -339,7 +339,7 @@
                 <div class="col-md-4">
                     <!--pre tag indentations-->
                         <pre><code>
-<button class="link d3a-link" id="code3b-line-1">int main() {</button>
+<button class="link d3b-link" id="code3b-line-1">int main() {</button>
     <button class="link d3b-link" id="code3b-line-2">int mumHomePh = 1111111;</button>
     <button class="link d3b-link" id="code3b-line-3">int *const myHomePh = &amp;mumHomePh;</button>
     <button class="link d3b-link" id="code3b-line-4">int flatHomePh = 5555555;</button>
@@ -399,86 +399,28 @@
         </div>
 
         <div class="panel-body" id="anim-4" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">"const" pointers<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">References and "const" together<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
 
             <!--panel 4 code 1-->
             <div class="row" style="margin-bottom: 25px;">
                 <div class="col-md-4">
                     <!--pre tag indentations-->
-                            <pre><code>
-    <button class="link d3a-link" id="code3a-line-1">int main() {</button>
-        <button class="link d3a-link" id="code3a-line-2">int mumAge = 49;</button>
-        <button class="link d3a-link" id="code3a-line-3">int *const dadAge = &amp;mumAge;</button>
-        <button class="link d3a-link" id="code3a-line-4">*dadAge = 50;  //OK</button>
-        <button class="link d3a-link" id="code3a-line-5">cout << "*mumAge:" << *mumAge << endl;</button>
-        <button class="link d3a-link" id="code3a-line-6">cout << "*dadAge:" << *dadAge << endl;</button>
-        <button class="link d3a-link" id="code3a-line-7">mumAge = 51;   //OK</button>
-        <button class="link d3a-link" id="code3a-line-8">cout << "*mumAge:" << *mumAge << endl;</button>
-        <button class="link d3a-link" id="code3a-line-9">cout << "*dadAge:" << *dadAge << endl;</button>
-        <button class="link d3a-link" id="code3a-line-10">dadAge = &amp;myAge;   //compiler error</button>
-        <button class="link d3a-link" id="code3a-line-11">return 0;</button>
-    <button class="link d3a-link" id="code3a-line-12">}</button>
-                            </code></pre>
+                    <pre><code>
+<button class="link d4a-link" id="code4a-line-1">int main() {</button>
+    <button class="link d4a-link" id="code4a-line-2">string primeCol = "red";</button>
+    <button class="link d4a-link" id="code4a-line-3">const string &favCol = colour;</button>
+    <button class="link d4a-link" id="code4a-line-4">cout << "primeCol: " << primeCol << endl;</button>
+    <button class="link d4a-link" id="code4a-line-5">cout << "favCol: " << favCol << endl;</button>
+    <button class="link d4a-link" id="code4a-line-6">colour = "blue";</button>
+    <button class="link d4a-link" id="code4a-line-7">cout << "primeCol: " << primeCol << endl;</button>
+    <button class="link d4a-link" id="code4a-line-8">cout << "favCol: " << favCol << endl;</button>
+    <button class="link d4a-link" id="code4a-line-9">favCol = "green";  //compiler error</button>
+    <button class="link d4a-link" id="code4a-line-10">return 0;</button>
+ <button class="link d4a-link" id="code4a-line-11">}</button>
+                    </code></pre>
 
-                    <button type="button" class="btn btn-default" id="step-button-3a">Step</button>
-                    <button type="button" class="btn btn-default" id="start-button-3a">Start</button>
-                </div>
-                <div class="col-md-8">
-                    <div class="col-md-8 col-md-offset-1">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-top"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack-heap d3a-stack-right d3a-stack-left d3a-stack-top" style="color: #532A78;"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge-val">0x0061ff14</span></td>
-                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge">int *const dadAge;</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" id="d3a-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap d3a-stack-right d3a-stack-left"><span class="hide-all d3a-hide-all d3a-show2" id="d3a-mumAge-val">49</span></td>
-                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show2" id="d3a-mumAge">int mumAge;</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack-heap d3a-stack-right d3a-stack-left"><span class="hide-all d3a-hide-all d3a-show1" id="d3a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
-                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show1" id="d3a-rtn-addr">rtn addr</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap d3a-stack-right d3a-stack-left d3a-stack-bottom"><span class="hide-all d3a-hide-all" id="d3a-rtnval-val">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show1" id="d3a-rtnval">rtn val</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <th class="col-md-1 not-stack"></th>
-                                    <th class="col-md-4 stack">Stack</th>
-                                    <th class="col-md-7 not-stack"></th>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--panel 3 code 2-->
-            <div class="row">
-                <div class="col-md-4">
-                    <!--pre tag indentations-->
-                            <pre><code>
-    <button class="link d3a-link" id="code3b-line-1">int main() {</button>
-        <button class="link d3b-link" id="code3b-line-2">int mumHomePh = 1111111;</button>
-        <button class="link d3b-link" id="code3b-line-3">int *const myHomePh = &amp;mumHomePh;</button>
-        <button class="link d3b-link" id="code3b-line-4">int flatHomePh = 5555555;</button>
-        <button class="link d3b-link" id="code3b-line-5">*myHomePh = 7777777;   //OK</button>
-        <button class="link d3b-link" id="code3b-line-6">myHomePh = &amp;flatHomePh;  //compiler error</button>
-        <button class="link d3b-link" id="code3b-line-7">return 0;</button>
-    <button class="link d3b-link" id="code3b-line-8">}</button>
-                            </code></pre>
-
-                    <button type="button" class="btn btn-default" id="step-button-3b">Step</button>
-                    <button type="button" class="btn btn-default" id="start-button-3b">Start</button>
+                    <button type="button" class="btn btn-default" id="step-button-4a">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-4a">Start</button>
                 </div>
                 <div class="col-md-8">
                     <div class="col-md-8 col-md-offset-1">
@@ -491,28 +433,148 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-heap d3b-stack-right d3b-stack-left d3b-stack-top"><span class="hide-all d3b-hide-all d3b-show4" id="d3b-flatPh-val">5555555</span></td>
-                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show4" id="d3b-flatPh">int flatHomePh;</span></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left d4a-stack-top" id="d4a-string-top"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack-heap d3b-stack-right d3b-stack-left" style="color: #532A78;"><span class="hide-all d3b-hide-all d3b-show3" id="d3b-myPh-val">0x0061ff14</span></td>
-                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show3" id="d3b-myPh">int *const myHomePh;</span></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left" id="d4a-string-mid"><span class="hide-all d4a-hide-all d4a-show2" id="d4a-primeCol-val">"red"</span></td>
+                                    <td class="not-stack"><span class="hide-all d4a-hide-all d4a-show2" id="d4a-primeCol">string primeCol;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" id="d3b-pointer-addr1" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap d3b-stack-right d3b-stack-left"><span class="hide-all d3b-hide-all d3b-show2" id="d3b-mumPh-val">1111111</span></td>
-                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show2" id="d3b-mumPh">int mumHomePh;</span></td>
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left" id="d4a-string-bot"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack-heap d3b-stack-right d3b-stack-left"><span class="hide-all d3b-hide-all d3b-show1" id="d3b-rtn-addr-val"><i>0x0061ff2d</i></span></td>
-                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show1" id="d3b-rtn-addr">rtn addr</span></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left"><span class="hide-all d4a-hide-all d4a-show1" id="d4a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d4a-hide-all d4a-show1" id="d4a-rtn-addr">rtn addr</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap d3b-stack-right d3b-stack-left d3b-stack-bottom"><span class="hide-all d3b-hide-all" id="d3b-rtnval-val">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show1" id="d3b-rtnval">rtn val</span></td>
+                                    <td class="stack-heap d4a-stack-right d4a-stack-left d4a-stack-bottom"><span class="hide-all d4a-hide-all" id="d4a-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d4a-hide-all d4a-show1" id="d4a-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-4 stack">Stack</th>
+                                    <th class="col-md-7 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--panel 4 code 2-->
+            <div class="row">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link d4b-link" id="code4b-line-1">int main() {</button>
+    <button class="link d4b-link" id="code4b-line-2">const string colour = "pink";</button>
+    <button class="link d4b-link" id="code4b-line-3">string favCol = colour;  //compiler error</button>
+    <button class="link d4b-link" id="code4b-line-4">return 0;</button>
+<button class="link d4b-link" id="code4b-line-5">}</button>
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-4b">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-4b">Start</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
+                                    <td class="stack-heap d4b-stack-right d4b-stack-left d4b-stack-top" id="d4b-string-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap d4b-stack-right d4b-stack-left" id="d4b-string-mid"><span class="hide-all d4b-hide-all d4b-show2" id="d4b-colour-val">"pink"</span></td>
+                                    <td class="not-stack"><span class="hide-all d4b-hide-all d4b-show2" id="d4b-colour">const string colour;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d4b-stack-right d4b-stack-left" id="d4b-string-bot"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap d4b-stack-right d4b-stack-left"><span class="hide-all d4b-hide-all d4b-show1" id="d4b-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d4b-hide-all d4b-show1" id="d4b-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap d4b-stack-right d4b-stack-left d4b-stack-bottom"><span class="hide-all d4b-hide-all" id="d4b-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d4b-hide-all d4b-show1" id="d4b-rtnval">rtn val</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-4 stack">Stack</th>
+                                    <th class="col-md-7 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--panel 4 code 3-->
+            <div class="row">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre><code>
+<button class="link d4c-link" id="code4c-line-1">int main() {</button>
+    <button class="link d4c-link" id="code4c-line-2">const string colour = "pink";</button>
+    <button class="link d4c-link" id="code4c-line-3">const string favCol = colour;    //OK</button>
+    <button class="link d4c-link" id="code4c-line-4">colour = "black";  //compiler error</button>
+    <button class="link d4c-link" id="code4c-line-5">return 0;</button>
+<button class="link d4c-link" id="code4c-line-6">}</button>
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-4c">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-4c">Start</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
+                                    <td class="stack-heap d4c-stack-right d4c-stack-left d4c-stack-top" id="d4c-string-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap d4c-stack-right d4c-stack-left" id="d4c-string-mid"><span class="hide-all d4c-hide-all d4c-show2" id="d4c-colour-val">"pink"</span></td>
+                                    <td class="not-stack"><span class="hide-all d4c-hide-all d4c-show2" id="d4c-colour">const string colour;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap d4c-stack-right d4c-stack-left" id="d4c-string-bot"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap d4c-stack-right d4c-stack-left"><span class="hide-all d4c-hide-all d4c-show1" id="d4c-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d4c-hide-all d4c-show1" id="d4c-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap d4c-stack-right d4c-stack-left d4c-stack-bottom"><span class="hide-all d4c-hide-all" id="d4c-rtnval-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d4c-hide-all d4b-show1" id="d4c-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <th class="col-md-1 not-stack"></th>
@@ -536,7 +598,6 @@
             <button class="btn btn-default" id="anim-2-btn" type="button">2</button>
             <button class="btn btn-default" id="anim-3-btn" type="button">3</button>
             <button class="btn btn-default" id="anim-4-btn" type="button">4</button>
-            <button class="btn btn-default" id="anim-5-btn" type="button">5</button>
         </div>
         <div class="btn-group" role="group">
             <button class="btn btn-default" id="next" type="button"><span class="glyphicon glyphicon-menu-right"></span></button>
