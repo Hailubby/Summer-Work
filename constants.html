@@ -171,7 +171,7 @@
 <button class="link d2a-link" id="code2a-line-1">int main() {</button>
     <button class="link d2a-link" id="code2a-line-2">int evenNum = 6;</button>
     <button class="link d2a-link" id="code2a-line-3">const int *luckyNum = &amp;evenNum;</button>
-    <button class="link d2a-link" id="code2a-line-4">*luckyNum = 10;</button>
+    <button class="link d2a-link" id="code2a-line-4">*luckyNum = 10;    <span style="color: #D9534F">//compiler error</span></button>
     <button class="link d2a-link" id="code2a-line-5">return 0;</button>
 <button class="link d2a-link" id="code2a-line-6">}</button>
                     </code></pre>
@@ -191,7 +191,7 @@
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
                                     <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-luckyNum-val">0x0061ff14</span></td>
-                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-luckyNum">const int *luckyNum;</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-luckyNum"><span id="d2a-const-l4">const</span> int *luckyNum;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d2a-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
@@ -205,7 +205,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-bottom"><span class="hide-all d2a-hide-all" id="d2a-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-bottom"><span class="hide-all d2a-hide-all d2a-show5" id="d2a-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show1" id="d2a-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -215,6 +215,10 @@
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br />
+                        <p class="hide-all d2a-hide-all d2a-show4" id="d2a-error-l4">The pointer cannot change the value of the variable it is pointing to.</p>
                     </div>
                 </div>
             </div>
@@ -227,9 +231,9 @@
     <button class="link d2b-link" id="code2b-line-2">int evenNum1 = 6;</button>
     <button class="link d2b-link" id="code2b-line-3">int evenNum2 = 12;</button>
     <button class="link d2b-link" id="code2b-line-4">const int *luckyNum = &amp;evenNum;</button>
-    <button class="link d2b-link" id="code2b-line-5">evenNum1= 10;  //OK</button>
+    <button class="link d2b-link" id="code2b-line-5">evenNum1= 10;  <span style="color: #457D46">//OK</span></button>
     <button class="link d2b-link" id="code2b-line-6">cout << "*luckyNum:" << *luckyNum << endl;</button>
-    <button class="link d2b-link" id="code2b-line-7">luckyNum = &amp;evenNum2;  //OK</button>
+    <button class="link d2b-link" id="code2b-line-7">luckyNum = &amp;evenNum2;  <span style="color: #457D46">//OK</span></button>
     <button class="link d2b-link" id="code2b-line-8">cout << "*luckyNum:" << *luckyNum << endl;</button>
     <button class="link d2b-link" id="code2b-line-9">return 0;</button>
 <button class="link d2b-link" id="code2b-line-10">}</button>
@@ -295,13 +299,13 @@
 <button class="link d3a-link" id="code3a-line-1">int main() {</button>
     <button class="link d3a-link" id="code3a-line-2">int mumAge = 49;</button>
     <button class="link d3a-link" id="code3a-line-3">int *const dadAge = &amp;mumAge;</button>
-    <button class="link d3a-link" id="code3a-line-4">*dadAge = 50;  //OK</button>
+    <button class="link d3a-link" id="code3a-line-4">*dadAge = 50;  <span style="color: #457D46">//OK</span></button>
     <button class="link d3a-link" id="code3a-line-5">cout << "*mumAge:" << *mumAge << endl;</button>
     <button class="link d3a-link" id="code3a-line-6">cout << "*dadAge:" << *dadAge << endl;</button>
-    <button class="link d3a-link" id="code3a-line-7">mumAge = 51;   //OK</button>
+    <button class="link d3a-link" id="code3a-line-7">mumAge = 51;   <span style="color: #457D46">//OK</span></button>
     <button class="link d3a-link" id="code3a-line-8">cout << "*mumAge:" << *mumAge << endl;</button>
     <button class="link d3a-link" id="code3a-line-9">cout << "*dadAge:" << *dadAge << endl;</button>
-    <button class="link d3a-link" id="code3a-line-10">dadAge = &amp;myAge;   //compiler error</button>
+    <button class="link d3a-link" id="code3a-line-10">dadAge = &amp;myAge;   <span style="color: #D9534F">//compiler error</span></button>
     <button class="link d3a-link" id="code3a-line-11">return 0;</button>
 <button class="link d3a-link" id="code3a-line-12">}</button>
                         </code></pre>
@@ -357,8 +361,8 @@
     <button class="link d3b-link" id="code3b-line-2">int mumHomePh = 1111111;</button>
     <button class="link d3b-link" id="code3b-line-3">int *const myHomePh = &amp;mumHomePh;</button>
     <button class="link d3b-link" id="code3b-line-4">int flatHomePh = 5555555;</button>
-    <button class="link d3b-link" id="code3b-line-5">*myHomePh = 7777777;   //OK</button>
-    <button class="link d3b-link" id="code3b-line-6">myHomePh = &amp;flatHomePh;  //compiler error</button>
+    <button class="link d3b-link" id="code3b-line-5">*myHomePh = 7777777;   <span style="color: #457D46">//OK</span></button>
+    <button class="link d3b-link" id="code3b-line-6">myHomePh = &amp;flatHomePh;  <span style="color: #D9534F">//compiler error</span></button>
     <button class="link d3b-link" id="code3b-line-7">return 0;</button>
 <button class="link d3b-link" id="code3b-line-8">}</button>
                         </code></pre>
@@ -428,7 +432,7 @@
     <button class="link d4a-link" id="code4a-line-6">colour = "blue";</button>
     <button class="link d4a-link" id="code4a-line-7">cout << "primeCol: " << primeCol << endl;</button>
     <button class="link d4a-link" id="code4a-line-8">cout << "favCol: " << favCol << endl;</button>
-    <button class="link d4a-link" id="code4a-line-9">favCol = "green";  //compiler error</button>
+    <button class="link d4a-link" id="code4a-line-9">favCol = "green";  <span style="color: #D9534F">//compiler error</span></button>
     <button class="link d4a-link" id="code4a-line-10">return 0;</button>
  <button class="link d4a-link" id="code4a-line-11">}</button>
                     </code></pre>
@@ -487,7 +491,7 @@
                     <pre><code>
 <button class="link d4b-link" id="code4b-line-1">int main() {</button>
     <button class="link d4b-link" id="code4b-line-2">const string colour = "pink";</button>
-    <button class="link d4b-link" id="code4b-line-3">string favCol = colour;  //compiler error</button>
+    <button class="link d4b-link" id="code4b-line-3">string favCol = colour;  <span style="color: #D9534F">//compiler error</span></button>
     <button class="link d4b-link" id="code4b-line-4">return 0;</button>
 <button class="link d4b-link" id="code4b-line-5">}</button>
                     </code></pre>
@@ -547,8 +551,8 @@
                     <pre><code>
 <button class="link d4c-link" id="code4c-line-1">int main() {</button>
     <button class="link d4c-link" id="code4c-line-2">const string colour = "pink";</button>
-    <button class="link d4c-link" id="code4c-line-3">const string favCol = colour;    //OK</button>
-    <button class="link d4c-link" id="code4c-line-4">colour = "black";  //compiler error</button>
+    <button class="link d4c-link" id="code4c-line-3">const string favCol = colour;    <span style="color: #457D46">//OK</span></button>
+    <button class="link d4c-link" id="code4c-line-4">colour = "black";  <span style="color: #D9534F">//compiler error</span></button>
     <button class="link d4c-link" id="code4c-line-5">return 0;</button>
 <button class="link d4c-link" id="code4c-line-6">}</button>
                     </code></pre>
