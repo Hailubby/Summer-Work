@@ -227,10 +227,10 @@
                 <div class="col-md-4">
                     <!--pre tag indentations-->
                     <pre><code>
-<button class="link d2a-link" id="code2b-line-1">int main() {</button>
+<button class="link d2b-link" id="code2b-line-1">int main() {</button>
     <button class="link d2b-link" id="code2b-line-2">int evenNum1 = 6;</button>
     <button class="link d2b-link" id="code2b-line-3">int evenNum2 = 12;</button>
-    <button class="link d2b-link" id="code2b-line-4">const int *luckyNum = &amp;evenNum;</button>
+    <button class="link d2b-link" id="code2b-line-4">const int *luckyNum = &amp;evenNum1;</button>
     <button class="link d2b-link" id="code2b-line-5">evenNum1= 10;  <span style="color: #457D46">//OK</span></button>
     <button class="link d2b-link" id="code2b-line-6">cout << "*luckyNum:" << *luckyNum << endl;</button>
     <button class="link d2b-link" id="code2b-line-7">luckyNum = &amp;evenNum2;  <span style="color: #457D46">//OK</span></button>
@@ -257,7 +257,7 @@
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show4" id="d2b-luckyNum">const int *luckyNum;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="not-stack" id="d2b-pointer-addr2" style="color: #777"><i>0x0061ff10</i></td>
                                     <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left"><span class="hide-all d2b-hide-all d2b-show3" id="d2b-evenNum2-val">12</span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show3" id="d2b-evenNum2">int evenNum2;</span></td>
                                 </tr>
@@ -273,7 +273,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-bottom"><span class="hide-all d2b-hide-all" id="d2b-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-bottom"><span class="hide-all d2b-hide-all d2b-show9" id="d2b-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show1" id="d2b-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -283,6 +283,13 @@
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br />
+                        <br />
+                        <p>Output:</p>
+                        <p class="hide-all d2b-hide-all d2b-show6" id="d2b-print-l6">*luckyNum: 10</p>
+                        <p class="hide-all d2b-hide-all d2b-show8" id="d2b-print-l8">*luckyNum: 12</p>
                     </div>
                 </div>
             </div>
