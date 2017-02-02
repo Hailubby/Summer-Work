@@ -111,10 +111,10 @@
                 <div class="col-md-4">
                     <!--pre tag indentations-->
                     <pre><code>
-<button class="link d1a-link" id="code1b-line-1">int main() {</button>
-    <button class="link d1a-link" id="code1b-line-2">const int minDrinkingAge = 18;</button>
-    <button class="link d1a-link" id="code1b-line-3">minDrinkingAge--; //compiler error</button>
-    <button class="link d1a-link" id="code1b-line-4">return 0;</button>
+<button class="link d1b-link" id="code1b-line-1">int main() {</button>
+    <button class="link d1b-link" id="code1b-line-2">const int minDrinkingAge = 18;</button>
+    <button class="link d1b-link" id="code1b-line-3">minDrinkingAge--;  <span style="color: #D9534F">//compiler error</span></button>
+    <button class="link d1b-link" id="code1b-line-4">return 0;</button>
 }
                     </code></pre>
 
@@ -132,8 +132,8 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-top"><span class="hide-all d1b-hide-all d1b-show3" id="d1b-minDAge-val">18</span></td>
-                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-minDAge">const int minDrinkingAge;</span></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-top"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-minAge-val">18</span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-minAge"><span id="d1b-const-l2">const</span> int minDrinkingAge;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
@@ -152,6 +152,10 @@
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br />
+                        <p class="hide-all d1b-hide-all d1b-show3" id="d1b-error-l3">minDrinkingAge may not change it's value as it has been declared as a "const".</p>
                     </div>
                 </div>
             </div>
