@@ -332,7 +332,7 @@
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
                                     <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-top" style="color: #532A78;"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge-val">0x0061ff14</span></td>
-                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge">int *const dadAge;</span></td>
+                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge">int *<span id="d3a-const-l10">const</span> dadAge;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d3a-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
@@ -346,7 +346,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-bottom"><span class="hide-all d3a-hide-all" id="d3a-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-bottom"><span class="hide-all d3a-hide-all d3a-show11" id="d3a-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show1" id="d3a-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -356,6 +356,17 @@
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br />
+                        <p>Output:</p>
+                        <p class="hide-all d3a-hide-all d3a-show5" id="d3a-print-l5">*mumAge: 50</p>
+                        <p class="hide-all d3a-hide-all d3a-show6" id="d3a-print-l6">*dadAge: 50</p>
+                        <p class="hide-all d3a-hide-all d3a-show8" id="d3a-print-l8">*mumAge: 51</p>
+                        <p class="hide-all d3a-hide-all d3a-show9" id="d3a-print-l9">*dadAge: 51</p>
+                        <br />
+                        <br />
+                        <p class="hide-all d3a-hide-all d3a-show10" id="d3a-error-l10">The const pointer cannot change to point to something else.</p>
                     </div>
                 </div>
             </div>

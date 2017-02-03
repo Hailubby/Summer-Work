@@ -5,7 +5,7 @@
 /** Specific JQuery for the getting constants page. Mainly just animations **/
 
 $(document).ready(function () {
-    
+
     //panel 1
     //panel 1 code 1
     var currentLine1a = 1;
@@ -1266,6 +1266,562 @@ $(document).ready(function () {
         else if (currentLine2b == 10) {
             p2_c2_line10();
             currentLine2b = 1;
+        }
+    });
+
+    //panel 3
+    //panel 3 code 1
+    var currentLine3a = 1;
+    $("#code3a-line-1").addClass("yellow");
+
+    $("#start-button-3a").click(function () {
+        currentLine3a = 1;
+        $(".d3a-hide-all").hide();
+        p3_c1_hideBorders();
+        $("#code3a-line-12").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .stack-heap-3a").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#777'}, 0);
+        p3_c1_line1();
+        $("#d3a-rtn-addr-val").promise().done(function () {
+            p3_c1_line2();
+            $("#d3a-mumAge-val").promise().done(function () {
+                p3_c1_line3();
+                $("#d3a-dadAge-val").promise().done(function () {
+                    p3_c1_line4();
+                    $("#d3a-mumAge-val").promise().done(function () {
+                        p3_c1_line5();
+                        $("#d3a-print-l5").promise().done(function () {
+                            p3_c1_line6();
+                            $("#d3a-print-l6").promise().done(function () {
+                                p3_c1_line7();
+                                $("#d3a-mumAge-val").promise().done(function () {
+                                    p3_c1_line8();
+                                    $("#d3a-print-l8").promise().done(function () {
+                                        p3_c1_line9();
+                                        $("#d3a-print-l9").promise().done(function () {
+                                            p3_c1_line10();
+                                            $("#d3a-const-l10").promise().done(function () {
+                                                p3_c1_line11();
+                                                $("#d3a-rtnval-val").promise().done(function () {
+                                                    p3_c1_line12();
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
+
+    //p3 c1 line 1 function
+    var p3_c1_line1 = function () {
+        $("#code3a-line-1").animate({backgroundColor: '#ffff00'}, 600);
+        $(".d3a-link").removeClass("yellow");
+        $(".table .stack-heap-3a").animate({backgroundColor: '#F5F5F5'}, 500);
+        $(".table .d3a-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
+        $(".table .d3a-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
+        $(".table .d3a-stack-left").delay(50).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},30);
+        $(".table .d3a-stack-right").delay(50).animate({borderRightWidth: '2px', borderRightColor: 'black'},30);
+        $("#d3a-rtnval").delay(1200).show(400);
+        $("#d3a-rtn-addr").delay(1200).show(400);
+        $("#d3a-rtn-addr-val").delay(1600).show(400);
+    };
+
+    //p3 c1 line 2 function
+    var p3_c1_line2 = function () {
+        $("#code3a-line-1").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-2").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $("#d3a-mumAge").delay(1000).show(400);
+        $("#d3a-mumAge-val").html('49');
+        $("#d3a-mumAge-val").delay(1400).show(400);
+    };
+
+    //p3 c1 line 3 function
+    var p3_c1_line3 = function () {
+        $("#code3a-line-2").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-3").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $("#d3a-dadAge").delay(1000).show(400);
+        $("#d3a-pointer-addr").delay(1400).animate({color: '#532A78', fontWeight: 'bold'}, 150);
+        $("#d3a-dadAge-val").delay(1400).show(400);
+    };
+
+    //p3 c1 line 4 function
+    var p3_c1_line4 = function () {
+        $("#code3a-line-3").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-4").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        setTimeout(function () {
+            $("#d3a-mumAge-val").html('50');
+        }, 1000);
+        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: 'transparent'}, 500);
+    };
+
+    //p3 c1 line 5 function
+    var p3_c1_line5 = function () {
+        $("#code3a-line-4").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-5").animate({backgroundColor: '#5CB85C'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d3a-print-l5").delay(1600).show(400);
+    };
+
+    //p3 c1 line 6 function
+    var p3_c1_line6 = function () {
+        $("#code3a-line-5").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-6").animate({backgroundColor: '#5CB85C'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $("#d3a-mumAge-val").removeClass("green");
+
+        $("#d3a-mumAge-val").delay(400).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d3a-print-l6").delay(1800).show(400);
+    };
+
+    //p3 c1 line 7 function
+    var p3_c1_line7 = function () {
+        $("#code3a-line-6").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-7").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $("#d3a-mumAge-val").removeClass("green");
+
+        setTimeout(function () {
+            $("#d3a-mumAge-val").html('51');
+        }, 1000);
+        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: 'transparent'}, 500);
+    };
+
+    //p3 c1 line 8 function
+    var p3_c1_line8 = function () {
+        $("#code3a-line-7").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-8").animate({backgroundColor: '#5CB85C'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d3a-print-l8").delay(1600).show(400);
+    };
+
+    //p3 c1 line 9 function
+    var p3_c1_line9 = function () {
+        $("#code3a-line-8").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-9").animate({backgroundColor: '#5CB85C'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $("#d3a-mumAge-val").removeClass("green");
+
+        $("#d3a-mumAge-val").delay(400).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d3a-print-l9").delay(1800).show(400);
+    };
+
+    //p3 c1 line 10 function
+    var p3_c1_line10 = function () {
+        $("#code3a-line-9").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-10").animate({backgroundColor: '#dd747b'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $("#d3a-mumAge-val").removeClass("green");
+
+        $("#d3a-const-l10").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
+        $("#d3a-error-l10").delay(1500).show(400);
+    };
+
+    //p3 c1 line 11 function
+    var p3_c1_line11 = function () {
+        $("#code3a-line-10").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-11").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("red");
+        $("#d3a-rtnval-val").delay(1000).show(400).delay(200);
+    };
+
+    //p3 c1 line 12 function
+    var p3_c1_line12 = function () {
+        $("#code3a-line-11").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code3a-line-12").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-hide-all").delay(1000).hide(400);
+        $("#d3a-pointer-addr").delay(1000).animate({color: '#777'}, 150);
+        $("#code3a-line-12").promise().done(function () {
+            p3_c1_hideBorders();
+        });
+    };
+
+    //unhighlight all lines
+    var p3_c1_unhighlight = function () {
+        $("#code3a-line-1").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-2").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-3").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-6").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-7").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-8").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-9").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-10").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-11").animate({backgroundColor: 'transparent'}, 0);
+        $("#code3a-line-12").animate({backgroundColor: 'transparent'}, 0);
+    };
+
+    //show stack border
+    var p3_c1_showBorders = function () {
+        $(".table .d3a-stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
+        $(".table .d3a-stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
+        $(".table .d3a-stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
+        $(".table .d3a-stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
+        $(".table .stack-heap-3a").animate({backgroundColor: '#F5F5F5'}, 0);
+    };
+
+    //hide stack borders
+    var p3_c1_hideBorders = function () {
+        $(".table .d3a-stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
+        $(".table .d3a-stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
+        $(".table .d3a-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
+        $(".table .d3a-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
+        $(".table .stack-heap-3a").animate({backgroundColor: 'transparent'}, 0);
+    };
+
+    //stepping function
+    $("#code3a-line-1").click(function(){
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-1").addClass("yellow");
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#777'}, 0);
+
+        $(".d3a-hide-all").hide();
+        p3_c1_hideBorders();
+        p3_c1_unhighlight();
+
+        p3_c1_line1();
+        currentLine3a = 2;
+    });
+
+    $("#code3a-line-2").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-2").addClass("yellow");
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#777'}, 0);
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line2();
+        currentLine3a = 3;
+    });
+
+    $("#code3a-line-3").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-3").addClass("yellow");
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#777'}, 0);
+        $("#d3a-mumAge-val").html('49');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line3();
+        currentLine3a = 4;
+    });
+
+    $("#code3a-line-4").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-4").addClass("yellow");
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('49');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line4();
+        currentLine3a = 5;
+    });
+
+    $("#code3a-line-5").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-5").addClass("green");
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('50');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line5();
+        currentLine3a = 6;
+    });
+
+    $("#code3a-line-6").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-6").addClass("green");
+        $("#d3a-mumAge-val").animate({backgroundColor: '#5CB85C'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('50');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        $(".d3a-show5").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line6();
+        currentLine3a = 7;
+    });
+
+    $("#code3a-line-7").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-7").addClass("yellow");
+        $("#d3a-mumAge-val").animate({backgroundColor: '#5CB85C'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('50');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        $(".d3a-show5").show();
+        $(".d3a-show6").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line7();
+        currentLine3a = 8;
+    });
+
+    $("#code3a-line-8").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-8").addClass("green");
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('51');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        $(".d3a-show5").show();
+        $(".d3a-show6").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line8();
+        currentLine3a = 9;
+    });
+
+    $("#code3a-line-9").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-9").addClass("green");
+        $("#d3a-mumAge-val").animate({backgroundColor: '#5CB85C'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('51');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        $(".d3a-show5").show();
+        $(".d3a-show6").show();
+        $(".d3a-show8").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line9();
+        currentLine3a = 10;
+    });
+
+    $("#code3a-line-10").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-10").addClass("red");
+        $("#d3a-mumAge-val").animate({backgroundColor: '#5CB85C'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('51');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        $(".d3a-show5").show();
+        $(".d3a-show6").show();
+        $(".d3a-show8").show();
+        $(".d3a-show9").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line10();
+        currentLine3a = 11;
+    });
+
+    $("#code3a-line-11").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-11").addClass("yellow");
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: '#dd747b'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('51');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        $(".d3a-show5").show();
+        $(".d3a-show6").show();
+        $(".d3a-show8").show();
+        $(".d3a-show9").show();
+        $(".d3a-show10").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line11();
+        currentLine3a = 12;
+    });
+
+    $("#code3a-line-12").click(function() {
+        $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
+        $("#code3a-line-12").addClass("yellow");
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3a-mumAge-val").html('51');
+
+        p3_c1_showBorders();
+        $(".d3a-hide-all").hide();
+        $(".d3a-show1").show();
+        $(".d3a-show2").show();
+        $(".d3a-show3").show();
+        $(".d3a-show5").show();
+        $(".d3a-show6").show();
+        $(".d3a-show8").show();
+        $(".d3a-show9").show();
+        $(".d3a-show10").show();
+        $(".d3a-show11").show();
+        p3_c1_unhighlight();
+
+        p3_c1_line12();
+        currentLine3a = 11;
+    });
+
+    $("#step-button-3a").click(function () {
+        if (currentLine3a == 1) {
+            //do line 1 things here
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
+            $("#code3a-line-1").addClass("yellow");
+            $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+            $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+            $("#d3a-pointer-addr").animate({color: '#777'}, 0);
+
+            $(".d3a-hide-all").hide();
+            p3_c1_hideBorders();
+            p3_c1_unhighlight();
+
+            p3_c1_line1();
+            currentLine3a = 2;
+        }
+        else if (currentLine3a == 2) {
+            //do line 2 things here
+            p3_c1_line2();
+            currentLine3a = 3;
+        }
+        else if (currentLine3a == 3) {
+            //do line 3 things here
+            p3_c1_line3();
+            currentLine3a = 4;
+        }
+        else if (currentLine3a == 4) {
+            //do line 4 things here
+            p3_c1_line4();
+            currentLine3a = 5;
+        }
+        else if (currentLine3a == 5) {
+            p3_c1_line5();
+            currentLine3a = 6;
+        }
+        else if (currentLine3a == 6) {
+            p3_c1_line6();
+            currentLine3a = 7;
+        }
+        else if (currentLine3a == 7) {
+            p3_c1_line7();
+            currentLine3a = 8;
+        }
+        else if (currentLine3a == 8) {
+            p3_c1_line8();
+            currentLine3a = 9;
+        }
+        else if (currentLine3a == 9) {
+            p3_c1_line9();
+            currentLine3a = 10;
+        }
+        else if (currentLine3a == 10) {
+            p3_c1_line10();
+            currentLine3a = 11;
+        }
+        else if (currentLine3a == 11) {
+            p3_c1_line11();
+            currentLine3a = 12;
+        }
+        else if (currentLine3a == 12) {
+            p3_c1_line12();
+            currentLine3a = 1;
         }
     });
 
