@@ -364,9 +364,6 @@
                         <p class="hide-all d3a-hide-all d3a-show6" id="d3a-print-l6">*dadAge: 50</p>
                         <p class="hide-all d3a-hide-all d3a-show8" id="d3a-print-l8">*mumAge: 51</p>
                         <p class="hide-all d3a-hide-all d3a-show9" id="d3a-print-l9">*dadAge: 51</p>
-                        <br />
-                        <br />
-                        <p class="hide-all d3a-hide-all d3a-show10" id="d3a-error-l10">The const pointer cannot change to point to something else.</p>
                     </div>
                 </div>
             </div>
@@ -405,10 +402,10 @@
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
                                     <td class="stack-heap stack-heap-3b d3b-stack-right d3b-stack-left" style="color: #532A78;"><span class="hide-all d3b-hide-all d3b-show3" id="d3b-myPh-val">0x0061ff14</span></td>
-                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show3" id="d3b-myPh">int *const myHomePh;</span></td>
+                                    <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show3" id="d3b-myPh">int *<span id="d3b-const-l6">const</span> myHomePh;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" id="d3b-pointer-addr1" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="not-stack" id="d3b-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
                                     <td class="stack-heap stack-heap-3b d3b-stack-right d3b-stack-left"><span class="hide-all d3b-hide-all d3b-show2" id="d3b-mumPh-val">1111111</span></td>
                                     <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show2" id="d3b-mumPh">int mumHomePh;</span></td>
                                 </tr>
@@ -429,6 +426,11 @@
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br />
+                        <br />
+                        <p class="hide-all d3b-hide-all d3b-show6" id="d3b-error-l6">The const pointer cannot change to point to something else.</p>
                     </div>
                 </div>
             </div>
