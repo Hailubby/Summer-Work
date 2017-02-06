@@ -1973,4 +1973,205 @@ $(document).ready(function () {
         $(".table .stack-heap-3b").animate({backgroundColor: 'transparent'}, 0);
     };
 
+    //stepping function
+    $("#code3b-line-1").click(function(){
+        $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
+        $("#code3b-line-1").addClass("yellow");
+        $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-pointer-addr").animate({color: '#777'}, 0);
+
+        $(".d3b-hide-all").hide();
+        p3_c2_hideBorders();
+        p3_c2_unhighlight();
+
+        p3_c2_line1();
+        currentLine3b = 2;
+    });
+
+    $("#code3b-line-2").click(function() {
+        $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
+        $("#code3b-line-2").addClass("yellow");
+        $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-pointer-addr").animate({color: '#777'}, 0);
+
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $(".d3b-show1").show();
+        p3_c2_unhighlight();
+
+        p3_c2_line2();
+        currentLine3b = 3;
+    });
+
+    $("#code3b-line-3").click(function() {
+        $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
+        $("#code3b-line-3").addClass("yellow");
+        $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-pointer-addr").animate({color: '#777'}, 0);
+        $("#d3b-mumPh-val").html('1111111');
+
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        p3_c2_unhighlight();
+
+        p3_c2_line3();
+        currentLine3b = 4;
+    });
+
+    $("#code3b-line-4").click(function() {
+        $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
+        $("#code3b-line-4").addClass("yellow");
+        $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3b-mumPh-val").html('1111111');
+
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        p3_c2_unhighlight();
+
+        p3_c2_line4();
+        currentLine3b = 5;
+    });
+
+    $("#code3b-line-5").click(function() {
+        $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
+        $("#code3b-line-5").addClass("yellow");
+        $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3b-mumPh-val").html('1111111');
+
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        $(".d3b-show4").show();
+        p3_c2_unhighlight();
+
+        p3_c2_line5();
+        currentLine3b = 6;
+    });
+
+    $("#code3b-line-6").click(function() {
+        $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
+        $("#code3b-line-6").addClass("red");
+        $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3b-mumPh-val").html('7777777');
+
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        $(".d3b-show4").show();
+        p3_c2_unhighlight();
+
+        p3_c2_line6();
+        currentLine3b = 7;
+    });
+
+    $("#code3b-line-7").click(function() {
+        $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
+        $("#code3b-line-7").addClass("yellow");
+        $("#d3b-const-l6").animate({backgroundColor: '#dd747b'}, 0);
+        $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3b-mumPh-val").html('7777777');
+
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        $(".d3b-show4").show();
+        $(".d3b-show6").show();
+        p3_c2_unhighlight();
+
+        p3_c2_line7();
+        currentLine3b = 8;
+    });
+
+    $("#code3b-line-8").click(function() {
+        $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
+        $("#code3b-line-8").addClass("yellow");
+        $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
+        $("#d3b-mumPh-val").html('7777777');
+
+        p3_c2_showBorders();
+        $(".d3b-hide-all").hide();
+        $(".d3b-show1").show();
+        $(".d3b-show2").show();
+        $(".d3b-show3").show();
+        $(".d3b-show4").show();
+        $(".d3b-show6").show();
+        $(".d3b-show7").show();
+        p3_c2_unhighlight();
+
+        p3_c2_line8();
+        currentLine3b = 1;
+    });
+
+    $("#step-button-3b").click(function () {
+        if (currentLine3b == 1) {
+            //do line 1 things here
+            $(".d3b-link").removeClass("yellow");
+            $(".d3b-link").removeClass("red");
+            $("#code3b-line-1").addClass("yellow");
+            $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+            $("#d3b-pointer-addr").animate({color: '#777'}, 0);
+
+            $(".d3b-hide-all").hide();
+            p3_c2_hideBorders();
+            p3_c2_unhighlight();
+
+            p3_c2_line1();
+            currentLine3b = 2;
+        }
+        else if (currentLine3b == 2) {
+            //do line 2 things here
+            p3_c2_line2();
+            currentLine3b = 3;
+        }
+        else if (currentLine3b == 3) {
+            //do line 3 things here
+            p3_c2_line3();
+            currentLine3b = 4;
+        }
+        else if (currentLine3b == 4) {
+            //do line 4 things here
+            p3_c2_line4();
+            currentLine3b = 5;
+        }
+        else if (currentLine3b == 5) {
+            p3_c2_line5();
+            currentLine3b = 6;
+        }
+        else if (currentLine3b == 6) {
+            p3_c2_line6();
+            currentLine3b = 7;
+        }
+        else if (currentLine3b == 7) {
+            p3_c2_line7();
+            currentLine3b = 8;
+        }
+        else if (currentLine3b == 8) {
+            p3_c2_line8();
+            currentLine3b = 1;
+        }
+    });
+
 });
