@@ -491,7 +491,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-4a d4a-stack-right d4a-stack-left d4a-stack-bottom"><span class="hide-all d4a-hide-all d4a-show-10" id="d4a-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-4a d4a-stack-right d4a-stack-left d4a-stack-bottom"><span class="hide-all d4a-hide-all d4a-show-1" id="d4a-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d4a-hide-all d4a-show1" id="d4a-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -520,7 +520,7 @@
                     <pre><code>
 <button class="link d4b-link" id="code4b-line-1">int main() {</button>
     <button class="link d4b-link" id="code4b-line-2">const string colour = "pink";</button>
-    <button class="link d4b-link" id="code4b-line-3">string favCol = colour;  <span style="color: #D9534F">//compiler error</span></button>
+    <button class="link d4b-link" id="code4b-line-3">string &favCol = colour;  <span style="color: #D9534F">//compiler error</span></button>
     <button class="link d4b-link" id="code4b-line-4">return 0;</button>
 <button class="link d4b-link" id="code4b-line-5">}</button>
                     </code></pre>
@@ -545,7 +545,7 @@
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
                                     <td class="stack-heap stack-heap-4b d4b-stack-right d4b-stack-left" id="d4b-string-mid"><span class="hide-all d4b-hide-all d4b-show2" id="d4b-colour-val">"pink"</span></td>
-                                    <td class="not-stack"><span class="hide-all d4b-hide-all d4b-show2" id="d4b-colour">const string colour;</span></td>
+                                    <td class="not-stack"><span class="hide-all d4b-hide-all d4b-show2" id="d4b-colour"><span id="d4b-const-l3">const</span> string colour;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
@@ -559,7 +559,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-4b d4b-stack-right d4b-stack-left d4b-stack-bottom"><span class="hide-all d4b-hide-all" id="d4b-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-4b d4b-stack-right d4b-stack-left d4b-stack-bottom"><span class="hide-all d4b-hide-all d4b-show4" id="d4b-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d4b-hide-all d4b-show1" id="d4b-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -569,6 +569,10 @@
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br />
+                        <p class="hide-all d4b-hide-all d4b-show3" id="d4b-error-l3">Cannot bind a non-const reference to a const variable</p>
                     </div>
                 </div>
             </div>
@@ -621,7 +625,7 @@
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
                                     <td class="stack-heap stack-heap-4c d4c-stack-right d4c-stack-left d4c-stack-bottom"><span class="hide-all d4c-hide-all" id="d4c-rtnval-val">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d4c-hide-all d4b-show1" id="d4c-rtnval">rtn val</span></td>
+                                    <td class="not-stack"><span class="hide-all d4c-hide-all d4c-show1" id="d4c-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <th class="col-md-1 not-stack"></th>
