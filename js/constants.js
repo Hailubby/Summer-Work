@@ -355,6 +355,7 @@ $(document).ready(function () {
         $(".d1b-hide-all").hide();
         p1_c2_hideBorders();
         $("#code1b-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#d1b-const-l2").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-1b").animate({backgroundColor: 'transparent'}, 0);
         p1_c2_line1();
         $("#d1b-rtn-addr-val").promise().done(function () {
@@ -541,6 +542,7 @@ $(document).ready(function () {
         $(".d2a-hide-all").hide();
         p2_c1_hideBorders();
         $("#code2a-line-6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2a-const-l4").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-2a").animate({backgroundColor: 'transparent'}, 0);
         $("#d2a-pointer-addr").animate({color: '#777'}, 0);
         p2_c1_line1();
@@ -809,6 +811,8 @@ $(document).ready(function () {
         $(".d2b-hide-all").hide();
         p2_c2_hideBorders();
         $("#code2b-line-10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2b-evenNum1-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2b-evenNum2-val").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-2b").animate({backgroundColor: 'transparent'}, 0);
         $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
         $("#d2b-pointer-addr2").animate({color: '#777'}, 0);
@@ -1143,7 +1147,7 @@ $(document).ready(function () {
         $("#code2b-line-8").addClass("green");
         $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
         $("#d2b-pointer-addr2").animate({color: '#532A78'}, 0);
-        $("#d2b-evenNum1-val").animate({backgroundColor: '#transparent'}, 0);
+        $("#d2b-evenNum1-val").animate({backgroundColor: 'transparent'}, 0);
         $("#d2b-evenNum2-val").animate({backgroundColor: 'transparent'}, 0);
         $("#d2b-evenNum1-val").html('10');
         $("#d2b-luckyNum-val").html('0x0061ff10');
@@ -1279,6 +1283,8 @@ $(document).ready(function () {
         $(".d3a-hide-all").hide();
         p3_c1_hideBorders();
         $("#code3a-line-12").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-3a").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#777'}, 0);
         p3_c1_line1();
@@ -1831,6 +1837,7 @@ $(document).ready(function () {
         $(".d3b-hide-all").hide();
         p3_c2_hideBorders();
         $("#code3b-line-8").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-3b").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#777'}, 0);
         p3_c2_line1();
@@ -2173,5 +2180,7 @@ $(document).ready(function () {
             currentLine3b = 1;
         }
     });
+
+
 
 });

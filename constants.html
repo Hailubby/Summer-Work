@@ -449,7 +449,7 @@
     <button class="link d4a-link" id="code4a-line-3">const string &favCol = colour;</button>
     <button class="link d4a-link" id="code4a-line-4">cout << "primeCol: " << primeCol << endl;</button>
     <button class="link d4a-link" id="code4a-line-5">cout << "favCol: " << favCol << endl;</button>
-    <button class="link d4a-link" id="code4a-line-6">colour = "blue";</button>
+    <button class="link d4a-link" id="code4a-line-6">primeCol = "blue";     <span style="color: #457D46">//OK</span></button>
     <button class="link d4a-link" id="code4a-line-7">cout << "primeCol: " << primeCol << endl;</button>
     <button class="link d4a-link" id="code4a-line-8">cout << "favCol: " << favCol << endl;</button>
     <button class="link d4a-link" id="code4a-line-9">favCol = "green";  <span style="color: #D9534F">//compiler error</span></button>
@@ -482,7 +482,7 @@
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
                                     <td class="stack-heap stack-heap-4a d4a-stack-right d4a-stack-left" id="d4a-string-bot"></td>
-                                    <td class="not-stack"></td>
+                                    <td class="not-stack"><span class="hide-all d4a-hide-all d4a-show3" id="d4a-favCol"><span id="d4a-const-l9">const</span> string &favCol</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
@@ -501,6 +501,14 @@
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <br />
+                        <p>Output:</p>
+                        <p class="hide-all d4a-hide-all d4a-show4" id="d4a-print-l4">primeCol: red</p>
+                        <p class="hide-all d4a-hide-all d4a-show5" id="d4a-print-l5">favCol: red</p>
+                        <p class="hide-all d4a-hide-all d4a-show7" id="d4a-print-l7">primeCol: blue</p>
+                        <p class="hide-all d4a-hide-all d4a-show8" id="d4a-print-l8">favCol: blue</p>
                     </div>
                 </div>
             </div>
