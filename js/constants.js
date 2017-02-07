@@ -2194,6 +2194,8 @@ $(document).ready(function () {
         $("#d4a-string-bot").removeClass("stack-string-bottom");
         p4_c1_hideBorders();
         $("#code4a-line-11").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-4a").animate({backgroundColor: 'transparent'}, 0);
         p4_c1_line1();
         $("#d4a-rtn-addr-val").promise().done(function () {
@@ -2731,7 +2733,7 @@ $(document).ready(function () {
         }
     });
 
-    //panel 4 code 1
+    //panel 4 code 2
     var currentLine4b = 1;
     $("#code4b-line-1").addClass("yellow");
 
@@ -2743,6 +2745,7 @@ $(document).ready(function () {
         $("#d4b-string-bot").removeClass("stack-string-bottom");
         p4_c2_hideBorders();
         $("#code4b-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4b-const-l3").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-4b").animate({backgroundColor: 'transparent'}, 0);
         p4_c2_line1();
         $("#d4b-rtn-addr-val").promise().done(function () {
@@ -2804,6 +2807,8 @@ $(document).ready(function () {
         $("#code4b-line-4").animate({backgroundColor: '#ffff00'}, 1000);
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("red");
+        $("#d4c-const-l4").removeClass("red");
+
         $("#d4b-rtnval-val").delay(1000).show(400).delay(200);
     };
 
@@ -2979,7 +2984,347 @@ $(document).ready(function () {
         }
         else if (currentLine4b == 5) {
             p4_c2_line5();
-            currentLine4b = 6;
+            currentLine4b = 1;
         }
     });
+
+    //panel 4 code 3
+    var currentLine4c = 1;
+    $("#code4c-line-1").addClass("yellow");
+
+    $("#start-button-4c").click(function () {
+        currentLine4c = 1;
+        $(".d4c-hide-all").hide();
+        $("#d4c-string-top").removeClass("stack-string-top");
+        $("#d4c-string-mid").removeClass("stack-string-middle");
+        $("#d4c-string-bot").removeClass("stack-string-bottom");
+        p4_c3_hideBorders();
+        $("#code4c-line-7").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .stack-heap-4c").animate({backgroundColor: 'transparent'}, 0);
+        p4_c3_line1();
+        $("#d4c-rtn-addr-val").promise().done(function () {
+            p4_c3_line2();
+            $("#d4c-colour-val").promise().done(function () {
+                p4_c3_line3();
+                $("#d4c-colour-alias").promise().done(function () {
+                    p4_c3_line4();
+                    $("#d4c-const-l4").promise().done(function () {
+                        p4_c3_line5();
+                        $("#d4c-const-l5").promise().done(function () {
+                            p4_c3_line6();
+                            $("#d4c-rtnval-val").promise().done(function () {
+                                p4_c3_line7();
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
+
+    //p4 c3 line 1 function
+    var p4_c3_line1 = function () {
+        $("#code4c-line-1").animate({backgroundColor: '#ffff00'}, 600);
+        $(".d4c-link").removeClass("yellow");
+        $(".table .stack-heap-4c").animate({backgroundColor: '#F5F5F5'}, 500);
+        $(".table .d4c-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
+        $(".table .d4c-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
+        $(".table .d4c-stack-left").delay(50).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},30);
+        $(".table .d4c-stack-right").delay(50).animate({borderRightWidth: '2px', borderRightColor: 'black'},30);
+        $("#d4c-rtnval").delay(1000).show(400);
+        $("#d4c-rtn-addr").delay(1000).show(400);
+        $("#d4c-rtn-addr-val").delay(1400).show(400);
+
+    };
+
+    //p4 c3 line 2 function
+    var p4_c3_line2 = function () {
+        $("#code4c-line-1").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code4c-line-2").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d4c-link").removeClass("yellow");
+        setTimeout(function(){
+            $("#d4c-string-top").addClass("stack-string-top");
+            $("#d4c-string-mid").addClass("stack-string-middle");
+            $("#d4c-string-bot").addClass("stack-string-bottom");
+        }, 800);
+        $("#d4c-colour").delay(1000).show(400);
+        $("#d4c-colour-val").delay(1400).show(400);
+    };
+
+    //p4 c3 line 3 function
+    var p4_c3_line3 = function () {
+        $("#code4c-line-2").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code4c-line-3").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d4c-link").removeClass("yellow");
+        $("#d4c-colour-alias").delay(1000).show(400);
+    };
+
+    //p4 c3 line 4 function
+    var p4_c3_line4 = function () {
+        $("#code4c-line-3").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code4c-line-4").animate({backgroundColor: '#dd747b'}, 1000);
+        $(".d4c-link").removeClass("yellow");
+        $("#d4c-const-l4").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
+    };
+
+    //p4 c3 line 5 function
+    var p4_c3_line5 = function () {
+        $("#code4c-line-4").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code4c-line-5").animate({backgroundColor: '#dd747b'}, 1000);
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#d4c-const-l4").removeClass("red");
+
+        $("#d4c-const-l5").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
+    };
+
+    //p4 c3 line 6 function
+    var p4_c3_line6 = function () {
+        $("#code4c-line-5").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code4c-line-6").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#d4c-const-l5").removeClass("red");
+
+        $("#d4c-rtnval-val").delay(1000).show(400).delay(200);
+    };
+
+    //p4 c3 line 7 function
+    var p4_c3_line7 = function () {
+        $("#code4c-line-6").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code4c-line-7").animate({backgroundColor: '#ffff00'}, 1000);
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-hide-all").delay(1000).hide(400);
+        $("#code4c-line-7").promise().done(function () {
+            $("#d4c-string-top").removeClass("stack-string-top");
+            $("#d4c-string-mid").removeClass("stack-string-middle");
+            $("#d4c-string-bot").removeClass("stack-string-bottom");
+            p4_c3_hideBorders();
+        });
+    };
+
+    //unhighlight all lines
+    var p4_c3_unhighlight = function () {
+        $("#code4c-line-1").animate({backgroundColor: 'transparent'}, 0);
+        $("#code4c-line-2").animate({backgroundColor: 'transparent'}, 0);
+        $("#code4c-line-3").animate({backgroundColor: 'transparent'}, 0);
+        $("#code4c-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#code4c-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $("#code4c-line-6").animate({backgroundColor: 'transparent'}, 0);
+        $("#code4c-line-7").animate({backgroundColor: 'transparent'}, 0);
+    };
+
+    //show stack border
+    var p4_c3_showBorders = function () {
+        $(".table .d4c-stack-bottom").animate({borderBottomWidth: '2px', borderBottomColor: 'black'},0);
+        $(".table .d4c-stack-top").animate({borderTopWidth: '2px', borderTopColor: 'black'},0);
+        $(".table .d4c-stack-left").animate({borderLeftWidth: '2px', borderLeftColor: 'black'},0);
+        $(".table .d4c-stack-right").animate({borderRightWidth: '2px', borderRightColor: 'black'},0);
+        $(".table .stack-heap-4c").animate({backgroundColor: '#F5F5F5'}, 0);
+    };
+
+    //hide stack borders
+    var p4_c3_hideBorders = function () {
+        $(".table .d4c-stack-bottom").animate({borderBottomWidth: '1px', borderBottomColor: '#dddddd'},0);
+        $(".table .d4c-stack-top").animate({borderTopWidth: '1px', borderTopColor: '#dddddd'},0);
+        $(".table .d4c-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
+        $(".table .d4c-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
+        $(".table .stack-heap-4c").animate({backgroundColor: 'transparent'}, 0);
+    };
+
+    //stepping function
+    $("#code4c-line-1").click(function(){
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#code4c-line-1").addClass("yellow");
+        $("#d4c-string-top").removeClass("stack-string-top");
+        $("#d4c-string-mid").removeClass("stack-string-middle");
+        $("#d4c-string-bot").removeClass("stack-string-bottom");
+        $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
+
+        $(".d4c-hide-all").hide();
+        p4_c3_hideBorders();
+        p4_c3_unhighlight();
+
+        p4_c3_line1();
+        currentLine4c = 2;
+    });
+
+    $("#code4c-line-2").click(function(){
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#code4c-line-2").addClass("yellow");
+        $("#d4c-string-top").removeClass("stack-string-top");
+        $("#d4c-string-mid").removeClass("stack-string-middle");
+        $("#d4c-string-bot").removeClass("stack-string-bottom");
+        $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
+
+        p4_c3_showBorders();
+        $(".d4c-hide-all").hide();
+        $(".d4c-show1").show();
+        p4_c3_unhighlight();
+
+        p4_c3_line2();
+        currentLine4c = 3;
+    });
+
+    $("#code4c-line-3").click(function(){
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#code4c-line-3").addClass("yellow");
+        $("#d4c-string-top").addClass("stack-string-top");
+        $("#d4c-string-mid").addClass("stack-string-middle");
+        $("#d4c-string-bot").addClass("stack-string-bottom");
+        $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
+
+        p4_c3_showBorders();
+        $(".d4c-hide-all").hide();
+        $(".d4c-show1").show();
+        $(".d4c-show2").show();
+        p4_c3_unhighlight();
+
+        p4_c3_line3();
+        currentLine4c = 4;
+    });
+
+    $("#code4c-line-4").click(function(){
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#code4c-line-4").addClass("red");
+        $("#d4c-string-top").addClass("stack-string-top");
+        $("#d4c-string-mid").addClass("stack-string-middle");
+        $("#d4c-string-bot").addClass("stack-string-bottom");
+        $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
+
+        p4_c3_showBorders();
+        $(".d4c-hide-all").hide();
+        $(".d4c-show1").show();
+        $(".d4c-show2").show();
+        $(".d4c-show3").show();
+        p4_c3_unhighlight();
+
+        p4_c3_line4();
+        currentLine4c = 5;
+    });
+
+    $("#code4c-line-5").click(function(){
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#code4c-line-5").addClass("red");
+        $("#d4c-string-top").addClass("stack-string-top");
+        $("#d4c-string-mid").addClass("stack-string-middle");
+        $("#d4c-string-bot").addClass("stack-string-bottom");
+        $("#d4c-const-l4").animate({backgroundColor: '#dd747b'}, 0);
+        $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
+
+        p4_c3_showBorders();
+        $(".d4c-hide-all").hide();
+        $(".d4c-show1").show();
+        $(".d4c-show2").show();
+        $(".d4c-show3").show();
+        p4_c3_unhighlight();
+
+        p4_c3_line5();
+        currentLine4c = 6;
+    });
+
+    $("#code4c-line-6").click(function(){
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#code4c-line-6").addClass("yellow");
+        $("#d4c-string-top").addClass("stack-string-top");
+        $("#d4c-string-mid").addClass("stack-string-middle");
+        $("#d4c-string-bot").addClass("stack-string-bottom");
+        $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-const-l5").animate({backgroundColor: '#dd747b'}, 0);
+
+        p4_c3_showBorders();
+        $(".d4c-hide-all").hide();
+        $(".d4c-show1").show();
+        $(".d4c-show2").show();
+        $(".d4c-show3").show();
+        p4_c3_unhighlight();
+
+        p4_c3_line6();
+        currentLine4c = 7;
+    });
+
+    $("#code4c-line-7").click(function(){
+        $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
+        $("#code4c-line-7").addClass("yellow");
+        $("#d4c-string-top").addClass("stack-string-top");
+        $("#d4c-string-mid").addClass("stack-string-middle");
+        $("#d4c-string-bot").addClass("stack-string-bottom");
+        $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
+
+        p4_c3_showBorders();
+        $(".d4c-hide-all").hide();
+        $(".d4c-show1").show();
+        $(".d4c-show2").show();
+        $(".d4c-show3").show();
+        $(".d4c-show6").show();
+        p4_c3_unhighlight();
+
+        p4_c3_line7();
+        currentLine4c = 1;
+    });
+
+    $("#step-button-4c").click(function () {
+        if (currentLine4c == 1) {
+            //do line 1 things here
+            $(".d4c-link").removeClass("yellow");
+            $(".d4c-link").removeClass("red");
+            $("#code4c-line-1").addClass("yellow");
+            $("#d4c-string-top").removeClass("stack-string-top");
+            $("#d4c-string-mid").removeClass("stack-string-middle");
+            $("#d4c-string-bot").removeClass("stack-string-bottom");
+            $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
+            $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
+
+            $(".d4c-hide-all").hide();
+            p4_c3_hideBorders();
+            p4_c3_unhighlight();
+
+            p4_c3_line1();
+            currentLine4c = 2;
+        }
+        else if (currentLine4c == 2) {
+            //do line 2 things here
+            p4_c3_line2();
+            currentLine4c = 3;
+        }
+        else if (currentLine4c == 3) {
+            //do line 3 things here
+            p4_c3_line3();
+            currentLine4c = 4;
+        }
+        else if (currentLine4c == 4) {
+            //do line 4 things here
+            p4_c3_line4();
+            currentLine4c = 5;
+        }
+        else if (currentLine4c == 5) {
+            p4_c3_line5();
+            currentLine4c = 6;
+        }
+        else if (currentLine4c == 6) {
+            p4_c3_line6();
+            currentLine4c = 7;
+        }
+        else if (currentLine4c == 7) {
+            p4_c3_line7();
+            currentLine4c = 1;
+        }
+    });
+
 });

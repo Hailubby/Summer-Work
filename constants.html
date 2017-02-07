@@ -584,10 +584,11 @@
                     <pre><code>
 <button class="link d4c-link" id="code4c-line-1">int main() {</button>
     <button class="link d4c-link" id="code4c-line-2">const string colour = "pink";</button>
-    <button class="link d4c-link" id="code4c-line-3">const string favCol = colour;    <span style="color: #457D46">//OK</span></button>
+    <button class="link d4c-link" id="code4c-line-3">const string &favCol = colour;    <span style="color: #457D46">//OK</span></button>
     <button class="link d4c-link" id="code4c-line-4">colour = "black";  <span style="color: #D9534F">//compiler error</span></button>
-    <button class="link d4c-link" id="code4c-line-5">return 0;</button>
-<button class="link d4c-link" id="code4c-line-6">}</button>
+    <button class="link d4c-link" id="code4c-line-5">favCol = "black";  <span style="color: #D9534F">//compiler error</span></button>
+    <button class="link d4c-link" id="code4c-line-6">return 0;</button>
+<button class="link d4c-link" id="code4c-line-7">}</button>
                     </code></pre>
 
                     <button type="button" class="btn btn-default" id="step-button-4c">Step</button>
@@ -610,12 +611,12 @@
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
                                     <td class="stack-heap stack-heap-4c d4c-stack-right d4c-stack-left" id="d4c-string-mid"><span class="hide-all d4c-hide-all d4c-show2" id="d4c-colour-val">"pink"</span></td>
-                                    <td class="not-stack"><span class="hide-all d4c-hide-all d4c-show2" id="d4c-colour">const string colour;</span></td>
+                                    <td class="not-stack"><span class="hide-all d4c-hide-all d4c-show2" id="d4c-colour"><span id="d4c-const-l4">const</span> string colour;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
                                     <td class="stack-heap stack-heap-4c d4c-stack-right d4c-stack-left" id="d4c-string-bot"></td>
-                                    <td class="not-stack"></td>
+                                    <td class="not-stack"><span class="hide-all d4c-hide-all d4c-show3" id="d4c-colour-alias"><span id="d4c-const-l5">const</span> string &favCol</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
@@ -624,7 +625,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-4c d4c-stack-right d4c-stack-left d4c-stack-bottom"><span class="hide-all d4c-hide-all" id="d4c-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-4c d4c-stack-right d4c-stack-left d4c-stack-bottom"><span class="hide-all d4c-hide-all d4c-show6" id="d4c-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d4c-hide-all d4c-show1" id="d4c-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
