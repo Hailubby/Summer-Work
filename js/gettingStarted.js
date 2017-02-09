@@ -1894,7 +1894,7 @@ $(document).ready(function () {
         $("#d4a-string-mid").removeClass("stack-string-middle");
         $("#d4a-string-bot").removeClass("stack-string-bottom");
         p4_c1_hideBorders();
-        $("#code4a-line-6").animate({backgroundColor: 'transparent'}, 0);
+        $(".d4a-link").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-4a").animate({backgroundColor: 'transparent'}, 0);
         p4_c1_line1();
         $("#d4a-rtn-addr-val").promise().done(function () {
@@ -1907,6 +1907,9 @@ $(document).ready(function () {
                         p4_c1_line5();
                         $("#d4a-age-alias").promise().done(function () {
                             p4_c1_line6();
+                            $("#d4a-rtnval-val").promise().done(function () {
+                                p4_c1_line7();
+                            });
                         });
                     });
                 });
@@ -1933,7 +1936,7 @@ $(document).ready(function () {
     var p4_c1_line2 = function () {
         $("#code4a-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         setTimeout(function(){
             $("#d4a-string-top").addClass("stack-string-top");
             $("#d4a-string-mid").addClass("stack-string-middle");
@@ -1947,7 +1950,7 @@ $(document).ready(function () {
     var p4_c1_line3 = function () {
         $("#code4a-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         $("#d4a-age").delay(1000).show(400);
         $("#d4a-age-val").delay(1400).show(400);
     };
@@ -1956,24 +1959,35 @@ $(document).ready(function () {
     var p4_c1_line4 = function () {
         $("#code4a-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-4").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         $("#d4a-name-alias").delay(1000).show(400);
     };
 
-    //p1 c1 line 5 function
+    //p4 c1 line 5 function
     var p4_c1_line5 = function () {
         $("#code4a-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-5").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         $("#d4a-age-alias").delay(1000).show(400);
     };
 
-    //p1 c1 line 6 function
+    //p4 c1 line 6 function
     var p4_c1_line6 = function () {
         $("#code4a-line-5").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-6").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         $("#d4a-rtnval-val").delay(1000).show(400);
+    };
+
+    //p4 c1 line 7 function
+    var p4_c1_line7 = function () {
+        $("#code4a-line-6").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code4a-line-7").animate({backgroundColor: '#ffff00'}, 1000);
+
+        $(".d4a-hide-all").delay(1000).hide(400);
+        $("#code4a-line-7").promise().done(function () {
+            p4_c1_hideBorders();
+        });
     };
 
     //unhighlight all lines
@@ -1984,6 +1998,7 @@ $(document).ready(function () {
         $("#code4a-line-4").animate({backgroundColor: 'transparent'}, 0);
         $("#code4a-line-5").animate({backgroundColor: 'transparent'}, 0);
         $("#code4a-line-6").animate({backgroundColor: 'transparent'}, 0);
+        $("#code4a-line-7").animate({backgroundColor: 'transparent'}, 0);
     };
 
     //show stack border
@@ -2107,6 +2122,27 @@ $(document).ready(function () {
         p4_c1_unhighlight();
 
         p4_c1_line6();
+        currentLine4a = 7;
+    });
+
+    $("#code4a-line-7").click(function(){
+        $(".d4a-link").removeClass("yellow");
+        $("#code4a-line-7").addClass("yellow");
+        $("#d4a-string-top").addClass("stack-string-top");
+        $("#d4a-string-mid").addClass("stack-string-middle");
+        $("#d4a-string-bot").addClass("stack-string-bottom");
+
+        p4_c1_showBorders();
+        $(".d4a-hide-all").hide();
+        $(".d4a-show1").show();
+        $(".d4a-show2").show();
+        $(".d4a-show3").show();
+        $(".d4a-show4").show();
+        $(".d4a-show5").show();
+        $(".d4a-show6").show();
+        p4_c1_unhighlight();
+
+        p4_c1_line7();
         currentLine4a = 1;
     });
 
@@ -2149,6 +2185,10 @@ $(document).ready(function () {
         }
         else if (currentLine4a == 6) {
             p4_c1_line6();
+            currentLine4a = 7;
+        }
+        else if (currentLine4a == 7) {
+            p4_c1_line7();
             currentLine4a = 1;
         }
 
@@ -2165,7 +2205,7 @@ $(document).ready(function () {
         $("#d4b-string-mid").removeClass("stack-string-middle");
         $("#d4b-string-bot").removeClass("stack-string-bottom");
         p4_c2_hideBorders();
-        $("#code4b-line-9").animate({backgroundColor: 'transparent'}, 0);
+        $(".d4b-link").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-4b").animate({backgroundColor: 'transparent'}, 0);
         $("#d4b-pointer-addr").animate({color: '#777'}, 0);
 
@@ -2186,12 +2226,14 @@ $(document).ready(function () {
                                     p4_c2_line8();
                                     $("#d4b-print-l8").promise().done(function () {
                                         p4_c2_line9();
+                                        $("#d4b-rtnval-val").promise().done(function () {
+                                            p4_c2_line10();
+                                        });
                                     });
                                 });
                             });
                         });
                     });
-
                 });
             });
         });
@@ -2201,6 +2243,7 @@ $(document).ready(function () {
     var p4_c2_line1 = function () {
         $("#code4b-line-1").animate({backgroundColor: '#ffff00'}, 600);
         $(".d4b-link").removeClass("yellow");
+        $(".d4b-link").removeClass("green");
         $(".table .stack-heap-4b").animate({backgroundColor: '#F5F5F5'}, 500);
         $(".table .d4b-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
         $(".table .d4b-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
@@ -2215,7 +2258,8 @@ $(document).ready(function () {
     var p4_c2_line2 = function () {
         $("#code4b-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4b-link").removeClass("yellow");
+
+        $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 0);
         setTimeout(function(){
             $("#d4b-string-top").addClass("stack-string-top");
             $("#d4b-string-mid").addClass("stack-string-middle");
@@ -2230,7 +2274,7 @@ $(document).ready(function () {
     var p4_c2_line3 = function () {
         $("#code4b-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4b-link").removeClass("yellow");
+
         $("#d4b-name-alias").delay(1000).show(400);
     };
 
@@ -2238,9 +2282,9 @@ $(document).ready(function () {
     var p4_c2_line4 = function () {
         $("#code4b-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-4").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d4b-link").removeClass("yellow");
+
         $("#d4b-name-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d4b-print-l4").delay(1600).show(400);
+        $("#d4b-print-l4").delay(1700).show(400);
     };
 
     //p4 c2 line 5 function
@@ -2248,12 +2292,9 @@ $(document).ready(function () {
         $("#code4b-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 500);
         $("#code4b-line-5").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d4b-link").removeClass("yellow");
-        $(".d4b-link").removeClass("green");
-        $("#d4b-name-val").removeClass("green");
 
-        $("#d4b-name-val").delay(900).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d4b-print-l5").delay(1500).show(400);
+        $("#d4b-name-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 800);
+        $("#d4b-print-l5").delay(1700).show(400);
     };
 
     //p4 c2 line 6 function
@@ -2261,9 +2302,6 @@ $(document).ready(function () {
         $("#code4b-line-5").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-6").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4b-link").removeClass("yellow");
-        $(".d4b-link").removeClass("green");
-        $("#d4b-name-val").removeClass("green");
 
         setTimeout(function(){
             $("#d4b-name-val").html('"Bob Jones"');
@@ -2275,9 +2313,9 @@ $(document).ready(function () {
     var p4_c2_line7 = function () {
         $("#code4b-line-6").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-7").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d4b-link").removeClass("yellow");
+
         $("#d4b-name-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d4b-print-l7").delay(1600).show(400);
+        $("#d4b-print-l7").delay(1700).show(400);
     };
 
     //p4 c2 line 8 function
@@ -2285,12 +2323,9 @@ $(document).ready(function () {
         $("#code4b-line-7").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 500);
         $("#code4b-line-8").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d4b-link").removeClass("yellow");
-        $(".d4b-link").removeClass("green");
-        $("#d4b-name-val").removeClass("green");
 
-        $("#d4b-name-val").delay(900).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d4b-print-l8").delay(1500).show(400);
+        $("#d4b-name-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 800);
+        $("#d4b-print-l8").delay(1700).show(400);
     };
 
     //p4 c2 line 9 function
@@ -2298,10 +2333,19 @@ $(document).ready(function () {
         $("#code4b-line-8").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-9").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4b-link").removeClass("yellow");
-        $(".d4b-link").removeClass("green");
-        $("#d4b-name-val").removeClass("green");
+
         $("#d4b-rtnval-val").delay(1000).show(400);
+    };
+
+    //p4 c2 line 10 function
+    var p4_c2_line10 = function () {
+        $("#code4b-line-9").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code4b-line-10").animate({backgroundColor: '#ffff00'}, 1000);
+
+        $(".d4b-hide-all").delay(1000).hide(400);
+        $("#code4b-line-10").promise().done(function () {
+            p4_c2_hideBorders();
+        });
     };
 
     //unhighlight all lines
@@ -2315,6 +2359,7 @@ $(document).ready(function () {
         $("#code4b-line-7").animate({backgroundColor: 'transparent'}, 0);
         $("#code4b-line-8").animate({backgroundColor: 'transparent'}, 0);
         $("#code4b-line-9").animate({backgroundColor: 'transparent'}, 0);
+        $("#code4b-line-10").animate({backgroundColor: 'transparent'}, 0);
     };
 
     //show stack border
@@ -2357,6 +2402,7 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("green");
         $("#code4b-line-2").addClass("yellow");
+        $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4b-string-top").removeClass("stack-string-top");
         $("#d4b-string-mid").removeClass("stack-string-middle");
@@ -2375,6 +2421,7 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("green");
         $("#code4b-line-3").addClass("yellow");
+        $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4b-string-top").addClass("stack-string-top");
         $("#d4b-string-mid").addClass("stack-string-middle");
@@ -2394,9 +2441,8 @@ $(document).ready(function () {
     $("#code4b-line-4").click(function() {
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("green");
-        $("#d4b-name-val").removeClass("green");
-        $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 0);
         $("#code4b-line-4").addClass("green");
+        $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4b-string-top").addClass("stack-string-top");
         $("#d4b-string-mid").addClass("stack-string-middle");
@@ -2418,6 +2464,7 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("green");
         $("#code4b-line-5").addClass("green");
+        $("#d4b-name-val").animate({backgroundColor: '#5CB85C'}, 0);
 
         $("#d4b-string-top").addClass("stack-string-top");
         $("#d4b-string-mid").addClass("stack-string-middle");
@@ -2430,7 +2477,6 @@ $(document).ready(function () {
         $(".d4b-show2").show();
         $(".d4b-show3").show();
         $(".d4b-show4").show();
-        $("#d4b-name-val").addClass("green");
         p4_c2_unhighlight();
 
         p4_c2_line5();
@@ -2440,7 +2486,8 @@ $(document).ready(function () {
     $("#code4b-line-6").click(function() {
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("green");
-        $("#code4b-line-5").addClass("yellow");
+        $("#code4b-line-6").addClass("yellow");
+        $("#d4b-name-val").animate({backgroundColor: '#5CB85C'}, 0);
 
         $("#d4b-string-top").addClass("stack-string-top");
         $("#d4b-string-mid").addClass("stack-string-middle");
@@ -2454,7 +2501,6 @@ $(document).ready(function () {
         $(".d4b-show3").show();
         $(".d4b-show4").show();
         $(".d4b-show5").show();
-        $("#d4b-name-val").addClass("green");
         p4_c2_unhighlight();
 
         p4_c2_line6();
@@ -2464,9 +2510,8 @@ $(document).ready(function () {
     $("#code4b-line-7").click(function() {
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("green");
-        $("#d4b-name-val").removeClass("green");
-        $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 0);
         $("#code4b-line-7").addClass("green");
+        $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4b-string-top").addClass("stack-string-top");
         $("#d4b-string-mid").addClass("stack-string-middle");
@@ -2490,6 +2535,7 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("green");
         $("#code4b-line-8").addClass("green");
+        $("#d4b-name-val").animate({backgroundColor: '#5CB85C'}, 0);
 
         $("#d4b-string-top").addClass("stack-string-top");
         $("#d4b-string-mid").addClass("stack-string-middle");
@@ -2504,7 +2550,6 @@ $(document).ready(function () {
         $(".d4b-show4").show();
         $(".d4b-show5").show();
         $(".d4b-show7").show();
-        $("#d4b-name-val").addClass("green");
         p4_c2_unhighlight();
 
         p4_c2_line8();
@@ -2515,6 +2560,7 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $(".d4b-link").removeClass("green");
         $("#code4b-line-9").addClass("yellow");
+        $("#d4b-name-val").animate({backgroundColor: '#5CB85C'}, 0);
 
         $("#d4b-string-top").addClass("stack-string-top");
         $("#d4b-string-mid").addClass("stack-string-middle");
@@ -2530,10 +2576,36 @@ $(document).ready(function () {
         $(".d4b-show5").show();
         $(".d4b-show7").show();
         $(".d4b-show8").show();
-        $("#d4b-name-val").addClass("green");
         p4_c2_unhighlight();
 
         p4_c2_line9();
+        currentLine4b = 10;
+    });
+
+    $("#code4b-line-10").click(function(){
+        $(".d4b-link").removeClass("yellow");
+        $(".d4b-link").removeClass("green");
+        $("#code4b-line-10").addClass("yellow");
+        $("#d4b-name-val").animate({backgroundColor: 'transparent'}, 0);
+
+        $("#d4b-string-top").addClass("stack-string-top");
+        $("#d4b-string-mid").addClass("stack-string-middle");
+        $("#d4b-string-bot").addClass("stack-string-bottom");
+
+        p4_c2_showBorders();
+        $(".d4b-hide-all").hide();
+        $("#d4b-name-val").html('"Bob Jones"');
+        $(".d4b-show1").show();
+        $(".d4b-show2").show();
+        $(".d4b-show3").show();
+        $(".d4b-show4").show();
+        $(".d4b-show5").show();
+        $(".d4b-show7").show();
+        $(".d4b-show8").show();
+        $(".d4b-show9").show();
+        p4_c2_unhighlight();
+
+        p4_c2_line10();
         currentLine4b = 1;
     });
 
@@ -2589,6 +2661,10 @@ $(document).ready(function () {
         }
         else if (currentLine4b == 9) {
             p4_c2_line9();
+            currentLine4b = 10;
+        }
+        else if (currentLine4b == 10) {
+            p4_c2_line10();
             currentLine4b = 1;
         }
 
