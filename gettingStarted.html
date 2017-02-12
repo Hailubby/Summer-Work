@@ -43,11 +43,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">Definitions</h4>
             </div>
             <div class="modal-body">
                 <p><b>Declaration:</b> a declaration states the type of a variable, along with its name. A variable may be only declared once and must be declared before reading or assigning.</p>
-                <p><b>Initialisation:</b> the first assignment of a value to a variable. Initialisation of a variable may be done in conjuction with the declaration.</p>
+                <p><b>Initialisation:</b> the first assignment of a value to a variable. Initialisation of a variable may be done in conjunction with the declaration.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
@@ -65,10 +65,36 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">Definitions</h4>
             </div>
             <div class="modal-body">
                 <p><b>Assignment:</b> throwing away the old value of a variable and replacing it with a new one.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--panel 3 modal-->
+<div id="d4-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">References</h4>
+            </div>
+            <div class="modal-body">
+                <p>A <b>reference</b> binds a variable name to an existing variable acting as an alias. Once initialised, either the variable name or reference name may be used to refer to the variable</p>
+                <ul>
+                    <li>You cannot have NULL references</li>
+                    <li>A reference must be initialised when created</li>
+                    <li>Once a reference is initialised to an object, it cannot be changed to refer to another object</li>
+                </ul>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
@@ -256,7 +282,7 @@
 
         <!--panel 2-->
         <div class="panel-body" id="anim-2" style="min-height: 400px;">
-            <h2 style="margin-top: 0; margin-bottom: 25px;">Declaring and initialising variables...</h2>
+            <h2 style="margin-top: 0; margin-bottom: 25px;">Declaring and initialising variables...<a href="#" data-toggle="modal" data-target="#d1-modal"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
             <!--panel 2 code 1-->
             <div class="row">
                 <div class="col-md-4">
@@ -528,7 +554,7 @@
 
         <!--panel 4-->
         <div class="panel-body" id="anim-4" style="min-height: 400px;">
-            <h2 style="margin-top: 0; margin-bottom: 25px;">References</h2>
+            <h2 style="margin-top: 0; margin-bottom: 25px;">References <a href="#" data-toggle="modal" data-target="#d4-modal"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
 
             <!--panel 4 code 1-->
             <div class="row">
