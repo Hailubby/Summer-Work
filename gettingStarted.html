@@ -78,7 +78,7 @@
     </div>
 </div>
 
-<!--panel 3 modal-->
+<!--panel 4 modal-->
 <div id="d4-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -94,6 +94,33 @@
                     <li>You cannot have NULL references</li>
                     <li>A reference must be initialised when created</li>
                     <li>Once a reference is initialised to an object, it cannot be changed to refer to another object</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--panel 5 modal-->
+<div id="d5-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Pointers</h4>
+            </div>
+            <div class="modal-body">
+                <p>A <b>pointer</b> is a variable whose value is the address of another variable.</p>
+                <ul>
+                    <li>Pointers must be declared before they can be used</li>
+                    <li>It is good practise to initialise pointers either to an address (using &) or "null"</li>
+                    <li>Use * to access the value at the address available in the pointer variable</li>
+                    <li>Unlike references, a pointer can be copied and also later be bound to other variables</li>
                 </ul>
             </div>
             <div class="modal-footer">
@@ -705,7 +732,7 @@
 
         <!--panel 5-->
         <div class="panel-body" id="anim-5" style="min-height: 400px;">
-            <h2 style="margin-top: 0; margin-bottom: 25px;">Pointers</h2>
+            <h2 style="margin-top: 0; margin-bottom: 25px;">Pointers <a href="#" data-toggle="modal" data-target="#d5-modal"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
 
             <!--panel 5 code 1-->
             <div class="row">
