@@ -13,6 +13,38 @@ button.link{
     padding: 0;
 }
 
+.table .stack{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.table .stack-top{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.table .stack-bot{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.table .stack-class-left{
+    border-left: 2px ridge red;
+}
+
+.table .stack-class-right{
+    border-right: 2px ridge red
+}
+
+.table .stack-class-top{
+    border-top: 2px ridge red
+}
+.table .stack-class-bot{
+    border-bottom: 2px ridge red;
+}
+
 /*Stack frame styling*/
 .stack-frame-heading{
     font-size: 0.85em;

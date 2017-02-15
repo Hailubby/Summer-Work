@@ -46,10 +46,22 @@
             <div class="row" style="margin-bottom: 25px;">
                 <div class="col-md-4">
                     <!--pre tag indentations-->
+                    <pre class="class-panel"><code>
+<span class="d1a-link" id="class1a-line-1">class Colour {</span>
+    <span class="d1a-link" id="class1a-line-2">private:</span>
+        <span class="d1a-link" id="class1a-line-3">string name;</span>
+        <span class="d1a-link" id="class1a-line-4">int r, g, b;</span>
+    <span class="d1a-link" id="class1a-line-5">public:</span>
+        <span class="d1a-link" id="class1a-line-6">Colour() { }</span>
+<span class="d1a-link" id="class1a-line-7">}</span>
+                    </code></pre>
+
                     <pre><code>
 <button class="link d1a-link" id="code1a-line-1">int main() {</button>
-    <button class="link d1a-link" id="code1a-line-2">return 0;</button>
-}
+    //declare and create instance
+    <button class="link d1a-link" id="code1a-line-2">Colour favColour;</button>
+    <button class="link d1a-link" id="code1a-line-3">return 0;</button>
+<button class="link d1a-link" id="code1a-line-4">}</button>
                     </code></pre>
 
                     <button type="button" class="btn btn-default" id="step-button-1a">Step</button>
@@ -60,23 +72,48 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="not-stack" style="color: #777"><i>0x0061fefc</i></td>
                                     <td class="stack-top"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff00</i></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left d1a-stack-top"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-b-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-b">int b;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff04</i></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-g-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-g">int g;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-r-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-r">int r;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left" id="d1a-string-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left" id="d1a-string-mid"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-name-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-name">string name;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap d1a-stack-right d1a-stack-left d1a-stack-top"><span class="hide-all d1a-hide-all"></span></td>
-                                    <td class="not-stack"><span class="hide-all d1a-hide-all"></span></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left" id="d1a-string-bot"></td>
+                                    <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack-heap d1a-stack-right d1a-stack-left"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
                                     <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show1" id="d1a-rtn-addr">rtn addr</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap d1a-stack-right d1a-stack-left d1a-stack-bottom"><span class="hide-all d1a-hide-all">0</span></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left d1a-stack-bottom"><span class="hide-all d1a-hide-all d1a-show3">0</span></td>
                                     <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show1"></span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -90,6 +127,473 @@
                 </div>
             </div>
 
+            <!--panel 1 code 2-->
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre class="class-panel"><code>
+<span class="d1b-link" id="class1b-line-1">class Colour {</span>
+    <span class="d1b-link" id="class1b-line-2">private:</span>
+        <span class="d1b-link" id="class1b-line-3">string name;</span>
+        <span class="d1b-link" id="class1b-line-4">int r, g, b;</span>
+    <span class="d1b-link" id="class1b-line-5">public:</span>
+        <span class="d1b-link" id="class1b-line-6">Colour() { }</span>
+<span class="d1b-link" id="class1b-line-7">}</span>
+                    </code></pre>
+
+                    <pre><code>
+<button class="link d1b-link" id="code1b-line-1">int main() {</button>
+    //declare pointer and create instance
+    <button class="link d1b-link" id="code1b-line-2">Colour *favColour = new Colour();</button>
+    <button class="link d1b-link" id="code1b-line-3">return 0;</button>
+<button class="link d1b-link" id="code1b-line-4">}</button>
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-1b">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-1b">Start</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-6" style="margin-top: 40px;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-top" style="color: #532A78;"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-favCol-val">0x001d54f4</span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-favCol">Colour *favColour;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left"><span class="hide-all d1b-hide-all d1b-show1" id="d1b-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show1" id="d1b-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-bottom"><span class="hide-all d1b-hide-all d1b-show3">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show1"></span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 not-stack">Heap</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f0</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d1b-pointer-addr" style="color: #777"><i>0x001d54f4</i></td>
+                                    <td class="stack-heap d1b-heap d1b-heap-right d1b-heap-left d1p-heap-top" id="d1b-string-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f8</i></td>
+                                    <td class="stack-heap d1b-heap d1b-heap-right d1b-heap-left" id="d1b-string-mid"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-name-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-name">string name;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54fc</i></td>
+                                    <td class="stack-heap d1b-heap d1b-heap-right d1b-heap-left" id="d1b-string-bot"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5500</i></td>
+                                    <td class="stack-heap d1b-heap d1b-heap-right d1b-heap-left"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-r-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-r">int r;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5504</i></td>
+                                    <td class="stack-heap d1b-heap d1b-heap-right d1b-heap-left"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-g-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-g">int g;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5508</i></td>
+                                    <td class="stack-heap d1b-heap d1b-heap-right d1b-heap-left d1b-heap-bottom"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-b-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-b">int b;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d550c</i></td>
+                                    <td class="heap-bottom"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body" id="anim-2" style="min-height: 400px;">
+            <h2 style="margin: 0 0 25px 10px;">Default values & custom constructors<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+
+            <!--panel 2 code 1-->
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="col-md-4">
+                    <!--pre tag indentations-->
+                    <pre class="class-panel"><code>
+<span>class Colour {</span>
+    <span>private:</span>
+        <span>string name;</span>
+        <span>int r, g, b;</span>
+    <span>public:</span>
+        <span class="d2a-link" id="class2a-line-1">Colour() {</span>
+            <span class="d2a-link" id="class2a-line-2">name = "White";</span>
+            <span class="d2a-link" id="class2a-line-3">r = 255;</span>
+            <span class="d2a-link" id="class2a-line-4">g = 255;</span>
+            <span class="d2a-link" id="class2a-line-5">b = 255;</span>
+        <span class="d2a-link" id="class2a-line-6">}</span>
+<span>}</span>
+                    </code></pre>
+
+                    <pre><code>
+<button class="link d2a-link" id="code2a-line-1">int main() {</button>
+    <button class="link d2a-link" id="code2a-line-2">Colour *favColour = new Colour();</button>
+    <button class="link d2a-link" id="code2a-line-3">return 0;</button>
+<button class="link d2a-link" id="code2a-line-4">}</button>
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-2a">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-2a">Start</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-6" style="margin-top: 50px;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-favCol-val">0x001d54f0</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-favCol">Colour *favColour;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left"><span class="hide-all d2a-hide-all d2a-show1" id="d2a-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show1" id="d2a-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-bottom"><span class="hide-all d2a-hide-all d2a-show3">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show1"></span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 not-stack">Heap</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d2a-pointer-addr" style="color: #777"><i>0x001d54f0</i></td>
+                                    <td class="stack-heap d2a-heap d2a-heap-right d2a-heap-left d2a-heap-top" id="d2a-string-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f4</i></td>
+                                    <td class="stack-heap d2a-heap d2a-heap-right d2a-heap-left" id="d2a-string-mid"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-name-val">"White"</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-name">string name;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f8</i></td>
+                                    <td class="stack-heap d2a-heap d2a-heap-right d2a-heap-left" id="d2a-string-bot"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54fc</i></td>
+                                    <td class="stack-heap d2a-heap d2a-heap-right d2a-heap-left"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-r-val">255</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-r">int r;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5500</i></td>
+                                    <td class="stack-heap d2a-heap d2a-heap-right d2a-heap-left"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-g-val">255</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-g">int g;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5504</i></td>
+                                    <td class="stack-heap d2a-heap d2a-heap-right d2a-heap-left d2a-heap-bottom"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-b-val">255</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-b">int b;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5508</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d550c</i></td>
+                                    <td class="heap-bottom"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--panel 2 code 2-->
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="col-md-5">
+                    <!--pre tag indentations-->
+                    <pre class="class-panel"><code>
+<span>class Colour {</span>
+    <span>private:</span>
+        <span>string name;</span>
+        <span>int r, g, b;</span>
+    <span>public:</span>
+        <span class="d2b-link" id="class2b-line-1">Colour(const string &n, int x, int y, int z) {</span>
+            <span class="d2b-link" id="class2b-line-2">name = n;</span>
+            <span class="d2b-link" id="class2b-line-3">r = x;</span>
+            <span class="d2b-link" id="class2b-line-4">g = y;</span>
+            <span class="d2b-link" id="class2b-line-5">b = z</span>
+        <span class="d2b-link" id="class2b-line-6">}</span>
+<span>}</span>
+                    </code></pre>
+
+                    <pre><code>
+<button class="link d2b-link" id="code2b-line-1">int main() {</button>
+    <button class="link d2b-link" id="code2b-line-2">Colour *favColour = new Colour("Orange", 255, 165, 0);</button>
+    <button class="link d2b-link" id="code2b-line-3">return 0;</button>
+<button class="link d2b-link" id="code2b-line-4">}</button>
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-2b">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-2b">Start</button>
+                </div>
+                <div class="col-md-7">
+                    <div class="col-md-6" style="margin-top: 50px;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-favCol-val">0x001d54f8</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-favCol">Colour *favColour;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left"><span class="hide-all d2b-hide-all d2b-show1" id="d2b-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show1" id="d2b-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-bottom"><span class="hide-all d2b-hide-all d2b-show3">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show1"></span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 not-stack">Heap</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f0</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f4</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d2b-pointer-addr" style="color: #777"><i>0x001d54f8</i></td>
+                                    <td class="stack-heap d2b-heap d2b-heap-right d2b-heap-left d2b-heap-top" id="d2b-string-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54fc</i></td>
+                                    <td class="stack-heap d2b-heap d2b-heap-right d2b-heap-left" id="d2b-string-mid"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-name-val">"Orange"</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-name">string name;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5500</i></td>
+                                    <td class="stack-heap d2b-heap d2b-heap-right d2b-heap-left" id="d2b-string-bot"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5504</i></td>
+                                    <td class="stack-heap d2b-heap d2b-heap-right d2b-heap-left"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-r-val">255</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-r">int r;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5508</i></td>
+                                    <td class="stack-heap d2b-heap d2b-heap-right d2b-heap-left"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-g-val">165</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-g">int g;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d550c</i></td>
+                                    <td class="stack-heap d2b-heap d2b-heap-right d2b-heap-left d2b-heap-bottom"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-b-val">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-b">int b;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5510</i></td>
+                                    <td class="heap-bottom"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--panel 2 code 3-->
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="col-md-5">
+                    <!--pre tag indentations-->
+                    <pre class="class-panel"><code>
+<span>class Colour {</span>
+    <span>private:</span>
+        <span>string name;</span>
+        <span>int r, g, b;</span>
+    <span>public:</span>
+        <span class="d2c-link" id="class2c-line-1">Colour(const string &name, int r, int g, int b) {</span>
+            <span class="d2c-link" id="class2c-line-2">this->name = name;</span>
+            <span class="d2c-link" id="class2c-line-3">this->r = r;</span>
+            <span class="d2c-link" id="class2c-line-4">this->g = g;</span>
+            <span class="d2c-link" id="class2c-line-5">this->b = b</span>
+        <span class="d2c-link" id="class2c-line-6">}</span>
+<span>}</span>
+                    </code></pre>
+
+                    <pre><code>
+<button class="link d2c-link" id="code2c-line-1">int main() {</button>
+    <button class="link d2c-link" id="code2c-line-2">Colour *favColour = new Colour("Pink", 255, 192, 203);</button>
+    <button class="link d2c-link" id="code2c-line-3">return 0;</button>
+<button class="link d2c-link" id="code2c-line-4">}</button>
+                    </code></pre>
+
+                    <button type="button" class="btn btn-default" id="step-button-2c">Step</button>
+                    <button type="button" class="btn btn-default" id="start-button-2c">Start</button>
+                </div>
+                <div class="col-md-7">
+                    <div class="col-md-6" style="margin-top: 50px;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-top" style="color: #532A78;"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-favCol-val">0x001d54f4</span></td>
+                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-favCol">Colour *favColour;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
+                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left"><span class="hide-all d2c-hide-all d2c-show1" id="d2c-rtn-addr-val"><i>0x0061ff2d</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show1" id="d2c-rtn-addr">rtn addr</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
+                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-bottom"><span class="hide-all d2c-hide-all d2c-show3">0</span></td>
+                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show1"></span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 stack">Stack</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr class="row-height-1">
+                                    <th class="col-md-1 not-stack"></th>
+                                    <th class="col-md-6 not-stack">Heap</th>
+                                    <th class="col-md-5 not-stack"></th>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f0</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" id="d2c-pointer-addr" style="color: #777"><i>0x001d54f4</i></td>
+                                    <td class="stack-heap d2c-heap d2c-heap-right d2c-heap-left d2c-heap-top" id="d2c-string-top"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54f8</i></td>
+                                    <td class="stack-heap d2c-heap d2c-heap-right d2c-heap-left" id="d2c-string-mid"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-name-val">"Orange"</span></td>
+                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-name">string name;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d54fc</i></td>
+                                    <td class="stack-heap d2c-heap d2c-heap-right d2c-heap-left" id="d2c-string-bot"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5500</i></td>
+                                    <td class="stack-heap d2c-heap d2c-heap-right d2c-heap-left"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-r-val">255</span></td>
+                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-r">int r;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5504</i></td>
+                                    <td class="stack-heap d2c-heap d2c-heap-right d2c-heap-left"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-g-val">192</span></td>
+                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-g">int g;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5508</i></td>
+                                    <td class="stack-heap d2c-heap d2c-heap-right d2c-heap-left d2c-heap-bottom"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-b-val">203</span></td>
+                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-b">int b;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d550c</i></td>
+                                    <td class="stack-heap"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x001d5510</i></td>
+                                    <td class="heap-bottom"></td>
+                                    <td class="not-stack"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
