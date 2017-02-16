@@ -23,11 +23,17 @@ $(document).ready(function () {
         $(".table .stack-class-1a").animate({backgroundColor: 'transparent'}, 0);
         p1_c1_line1();
         $("#d1a-rtn-addr-val").promise().done(function () {
-            p1_c1_line2();
-            $("#d1a-b-val").promise().done(function () {
-                p1_c1_line3();
-                $("#d1a-rtnval-val").promise().done(function () {
-                    p1_c1_line4();
+            p1_c1_line2a();
+            $(".stack-class-1a").promise().done(function () {
+                p1_c1_line2b();
+                $("#d1a-name-val").promise().done(function () {
+                    p1_c1_line2c();
+                    $("#d1a-b-val").promise().done(function () {
+                        p1_c1_line3();
+                        $("#d1a-rtnval-val").promise().done(function () {
+                            p1_c1_line4();
+                        });
+                    });
                 });
             });
         });
@@ -47,38 +53,46 @@ $(document).ready(function () {
         $("#d1a-rtn-addr-val").delay(1600).show(400);
     };
 
-    //p1 c1 line 2 function
-    var p1_c1_line2 = function () {
+    //p1 c1 line 2a function
+    var p1_c1_line2a = function () {
         $("#code1a-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1a-line-2").animate({backgroundColor: '#ffff00'}, 1000);
 
         $("#class1a-line-3").delay(1000).animate({backgroundColor: '#ffff00'}, 1000);
-        $(".stack-class-1a").delay(1500).animate({backgroundColor: '#e8e8e8'}, 500);
+        $(".stack-class-1a").delay(2000).animate({backgroundColor: '#e8e8e8'}, 500);
+    };
 
-        $("#class1a-line-1").delay(2000).animate({backgroundColor: '#ffff00'}, 500);
+    //p1 c1 line 2b function
+    var p1_c1_line2b = function () {
+        $("#class1a-line-1").animate({backgroundColor: '#ffff00'}, 1000);
+
         setTimeout(function(){
             $("#d1a-string-top").addClass("stack-string-top");
             $("#d1a-string-mid").addClass("stack-string-middle");
             $("#d1a-string-bot").addClass("stack-string-bottom");
-        }, 2500);
-        $("#d1a-name").delay(2700).show(400);
-        $("#d1a-name-val").delay(3100).show(400);
-
-        $("#class1a-line-1").delay(3500).animate({backgroundColor: 'transparent'}, 500);
-        $("#class1a-line-2").delay(3500).animate({backgroundColor: '#ffff00'}, 500);
-        $("#d1a-r").delay(4000).show(400);
-        $("#d1a-r-val").delay(4400).show(400);
-        $("#d1a-g").delay(4800).show(400);
-        $("#d1a-g-val").delay(5200).show(400);
-        $("#d1a-b").delay(5600).show(400);
-        $("#d1a-b-val").delay(6000).show(400);
+        }, 800);
+        $("#d1a-name").delay(1000).show(400);
+        $("#d1a-name-val").delay(1400).show(400);
     };
+
+    //p1 c1 line 2c function
+    var p1_c1_line2c = function () {
+        $("#class1a-line-1").animate({backgroundColor: 'transparent'}, 1000);
+        $("#class1a-line-2").animate({backgroundColor: '#ffff00'}, 1000);
+
+        $("#d1a-r").delay(1000).show(400);
+        $("#d1a-r-val").delay(1400).show(400);
+        $("#d1a-g").delay(1800).show(400);
+        $("#d1a-g-val").delay(2200).show(400);
+        $("#d1a-b").delay(2600).show(400);
+        $("#d1a-b-val").delay(3000).show(400);
+    }
 
     //p1 c1 line 3 function
     var p1_c1_line3 = function () {
         $("#code1a-line-2").animate({backgroundColor: 'transparent'}, 1000);
-        $("#class1a-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#class1a-line-2").animate({backgroundColor: 'transparent'}, 1000);
+        $("#class1a-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1a-line-3").animate({backgroundColor: '#ffff00'}, 1000);
 
         $("#d1a-rtnval-val").delay(1000).show(400);
@@ -92,6 +106,9 @@ $(document).ready(function () {
         $(".d1a-hide-all").delay(1000).hide(400);
         $("#code1a-line-4").promise().done(function () {
             p1_c1_hideBorders();
+            $("#d1a-string-top").removeClass("stack-string-top");
+            $("#d1a-string-mid").removeClass("stack-string-middle");
+            $("#d1a-string-bot").removeClass("stack-string-bottom");
         });
     };
 

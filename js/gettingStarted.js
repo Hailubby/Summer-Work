@@ -1040,6 +1040,9 @@ $(document).ready(function () {
         $(".d2b-hide-all").delay(1000).hide(400);
         $("#code2b-line-6").promise().done(function () {
             p2_c2_hideBorders();
+            $("#d2b-string-top").removeClass("stack-string-top");
+            $("#d2b-string-mid").removeClass("stack-string-middle");
+            $("#d2b-string-bot").removeClass("stack-string-bottom");
         });
     };
 
@@ -1644,6 +1647,9 @@ $(document).ready(function () {
         $(".d3b-hide-all").delay(1000).hide(400);
         $("#code3b-line-8").promise().done(function () {
             p3_c2_hideBorders();
+            $("#d3b-string-top").removeClass("stack-string-top");
+            $("#d3b-string-mid").removeClass("stack-string-middle");
+            $("#d3b-string-bot").removeClass("stack-string-bottom");
         });
     };
 
@@ -1987,6 +1993,9 @@ $(document).ready(function () {
         $(".d4a-hide-all").delay(1000).hide(400);
         $("#code4a-line-7").promise().done(function () {
             p4_c1_hideBorders();
+            $("#d4a-string-top").removeClass("stack-string-top");
+            $("#d4a-string-mid").removeClass("stack-string-middle");
+            $("#d4a-string-bot").removeClass("stack-string-bottom");
         });
     };
 
@@ -2345,6 +2354,9 @@ $(document).ready(function () {
         $(".d4b-hide-all").delay(1000).hide(400);
         $("#code4b-line-10").promise().done(function () {
             p4_c2_hideBorders();
+            $("#d4b-string-top").removeClass("stack-string-top");
+            $("#d4b-string-mid").removeClass("stack-string-middle");
+            $("#d4b-string-bot").removeClass("stack-string-bottom");
         });
     };
 
@@ -3589,6 +3601,9 @@ $(document).ready(function () {
         $(".d5c-hide-all").delay(1000).hide(400);
         $("#code5c-line-11").promise().done(function () {
             p5_c3_hideBorders();
+            $("#d5c-string-top").removeClass("stack-string-top");
+            $("#d5c-string-mid").removeClass("stack-string-middle");
+            $("#d5c-string-bot").removeClass("stack-string-bottom");
         });
     };
 
