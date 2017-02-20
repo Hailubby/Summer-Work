@@ -91,16 +91,13 @@ button.link{
     text-align: center;
 }
 
-.table .stack-string-top{
+.table .stack-string-top,
+.table .stack-pointer-top{
     border-bottom: none !important;
 }
 
-.table .stack-string-middle{
-    border-top: none !important;
-    border-bottom: none !important;
-}
-
-.table .stack-string-bottom{
+.table .stack-string-bottom,
+.table .stack-pointer-bottom{
     border-top: none !important;
 }
 
