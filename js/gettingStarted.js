@@ -1532,7 +1532,6 @@ $(document).ready(function () {
         currentLine3b = 1;
         $(".d3b-hide-all").hide();
         $("#d3b-string-top").removeClass("stack-string-top");
-        $("#d3b-string-mid").removeClass("stack-string-middle");
         $("#d3b-string-bot").removeClass("stack-string-bottom");
         p3_c2_hideBorders();
         $(".d3b-link").animate({backgroundColor: 'transparent'}, 0);
@@ -1582,7 +1581,6 @@ $(document).ready(function () {
 
         setTimeout(function(){
             $("#d3b-string-top").addClass("stack-string-top");
-            $("#d3b-string-mid").addClass("stack-string-middle");
             $("#d3b-string-bot").addClass("stack-string-bottom");
         }, 800);
         $("#d3b-name-val").html('"Bob"');
@@ -1648,7 +1646,6 @@ $(document).ready(function () {
         $("#code3b-line-8").promise().done(function () {
             p3_c2_hideBorders();
             $("#d3b-string-top").removeClass("stack-string-top");
-            $("#d3b-string-mid").removeClass("stack-string-middle");
             $("#d3b-string-bot").removeClass("stack-string-bottom");
         });
     };
@@ -1689,7 +1686,6 @@ $(document).ready(function () {
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-1").addClass("yellow");
         $("#d3b-string-top").removeClass("stack-string-top");
-        $("#d3b-string-mid").removeClass("stack-string-middle");
         $("#d3b-string-bot").removeClass("stack-string-bottom");
 
         $(".d3b-hide-all").hide();
@@ -1704,7 +1700,6 @@ $(document).ready(function () {
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-2").addClass("yellow");
         $("#d3b-string-top").removeClass("stack-string-top");
-        $("#d3b-string-mid").removeClass("stack-string-middle");
         $("#d3b-string-bot").removeClass("stack-string-bottom");
 
         p3_c2_showBorders();
@@ -1720,7 +1715,6 @@ $(document).ready(function () {
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-3").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
-        $("#d3b-string-mid").addClass("stack-string-middle");
         $("#d3b-string-bot").addClass("stack-string-bottom");
 
         p3_c2_showBorders();
@@ -1738,7 +1732,6 @@ $(document).ready(function () {
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-4").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
-        $("#d3b-string-mid").addClass("stack-string-middle");
         $("#d3b-string-bot").addClass("stack-string-bottom");
 
         p3_c2_showBorders();
@@ -1757,7 +1750,6 @@ $(document).ready(function () {
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-5").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
-        $("#d3b-string-mid").addClass("stack-string-middle");
         $("#d3b-string-bot").addClass("stack-string-bottom");
 
         p3_c2_showBorders();
@@ -1778,7 +1770,6 @@ $(document).ready(function () {
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-6").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
-        $("#d3b-string-mid").addClass("stack-string-middle");
         $("#d3b-string-bot").addClass("stack-string-bottom");
 
         p3_c2_showBorders();
@@ -1799,7 +1790,6 @@ $(document).ready(function () {
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-7").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
-        $("#d3b-string-mid").addClass("stack-string-middle");
         $("#d3b-string-bot").addClass("stack-string-bottom");
 
         p3_c2_showBorders();
@@ -1820,7 +1810,6 @@ $(document).ready(function () {
         $(".d3b-link").removeClass("yellow");
         $("#code3b-line-8").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
-        $("#d3b-string-mid").addClass("stack-string-middle");
         $("#d3b-string-bot").addClass("stack-string-bottom");
 
         p3_c2_showBorders();
@@ -1844,7 +1833,6 @@ $(document).ready(function () {
             $(".d3b-link").removeClass("yellow");
             $("#code3b-line-1").addClass("yellow");
             $("#d3b-string-top").removeClass("stack-string-top");
-            $("#d3b-string-mid").removeClass("stack-string-middle");
             $("#d3b-string-bot").removeClass("stack-string-bottom");
 
             $(".d3b-hide-all").hide();
