@@ -2282,7 +2282,6 @@ $(document).ready(function () {
         currentLine4b = 1;
         $(".d4b-hide-all").hide();
         $("#d4b-string-top").removeClass("stack-string-top");
-        $("#d4b-string-mid").removeClass("stack-string-middle");
         $("#d4b-string-bot").removeClass("stack-string-bottom");
         p4_c2_hideBorders();
         $(".d4b-link").animate({backgroundColor: 'transparent'}, 0);
@@ -2330,7 +2329,6 @@ $(document).ready(function () {
 
         setTimeout(function(){
             $("#d4b-string-top").addClass("stack-string-top");
-            $("#d4b-string-mid").addClass("stack-string-middle");
             $("#d4b-string-bot").addClass("stack-string-bottom");
         }, 800);
         $("#d4b-name").delay(1000).show(400);
@@ -2379,7 +2377,6 @@ $(document).ready(function () {
         $("#code4b-line-7").promise().done(function () {
             p4_c2_hideBorders();
             $("#d4b-string-top").removeClass("stack-string-top");
-            $("#d4b-string-mid").removeClass("stack-string-middle");
             $("#d4b-string-bot").removeClass("stack-string-bottom");
         });
     };
@@ -2418,7 +2415,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $("#code4b-line-1").addClass("yellow");
         $("#d4b-string-top").removeClass("stack-string-top");
-        $("#d4b-string-mid").removeClass("stack-string-middle");
         $("#d4b-string-bot").removeClass("stack-string-bottom");
 
         $(".d4b-hide-all").hide();
@@ -2433,7 +2429,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $("#code4b-line-2").addClass("yellow");
         $("#d4b-string-top").removeClass("stack-string-top");
-        $("#d4b-string-mid").removeClass("stack-string-middle");
         $("#d4b-string-bot").removeClass("stack-string-bottom");
 
         p4_c2_showBorders();
@@ -2449,7 +2444,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $("#code4b-line-3").addClass("yellow");
         $("#d4b-string-top").addClass("stack-string-top");
-        $("#d4b-string-mid").addClass("stack-string-middle");
         $("#d4b-string-bot").addClass("stack-string-bottom");
 
         p4_c2_showBorders();
@@ -2466,7 +2460,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $("#code4b-line-4").addClass("yellow");
         $("#d4b-string-top").addClass("stack-string-top");
-        $("#d4b-string-mid").addClass("stack-string-middle");
         $("#d4b-string-bot").addClass("stack-string-bottom");
 
         p4_c2_showBorders();
@@ -2484,7 +2477,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $("#code4b-line-5").addClass("yellow");
         $("#d4b-string-top").addClass("stack-string-top");
-        $("#d4b-string-mid").addClass("stack-string-middle");
         $("#d4b-string-bot").addClass("stack-string-bottom");
 
         p4_c2_showBorders();
@@ -2503,7 +2495,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $("#code4b-line-6").addClass("yellow");
         $("#d4b-string-top").addClass("stack-string-top");
-        $("#d4b-string-mid").addClass("stack-string-middle");
         $("#d4b-string-bot").addClass("stack-string-bottom");
 
         p4_c2_showBorders();
@@ -2523,7 +2514,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("yellow");
         $("#code4b-line-7").addClass("yellow");
         $("#d4b-string-top").addClass("stack-string-top");
-        $("#d4b-string-mid").addClass("stack-string-middle");
         $("#d4b-string-bot").addClass("stack-string-bottom");
 
         p4_c2_showBorders();
@@ -2547,7 +2537,6 @@ $(document).ready(function () {
             $(".d4b-link").removeClass("yellow");
             $("#code4b-line-1").addClass("yellow");
             $("#d4b-string-top").removeClass("stack-string-top");
-            $("#d4b-string-mid").removeClass("stack-string-middle");
             $("#d4b-string-bot").removeClass("stack-string-bottom");
 
             $(".d4b-hide-all").hide();
@@ -2596,7 +2585,6 @@ $(document).ready(function () {
         currentLine4c = 1;
         $(".d4c-hide-all").hide();
         $("#d4c-string-top").removeClass("stack-string-top");
-        $("#d4c-string-mid").removeClass("stack-string-middle");
         $("#d4c-string-bot").removeClass("stack-string-bottom");
         p4_c3_hideBorders();
         $(".d4c-link").animate({backgroundColor: 'transparent'}, 0);
@@ -2656,7 +2644,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 0);
         setTimeout(function(){
             $("#d4c-string-top").addClass("stack-string-top");
-            $("#d4c-string-mid").addClass("stack-string-middle");
             $("#d4c-string-bot").addClass("stack-string-bottom");
         }, 800);
         $("#d4c-name-val").html('"Bob"');
@@ -2740,7 +2727,6 @@ $(document).ready(function () {
         $("#code4c-line-10").promise().done(function () {
             p4_c3_hideBorders();
             $("#d4c-string-top").removeClass("stack-string-top");
-            $("#d4c-string-mid").removeClass("stack-string-middle");
             $("#d4c-string-bot").removeClass("stack-string-bottom");
         });
     };
@@ -2784,7 +2770,6 @@ $(document).ready(function () {
         $("#code4c-line-1").addClass("yellow");
 
         $("#d4c-string-top").removeClass("stack-string-top");
-        $("#d4c-string-mid").removeClass("stack-string-middle");
         $("#d4c-string-bot").removeClass("stack-string-bottom");
 
         $(".d4c-hide-all").hide();
@@ -2802,7 +2787,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4c-string-top").removeClass("stack-string-top");
-        $("#d4c-string-mid").removeClass("stack-string-middle");
         $("#d4c-string-bot").removeClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -2821,7 +2805,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -2842,7 +2825,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -2864,7 +2846,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: '#5CB85C'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -2887,7 +2868,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: '#5CB85C'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -2911,7 +2891,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -2935,7 +2914,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: '#5CB85C'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -2960,7 +2938,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: '#5CB85C'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -2986,7 +2963,6 @@ $(document).ready(function () {
         $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
 
         p4_c3_showBorders();
@@ -3014,7 +2990,6 @@ $(document).ready(function () {
             $("#code4c-line-1").addClass("yellow");
 
             $("#d4c-string-top").removeClass("stack-string-top");
-            $("#d4c-string-mid").removeClass("stack-string-middle");
             $("#d4c-string-bot").removeClass("stack-string-bottom");
 
             $(".d4c-hide-all").hide();
