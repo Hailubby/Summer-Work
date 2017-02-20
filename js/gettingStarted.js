@@ -1292,22 +1292,23 @@ $(document).ready(function () {
     //p3 c1 line 4 function
     var p3_c1_line4 = function () {
         $("#code3a-line-3").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d3a-id-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-4").animate({backgroundColor: '#ffff00'}, 1000);
 
+        $("#d3a-id-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function(){
             $("#d3a-id-val").html('2');
-        }, 1000);
-        $("#d3a-id-val").delay(1100).animate({backgroundColor: 'transparent'}, 500);
+        }, 1900);
+        $("#d3a-id-val").delay(1900).show(400);
     };
 
     //p3 c1 line 5 function
     var p3_c1_line5 = function () {
         $("#code3a-line-4").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d3a-id-val");
         $("#code3a-line-5").animate({backgroundColor: '#5CB85C'}, 1000);
 
-        $("#d3a-id-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d3a-print-l5").delay(1600).show(400);
+        $("#d3a-id-val").animate({backgroundColor: 'transparent'}, 1000).delay(100).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d3a-print-l5").delay(2100).show(400);
     };
 
     //p3 c1 line 6 function
@@ -1428,7 +1429,7 @@ $(document).ready(function () {
         $(".d3a-link").removeClass("yellow");
         $(".d3a-link").removeClass("green");
         $("#code3a-line-5").addClass("green");
-        $("#d3a-id-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-id-val").animate({backgroundColor: '#d1d1d1'}, 0);
 
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
@@ -1536,6 +1537,8 @@ $(document).ready(function () {
         p3_c2_hideBorders();
         $(".d3b-link").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-3b").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-phone-val").animate({backgroundColor: 'transparent'}, 0);
         p3_c2_line1();
         $("#d3b-rtn-addr-val").promise().done(function () {
             p3_c2_line2();
@@ -1612,26 +1615,30 @@ $(document).ready(function () {
         $("#code3b-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-5").animate({backgroundColor: '#ffff00'}, 1000);
 
+        $("#d3b-name-val").delay(1000).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function(){
             $("#d3b-name-val").html('"Bob Jones"');
-        }, 1000);
-        $("#d3b-name-val").delay(1100).animate({backgroundColor: 'transparent'}, 500);
+        }, 1900);
+        $("#d3b-name-val").delay(1900).show(400);
     };
 
     //p3 c2 line 6 function
     var p3_c2_line6 = function () {
         $("#code3b-line-5").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-6").animate({backgroundColor: '#ffff00'}, 1000);
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 1000);
 
+        $("#d3b-phone-val").delay(1000).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function(){
             $("#d3b-phone-val").html('2222222');
-        }, 1000);
-        $("#d3b-phone-val").delay(1100).animate({backgroundColor: 'transparent'}, 500);
+        }, 1900);
+        $("#d3b-phone-val").delay(1900).show(400);
     };
 
     //p3 c2 line 7 function
     var p3_c2_line7 = function () {
         $("#code3b-line-6").animate({backgroundColor: 'transparent'}, 1000);
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-7").animate({backgroundColor: '#ffff00'}, 1000);
 
         $("#d3b-rtnval-val").delay(1000).show(400);
@@ -1701,6 +1708,7 @@ $(document).ready(function () {
         $("#code3b-line-2").addClass("yellow");
         $("#d3b-string-top").removeClass("stack-string-top");
         $("#d3b-string-bot").removeClass("stack-string-bottom");
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -1716,6 +1724,7 @@ $(document).ready(function () {
         $("#code3b-line-3").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
         $("#d3b-string-bot").addClass("stack-string-bottom");
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 0);
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -1733,6 +1742,8 @@ $(document).ready(function () {
         $("#code3b-line-4").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
         $("#d3b-string-bot").addClass("stack-string-bottom");
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-phone-val").animate({backgroundColor: 'transparent'}, 0);
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -1751,6 +1762,8 @@ $(document).ready(function () {
         $("#code3b-line-5").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
         $("#d3b-string-bot").addClass("stack-string-bottom");
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-phone-val").animate({backgroundColor: 'transparent'}, 0);
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -1771,6 +1784,8 @@ $(document).ready(function () {
         $("#code3b-line-6").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
         $("#d3b-string-bot").addClass("stack-string-bottom");
+        $("#d3b-name-val").animate({backgroundColor: '#d1d1d1'}, 0);
+        $("#d3b-phone-val").animate({backgroundColor: 'transparent'}, 0);
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -1791,6 +1806,8 @@ $(document).ready(function () {
         $("#code3b-line-7").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
         $("#d3b-string-bot").addClass("stack-string-bottom");
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-phone-val").animate({backgroundColor: '#d1d1d1'}, 0);
 
         p3_c2_showBorders();
         $(".d3a-hide-all").hide();
@@ -1811,6 +1828,8 @@ $(document).ready(function () {
         $("#code3b-line-8").addClass("yellow");
         $("#d3b-string-top").addClass("stack-string-top");
         $("#d3b-string-bot").addClass("stack-string-bottom");
+        $("#d3b-name-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-phone-val").animate({backgroundColor: 'transparent'}, 0);
 
         p3_c2_showBorders();
         $(".d3a-hide-all").hide();
@@ -1990,8 +2009,8 @@ $(document).ready(function () {
         $("#d4a-name-val").delay(1000).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function(){
             $("#d4a-name-val").html('"Bob Jones"');
-        }, 1700);
-        $("#d4a-name-val").delay(1700).show(400);
+        }, 1900);
+        $("#d4a-name-val").delay(1900).show(400);
     };
 
     //p4 c1 line 7 function
@@ -2589,6 +2608,7 @@ $(document).ready(function () {
         p4_c3_hideBorders();
         $(".d4c-link").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-4c").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 0);
         p4_c3_line1();
         $("#d4c-rtn-addr-val").promise().done(function () {
             p4_c3_line2();
@@ -2669,23 +2689,22 @@ $(document).ready(function () {
     //p4 c3 line 5 function
     var p4_c3_line5 = function () {
         $("#code4c-line-4").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 500);
         $("#code4c-line-5").animate({backgroundColor: '#5CB85C'}, 1000);
 
-        $("#d4c-name-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 800);
-        $("#d4c-print-l5").delay(1700).show(400);
+        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 800);
+        $("#d4c-print-l5").delay(1800).show(400);
     };
 
     //p4 c3 line 6 function
     var p4_c3_line6 = function () {
         $("#code4c-line-5").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4c-line-6").animate({backgroundColor: '#ffff00'}, 1000);
 
+        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function(){
             $("#d4c-name-val").html('"Bob Jones"');
-        }, 1000);
-        $("#d4c-name-val").delay(1100).animate({backgroundColor: 'transparent'}, 500);
+        }, 1700);
+        $("#d4c-name-val").delay(1700).show(400);
     };
 
     //p4 c3 line 7 function
@@ -2693,18 +2712,17 @@ $(document).ready(function () {
         $("#code4c-line-6").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4c-line-7").animate({backgroundColor: '#5CB85C'}, 1000);
 
-        $("#d4c-name-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d4c-print-l7").delay(1700).show(400);
+        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 1000).delay(100).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d4c-print-l7").delay(2100).show(400);
     };
 
     //p4 c3 line 8 function
     var p4_c3_line8 = function () {
         $("#code4c-line-7").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 500);
         $("#code4c-line-8").animate({backgroundColor: '#5CB85C'}, 1000);
 
-        $("#d4c-name-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 800);
-        $("#d4c-print-l8").delay(1700).show(400);
+        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 800);
+        $("#d4c-print-l8").delay(1800).show(400);
     };
 
     //p4 c3 line 9 function
@@ -2886,7 +2904,7 @@ $(document).ready(function () {
         $(".d4c-link").removeClass("yellow");
         $(".d4c-link").removeClass("green");
         $("#code4c-line-7").addClass("green");
-        $("#d4c-name-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4c-name-val").animate({backgroundColor: '#d1d1d1'}, 0);
 
         $("#d4c-string-top").addClass("stack-string-top");
         $("#d4c-string-bot").addClass("stack-string-bottom");
