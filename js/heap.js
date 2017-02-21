@@ -14,8 +14,9 @@ $(document).ready(function () {
     $("#start-button-1a").click(function () {
         currentLine1a = 1;
         $(".d1a-hide-all").hide();
+        $(".d1a-hide-all-heap").hide();
         p1_c1_hideBorders();
-        $("#code1a-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $(".d1a-link").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-1a").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d1a-heap1").animate({backgroundColor: 'transparent'}, 0);
         $("#d1a-pointer-addr").animate({color: '#777'}, 0);
@@ -26,6 +27,9 @@ $(document).ready(function () {
                 p1_c1_line3();
                 $("#d1a-heap-age-val").promise().done(function () {
                     p1_c1_line4();
+                    $("#d1a-mem-leak").promise().done(function () {
+                        p1_c1_line5();
+                    });
                 });
             });
         });
@@ -49,7 +53,7 @@ $(document).ready(function () {
     var p1_c1_line2 = function () {
         $("#code1a-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1a-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d1a-link").removeClass("yellow");
+
         $("#d1a-age").delay(1000).show(400);
         $(".table .d1a-heap1").delay(1200).animate({backgroundColor: '#F5F5F5'},500);
         $("#d1a-pointer-addr").delay(1600).animate({color: '#532A78', fontWeight: 'bold'}, 150);
@@ -60,7 +64,7 @@ $(document).ready(function () {
     var p1_c1_line3 = function () {
         $("#code1a-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1a-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d1a-link").removeClass("yellow");
+
         $("#d1a-heap-age-val").delay(1000).show(400);
     };
 
@@ -68,8 +72,21 @@ $(document).ready(function () {
     var p1_c1_line4 = function () {
         $("#code1a-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code1a-line-4").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d1a-link").removeClass("yellow");
+
         $("#d1a-rtnval-val").delay(1000).show(400);
+        $(".d1a-heap1").delay(1400).animate({backgroundColor: '#dd747b'}, 700);
+        $("#d1a-mem-leak").delay(2100).show(400).delay(400);
+    };
+
+    //p1 c1 line 5 function
+    var p1_c1_line5 = function () {
+        $("#code1a-line-4").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code1a-line-5").animate({backgroundColor: '#ffff00'}, 1000);
+
+        $(".d1a-hide-all").delay(1000).hide(400);
+        $("#code1a-line-5").promise().done(function () {
+            p1_c1_hideBorders();
+        });
     };
 
     //unhighlight all lines
@@ -78,6 +95,7 @@ $(document).ready(function () {
         $("#code1a-line-2").animate({backgroundColor: 'transparent'}, 0);
         $("#code1a-line-3").animate({backgroundColor: 'transparent'}, 0);
         $("#code1a-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#code1a-line-5").animate({backgroundColor: 'transparent'}, 0);
     };
 
     //show stack border
@@ -96,7 +114,6 @@ $(document).ready(function () {
         $(".table .d1a-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
         $(".table .d1a-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
         $(".table .stack-heap-1a").animate({backgroundColor: 'transparent'}, 0);
-        $(".table .d1a-heap1").animate({backgroundColor: 'transparent'}, 0);
     };
 
     //stepping function
@@ -104,7 +121,10 @@ $(document).ready(function () {
         $(".d1a-link").removeClass("yellow");
         $("#code1a-line-1").addClass("yellow");
 
+        $(".table .d1a-heap1").animate({backgroundColor: 'transparent'}, 0);
+
         $(".d1a-hide-all").hide();
+        $(".d1a-hide-all-heap").hide();
         $("#d1a-pointer-addr").animate({color: '#777'}, 0);
         p1_c1_hideBorders();
         p1_c1_unhighlight();
@@ -119,6 +139,7 @@ $(document).ready(function () {
 
         p1_c1_showBorders();
         $(".d1a-hide-all").hide();
+        $(".d1a-hide-all-heap").hide();
         $(".table .d1a-heap1").animate({backgroundColor: 'transparent'}, 0);
         $("#d1a-pointer-addr").animate({color: '#777'}, 0);
         $(".d1a-show1").show();
@@ -136,6 +157,7 @@ $(document).ready(function () {
         $(".table .d1a-heap1").animate({backgroundColor: '#F5F5F5'}, 0);
         $("#d1a-pointer-addr").animate({color: '#532A78'}, 0);
         $(".d1a-hide-all").hide();
+        $(".d1a-hide-all-heap").hide();
         $(".d1a-show1").show();
         $(".d1a-show2").show();
         p1_c1_unhighlight();
@@ -152,12 +174,32 @@ $(document).ready(function () {
         $(".table .d1a-heap1").animate({backgroundColor: '#F5F5F5'}, 0);
         $("#d1a-pointer-addr").animate({color: '#532A78'}, 0);
         $(".d1a-hide-all").hide();
+        $(".d1a-hide-all-heap").hide();
         $(".d1a-show1").show();
         $(".d1a-show2").show();
         $(".d1a-show3").show();
         p1_c1_unhighlight();
 
         p1_c1_line4();
+        currentLine1a = 5;
+    });
+
+    $("#code1a-line-5").click(function(){
+        $(".d1a-link").removeClass("yellow");
+        $("#code1a-line-5").addClass("yellow");
+
+        p1_c1_showBorders();
+        $(".table .d1a-heap1").animate({backgroundColor: '#dd747b'}, 0);
+        $("#d1a-pointer-addr").animate({color: '#532A78'}, 0);
+        $(".d1a-hide-all").hide();
+        $(".d1a-hide-all-heap").hide();
+        $(".d1a-show1").show();
+        $(".d1a-show2").show();
+        $(".d1a-show3").show();
+        $(".d1a-show4").show();
+        p1_c1_unhighlight();
+
+        p1_c1_line5();
         currentLine1a = 1;
     });
 
@@ -168,7 +210,10 @@ $(document).ready(function () {
             $(".d1a-link").removeClass("yellow");
             $("#code1a-line-1").addClass("yellow");
 
+            $(".table .d1a-heap1").animate({backgroundColor: 'transparent'}, 0);
+
             $(".d1a-hide-all").hide();
+            $(".d1a-hide-all-heap").hide();
             $("#d1a-pointer-addr").animate({color: '#777'}, 0);
             p1_c1_hideBorders();
             p1_c1_unhighlight();
@@ -189,6 +234,11 @@ $(document).ready(function () {
         else if (currentLine1a == 4) {
             //do line 4 things here
             p1_c1_line4();
+            currentLine1a = 5;
+        }
+        else if (currentLine1a == 5) {
+            //do line 5 things here
+            p1_c1_line5();
             currentLine1a = 1;
         }
     });
