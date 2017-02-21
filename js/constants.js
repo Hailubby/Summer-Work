@@ -1438,7 +1438,7 @@ $(document).ready(function () {
         $("#d3a-pointer-top").removeClass("stack-pointer-top");
         $("#d3a-pointer-bot").removeClass("stack-pointer-bottom");
         p3_c1_hideBorders();
-        $("#code3a-line-12").animate({backgroundColor: 'transparent'}, 0);
+        $(".d3a-link").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-3a").animate({backgroundColor: 'transparent'}, 0);
@@ -2027,7 +2027,7 @@ $(document).ready(function () {
         $("#d3b-pointer-top").removeClass("stack-pointer-top");
         $("#d3b-pointer-bot").removeClass("stack-pointer-bottom");
         p3_c2_hideBorders();
-        $("#code3b-line-8").animate({backgroundColor: 'transparent'}, 0);
+        $(".d3b-link").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-3b").animate({backgroundColor: 'transparent'}, 0);
@@ -2423,10 +2423,9 @@ $(document).ready(function () {
         currentLine4a = 1;
         $(".d4a-hide-all").hide();
         $("#d4a-string-top").removeClass("stack-string-top");
-        $("#d4a-string-mid").removeClass("stack-string-middle");
         $("#d4a-string-bot").removeClass("stack-string-bottom");
         p4_c1_hideBorders();
-        $("#code4a-line-11").animate({backgroundColor: 'transparent'}, 0);
+        $(".d4a-link").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-4a").animate({backgroundColor: 'transparent'}, 0);
@@ -2467,6 +2466,8 @@ $(document).ready(function () {
     var p4_c1_line1 = function () {
         $("#code4a-line-1").animate({backgroundColor: '#ffff00'}, 600);
         $(".d4a-link").removeClass("yellow");
+        $(".d4a-link").removeClass("green");
+        $(".d4a-link").removeClass("red");
         $(".table .stack-heap-4a").animate({backgroundColor: '#F5F5F5'}, 500);
         $(".table .d4a-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
         $(".table .d4a-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
@@ -2482,11 +2483,10 @@ $(document).ready(function () {
     var p4_c1_line2 = function () {
         $("#code4a-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         $("#d4a-primeCol-val").html('"red"');
         setTimeout(function(){
             $("#d4a-string-top").addClass("stack-string-top");
-            $("#d4a-string-mid").addClass("stack-string-middle");
             $("#d4a-string-bot").addClass("stack-string-bottom");
         }, 800);
         $("#d4a-primeCol").delay(1000).show(400);
@@ -2497,7 +2497,7 @@ $(document).ready(function () {
     var p4_c1_line3 = function () {
         $("#code4a-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         $("#d4a-primeCol-alias").delay(1000).show(400);
     };
 
@@ -2505,7 +2505,7 @@ $(document).ready(function () {
     var p4_c1_line4 = function () {
         $("#code4a-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-4").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         $("#d4a-primeCol-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
         $("#d4a-print-l4").delay(1600).show(400);
     };
@@ -2513,51 +2513,40 @@ $(document).ready(function () {
     //p4 c1 line 5 function
     var p4_c1_line5 = function () {
         $("#code4a-line-4").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-5").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d4a-link").removeClass("yellow");
-        $(".d4a-link").removeClass("green");
-        $("#d4a-primeCol-val").removeClass("green");
 
-        $("#d4a-primeCol-val").delay(400).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d4a-print-l5").delay(1800).show(400);
+        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d4a-print-l5").delay(2000).show(400);
     };
 
     //p4 c1 line 6 function
     var p4_c1_line6 = function () {
         $("#code4a-line-5").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-6").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
-        $(".d4a-link").removeClass("green");
-        $("#d4a-primeCol-val").removeClass("green");
 
+        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#d1d1d1'}, 500)
         setTimeout(function () {
             $("#d4a-primeCol-val").html('"blue"');
-        }, 1000);
-        $("#d4a-primeCol-val").delay(1000).animate({backgroundColor: 'transparent'}, 500);
+        }, 1900);
+        $("#d4a-primeCol-val").delay(1900).show(400);
     };
 
     //p4 c1 line 7 function
     var p4_c1_line7 = function () {
         $("#code4a-line-6").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-7").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d4a-link").removeClass("yellow");
-        $("#d4a-primeCol-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d4a-print-l7").delay(1600).show(400);
+
+        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d4a-print-l7").delay(2000).show(400);
     };
 
     //p4 c1 line 8 function
     var p4_c1_line8 = function () {
         $("#code4a-line-7").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-8").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d4a-link").removeClass("yellow");
-        $(".d4a-link").removeClass("green");
-        $("#d4a-primeCol-val").removeClass("green");
 
-        $("#d4a-primeCol-val").delay(400).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d4a-print-l8").delay(1800).show(400);
+        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d4a-print-l8").delay(2000).show(400);
     };
 
     //p4 c1 line 9 function
@@ -2565,9 +2554,6 @@ $(document).ready(function () {
         $("#code4a-line-8").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-9").animate({backgroundColor: '#dd747b'}, 1000);
-        $(".d4a-link").removeClass("yellow");
-        $(".d4a-link").removeClass("green");
-        $("#d4a-primeCol-val").removeClass("green");
 
         $("#d4a-const-l9").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
         $("#d4a-error-l9").delay(1500).show(400);
@@ -2578,9 +2564,7 @@ $(document).ready(function () {
         $("#code4a-line-9").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-10").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
-        $(".d4a-link").removeClass("red");
-        $("#d4a-const-l9").removeClass("red");
+
         $("#d4a-rtnval-val").delay(1000).show(400).delay(200);
     };
 
@@ -2588,11 +2572,10 @@ $(document).ready(function () {
     var p4_c1_line11 = function () {
         $("#code4a-line-10").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4a-line-11").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4a-link").removeClass("yellow");
+
         $(".d4a-hide-all").delay(1000).hide(400);
         $("#code4a-line-11").promise().done(function () {
             $("#d4a-string-top").removeClass("stack-string-top");
-            $("#d4a-string-mid").removeClass("stack-string-middle");
             $("#d4a-string-bot").removeClass("stack-string-bottom");
             p4_c1_hideBorders();
         });
@@ -2638,7 +2621,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-1").addClass("yellow");
         $("#d4a-string-top").removeClass("stack-string-top");
-        $("#d4a-string-mid").removeClass("stack-string-middle");
         $("#d4a-string-bot").removeClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
@@ -2657,7 +2639,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-2").addClass("yellow");
         $("#d4a-string-top").removeClass("stack-string-top");
-        $("#d4a-string-mid").removeClass("stack-string-middle");
         $("#d4a-string-bot").removeClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
@@ -2678,7 +2659,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-3").addClass("yellow");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
@@ -2700,7 +2680,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-4").addClass("green");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
@@ -2723,7 +2702,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-5").addClass("green");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: '#5CB85C'}, 0);
@@ -2747,7 +2725,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-6").addClass("yellow");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: '#5CB85C'}, 0);
@@ -2772,10 +2749,9 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-7").addClass("green");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
-        $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d4a-primeCol-val").animate({backgroundColor: '#d1d1d1'}, 0);
         $("#d4a-primeCol-val").html('"blue"');
 
         p4_c1_showBorders();
@@ -2797,7 +2773,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-8").addClass("green");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: '#5CB85C'}, 0);
@@ -2823,7 +2798,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-9").addClass("red");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: '#5CB85C'}, 0);
@@ -2850,7 +2824,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-10").addClass("yellow");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: '#dd747b'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
@@ -2878,7 +2851,6 @@ $(document).ready(function () {
         $(".d4a-link").removeClass("red");
         $("#code4a-line-11").addClass("yellow");
         $("#d4a-string-top").addClass("stack-string-top");
-        $("#d4a-string-mid").addClass("stack-string-middle");
         $("#d4a-string-bot").addClass("stack-string-bottom");
         $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
         $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
@@ -2909,7 +2881,6 @@ $(document).ready(function () {
             $(".d4a-link").removeClass("red");
             $("#code4a-line-1").addClass("yellow");
             $("#d4a-string-top").removeClass("stack-string-top");
-            $("#d4a-string-mid").removeClass("stack-string-middle");
             $("#d4a-string-bot").removeClass("stack-string-bottom");
             $("#d4a-const-l9").animate({backgroundColor: 'transparent'}, 0);
             $("#d4a-primeCol-val").animate({backgroundColor: 'transparent'}, 0);
@@ -2974,10 +2945,9 @@ $(document).ready(function () {
         currentLine4a = 1;
         $(".d4b-hide-all").hide();
         $("#d4b-string-top").removeClass("stack-string-top");
-        $("#d4b-string-mid").removeClass("stack-string-middle");
         $("#d4b-string-bot").removeClass("stack-string-bottom");
         p4_c2_hideBorders();
-        $("#code4b-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $(".d4b-link").animate({backgroundColor: 'transparent'}, 0);
         $("#d4b-const-l3").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-4b").animate({backgroundColor: 'transparent'}, 0);
         p4_c2_line1();
@@ -2999,6 +2969,7 @@ $(document).ready(function () {
     var p4_c2_line1 = function () {
         $("#code4b-line-1").animate({backgroundColor: '#ffff00'}, 600);
         $(".d4b-link").removeClass("yellow");
+        $(".d4b-link").removeClass("red");
         $(".table .stack-heap-4b").animate({backgroundColor: '#F5F5F5'}, 500);
         $(".table .d4b-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
         $(".table .d4b-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
@@ -3014,10 +2985,9 @@ $(document).ready(function () {
     var p4_c2_line2 = function () {
         $("#code4b-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4b-link").removeClass("yellow");
+
         setTimeout(function(){
             $("#d4b-string-top").addClass("stack-string-top");
-            $("#d4b-string-mid").addClass("stack-string-middle");
             $("#d4b-string-bot").addClass("stack-string-bottom");
         }, 800);
         $("#d4b-colour").delay(1000).show(400);
@@ -3028,7 +2998,7 @@ $(document).ready(function () {
     var p4_c2_line3 = function () {
         $("#code4b-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-3").animate({backgroundColor: '#dd747b'}, 1000);
-        $(".d4b-link").removeClass("yellow");
+
         $("#d4b-const-l3").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
         $("#d4b-error-l3").delay(1500).show(400);
     };
@@ -3038,9 +3008,6 @@ $(document).ready(function () {
         $("#code4b-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4b-const-l3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-4").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4b-link").removeClass("yellow");
-        $(".d4b-link").removeClass("red");
-        $("#d4c-const-l4").removeClass("red");
 
         $("#d4b-rtnval-val").delay(1000).show(400).delay(200);
     };
@@ -3049,11 +3016,10 @@ $(document).ready(function () {
     var p4_c2_line5 = function () {
         $("#code4b-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4b-line-5").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4b-link").removeClass("yellow");
+
         $(".d4b-hide-all").delay(1000).hide(400);
         $("#code4b-line-5").promise().done(function () {
             $("#d4b-string-top").removeClass("stack-string-top");
-            $("#d4b-string-mid").removeClass("stack-string-middle");
             $("#d4b-string-bot").removeClass("stack-string-bottom");
             p4_c2_hideBorders();
         });
@@ -3092,7 +3058,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("red");
         $("#code4b-line-1").addClass("yellow");
         $("#d4b-string-top").removeClass("stack-string-top");
-        $("#d4b-string-mid").removeClass("stack-string-middle");
         $("#d4b-string-bot").removeClass("stack-string-bottom");
         $("#d4b-const-l3").animate({backgroundColor: 'transparent'}, 0);
 
@@ -3109,7 +3074,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("red");
         $("#code4b-line-2").addClass("yellow");
         $("#d4b-string-top").removeClass("stack-string-top");
-        $("#d4b-string-mid").removeClass("stack-string-middle");
         $("#d4b-string-bot").removeClass("stack-string-bottom");
         $("#d4b-const-l3").animate({backgroundColor: 'transparent'}, 0);
 
@@ -3127,7 +3091,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("red");
         $("#code4b-line-3").addClass("red");
         $("#d4b-string-top").addClass("stack-string-top");
-        $("#d4b-string-mid").addClass("stack-string-middle");
         $("#d4b-string-bot").addClass("stack-string-bottom");
         $("#d4b-const-l3").animate({backgroundColor: 'transparent'}, 0);
 
@@ -3146,7 +3109,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("red");
         $("#code4b-line-4").addClass("yellow");
         $("#d4b-string-top").addClass("stack-string-top");
-        $("#d4b-string-mid").addClass("stack-string-middle");
         $("#d4b-string-bot").addClass("stack-string-bottom");
         $("#d4b-const-l3").animate({backgroundColor: '#dd747b'}, 0);
 
@@ -3166,7 +3128,6 @@ $(document).ready(function () {
         $(".d4b-link").removeClass("red");
         $("#code4b-line-5").addClass("yellow");
         $("#d4b-string-top").addClass("stack-string-top");
-        $("#d4b-string-mid").addClass("stack-string-middle");
         $("#d4b-string-bot").addClass("stack-string-bottom");
         $("#d4b-const-l3").animate({backgroundColor: 'transparent'}, 0);
 
@@ -3189,7 +3150,6 @@ $(document).ready(function () {
             $(".d4b-link").removeClass("red");
             $("#code4b-line-1").addClass("yellow");
             $("#d4b-string-top").removeClass("stack-string-top");
-            $("#d4b-string-mid").removeClass("stack-string-middle");
             $("#d4b-string-bot").removeClass("stack-string-bottom");
             $("#d4b-const-l3").animate({backgroundColor: 'transparent'}, 0);
 
@@ -3229,10 +3189,9 @@ $(document).ready(function () {
         currentLine4c = 1;
         $(".d4c-hide-all").hide();
         $("#d4c-string-top").removeClass("stack-string-top");
-        $("#d4c-string-mid").removeClass("stack-string-middle");
         $("#d4c-string-bot").removeClass("stack-string-bottom");
         p4_c3_hideBorders();
-        $("#code4c-line-7").animate({backgroundColor: 'transparent'}, 0);
+        $(".d4c-link").animate({backgroundColor: 'transparent'}, 0);
         $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
         $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-4c").animate({backgroundColor: 'transparent'}, 0);
@@ -3261,6 +3220,7 @@ $(document).ready(function () {
     var p4_c3_line1 = function () {
         $("#code4c-line-1").animate({backgroundColor: '#ffff00'}, 600);
         $(".d4c-link").removeClass("yellow");
+        $(".d4c-link").removeClass("red");
         $(".table .stack-heap-4c").animate({backgroundColor: '#F5F5F5'}, 500);
         $(".table .d4c-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
         $(".table .d4c-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
@@ -3276,10 +3236,9 @@ $(document).ready(function () {
     var p4_c3_line2 = function () {
         $("#code4c-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4c-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4c-link").removeClass("yellow");
+
         setTimeout(function(){
             $("#d4c-string-top").addClass("stack-string-top");
-            $("#d4c-string-mid").addClass("stack-string-middle");
             $("#d4c-string-bot").addClass("stack-string-bottom");
         }, 800);
         $("#d4c-colour").delay(1000).show(400);
@@ -3290,7 +3249,7 @@ $(document).ready(function () {
     var p4_c3_line3 = function () {
         $("#code4c-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4c-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4c-link").removeClass("yellow");
+
         $("#d4c-colour-alias").delay(1000).show(400);
     };
 
@@ -3298,7 +3257,7 @@ $(document).ready(function () {
     var p4_c3_line4 = function () {
         $("#code4c-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4c-line-4").animate({backgroundColor: '#dd747b'}, 1000);
-        $(".d4c-link").removeClass("yellow");
+
         $("#d4c-const-l4").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
     };
 
@@ -3307,9 +3266,6 @@ $(document).ready(function () {
         $("#code4c-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4c-line-5").animate({backgroundColor: '#dd747b'}, 1000);
-        $(".d4c-link").removeClass("yellow");
-        $(".d4c-link").removeClass("red");
-        $("#d4c-const-l4").removeClass("red");
 
         $("#d4c-const-l5").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
     };
@@ -3319,9 +3275,6 @@ $(document).ready(function () {
         $("#code4c-line-5").animate({backgroundColor: 'transparent'}, 1000);
         $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 1000);
         $("#code4c-line-6").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d4c-link").removeClass("yellow");
-        $(".d4c-link").removeClass("red");
-        $("#d4c-const-l5").removeClass("red");
 
         $("#d4c-rtnval-val").delay(1000).show(400).delay(200);
     };
@@ -3334,7 +3287,6 @@ $(document).ready(function () {
         $(".d4c-hide-all").delay(1000).hide(400);
         $("#code4c-line-7").promise().done(function () {
             $("#d4c-string-top").removeClass("stack-string-top");
-            $("#d4c-string-mid").removeClass("stack-string-middle");
             $("#d4c-string-bot").removeClass("stack-string-bottom");
             p4_c3_hideBorders();
         });
@@ -3375,7 +3327,6 @@ $(document).ready(function () {
         $(".d4c-link").removeClass("red");
         $("#code4c-line-1").addClass("yellow");
         $("#d4c-string-top").removeClass("stack-string-top");
-        $("#d4c-string-mid").removeClass("stack-string-middle");
         $("#d4c-string-bot").removeClass("stack-string-bottom");
         $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
         $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
@@ -3393,7 +3344,6 @@ $(document).ready(function () {
         $(".d4c-link").removeClass("red");
         $("#code4c-line-2").addClass("yellow");
         $("#d4c-string-top").removeClass("stack-string-top");
-        $("#d4c-string-mid").removeClass("stack-string-middle");
         $("#d4c-string-bot").removeClass("stack-string-bottom");
         $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
         $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
@@ -3412,7 +3362,6 @@ $(document).ready(function () {
         $(".d4c-link").removeClass("red");
         $("#code4c-line-3").addClass("yellow");
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
         $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
         $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
@@ -3432,7 +3381,6 @@ $(document).ready(function () {
         $(".d4c-link").removeClass("red");
         $("#code4c-line-4").addClass("red");
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
         $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
         $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
@@ -3453,7 +3401,6 @@ $(document).ready(function () {
         $(".d4c-link").removeClass("red");
         $("#code4c-line-5").addClass("red");
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
         $("#d4c-const-l4").animate({backgroundColor: '#dd747b'}, 0);
         $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
@@ -3474,7 +3421,6 @@ $(document).ready(function () {
         $(".d4c-link").removeClass("red");
         $("#code4c-line-6").addClass("yellow");
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
         $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
         $("#d4c-const-l5").animate({backgroundColor: '#dd747b'}, 0);
@@ -3495,7 +3441,6 @@ $(document).ready(function () {
         $(".d4c-link").removeClass("red");
         $("#code4c-line-7").addClass("yellow");
         $("#d4c-string-top").addClass("stack-string-top");
-        $("#d4c-string-mid").addClass("stack-string-middle");
         $("#d4c-string-bot").addClass("stack-string-bottom");
         $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
         $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
@@ -3519,7 +3464,6 @@ $(document).ready(function () {
             $(".d4c-link").removeClass("red");
             $("#code4c-line-1").addClass("yellow");
             $("#d4c-string-top").removeClass("stack-string-top");
-            $("#d4c-string-mid").removeClass("stack-string-middle");
             $("#d4c-string-bot").removeClass("stack-string-bottom");
             $("#d4c-const-l4").animate({backgroundColor: 'transparent'}, 0);
             $("#d4c-const-l5").animate({backgroundColor: 'transparent'}, 0);
