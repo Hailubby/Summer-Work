@@ -1435,6 +1435,8 @@ $(document).ready(function () {
     $("#start-button-3a").click(function () {
         currentLine3a = 1;
         $(".d3a-hide-all").hide();
+        $("#d3a-pointer-top").removeClass("stack-pointer-top");
+        $("#d3a-pointer-bot").removeClass("stack-pointer-bottom");
         p3_c1_hideBorders();
         $("#code3a-line-12").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
@@ -1481,6 +1483,8 @@ $(document).ready(function () {
     var p3_c1_line1 = function () {
         $("#code3a-line-1").animate({backgroundColor: '#ffff00'}, 600);
         $(".d3a-link").removeClass("yellow");
+        $(".d3a-link").removeClass("green");
+        $(".d3a-link").removeClass("red");
         $(".table .stack-heap-3a").animate({backgroundColor: '#F5F5F5'}, 500);
         $(".table .d3a-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
         $(".table .d3a-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
@@ -1495,7 +1499,7 @@ $(document).ready(function () {
     var p3_c1_line2 = function () {
         $("#code3a-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3a-link").removeClass("yellow");
+
         $("#d3a-mumAge").delay(1000).show(400);
         $("#d3a-mumAge-val").html('49');
         $("#d3a-mumAge-val").delay(1400).show(400);
@@ -1505,7 +1509,11 @@ $(document).ready(function () {
     var p3_c1_line3 = function () {
         $("#code3a-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3a-link").removeClass("yellow");
+
+        setTimeout(function(){
+            $("#d3a-pointer-top").addClass("stack-pointer-top");
+            $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
+        }, 800);
         $("#d3a-dadAge").delay(1000).show(400);
         $("#d3a-pointer-addr").delay(1400).animate({color: '#532A78', fontWeight: 'bold'}, 150);
         $("#d3a-dadAge-val").delay(1400).show(400);
@@ -1515,70 +1523,60 @@ $(document).ready(function () {
     var p3_c1_line4 = function () {
         $("#code3a-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-4").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3a-link").removeClass("yellow");
+
+        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function () {
             $("#d3a-mumAge-val").html('50');
-        }, 1000);
-        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: 'transparent'}, 500);
+        }, 1900);
+        $("#d3a-mumAge-val").delay(1900).show(400);
     };
 
     //p3 c1 line 5 function
     var p3_c1_line5 = function () {
         $("#code3a-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-5").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d3a-link").removeClass("yellow");
-        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
+
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 1000);
         $("#d3a-print-l5").delay(1600).show(400);
     };
 
     //p3 c1 line 6 function
     var p3_c1_line6 = function () {
         $("#code3a-line-5").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-6").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#d3a-mumAge-val").removeClass("green");
 
-        $("#d3a-mumAge-val").delay(400).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d3a-print-l6").delay(1800).show(400);
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d3a-print-l6").delay(2000).show(400);
     };
 
     //p3 c1 line 7 function
     var p3_c1_line7 = function () {
         $("#code3a-line-6").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-7").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#d3a-mumAge-val").removeClass("green");
 
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function () {
             $("#d3a-mumAge-val").html('51');
-        }, 1000);
-        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: 'transparent'}, 500);
+        }, 1900);
+        $("#d3a-mumAge-val").delay(1900).show(400);
     };
 
     //p3 c1 line 8 function
     var p3_c1_line8 = function () {
         $("#code3a-line-7").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-8").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d3a-link").removeClass("yellow");
-        $("#d3a-mumAge-val").delay(1000).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d3a-print-l8").delay(1600).show(400);
+
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d3a-print-l8").delay(2000).show(400);
     };
 
     //p3 c1 line 9 function
     var p3_c1_line9 = function () {
         $("#code3a-line-8").animate({backgroundColor: 'transparent'}, 1000);
-        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-9").animate({backgroundColor: '#5CB85C'}, 1000);
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#d3a-mumAge-val").removeClass("green");
 
-        $("#d3a-mumAge-val").delay(400).animate({backgroundColor: '#5CB85C'}, 1000);
-        $("#d3a-print-l9").delay(1800).show(400);
+        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 500).delay(500).animate({backgroundColor: '#5CB85C'}, 1000);
+        $("#d3a-print-l9").delay(2000).show(400);
     };
 
     //p3 c1 line 10 function
@@ -1586,9 +1584,6 @@ $(document).ready(function () {
         $("#code3a-line-9").animate({backgroundColor: 'transparent'}, 1000);
         $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-10").animate({backgroundColor: '#dd747b'}, 1000);
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("green");
-        $("#d3a-mumAge-val").removeClass("green");
 
         $("#d3a-const-l10").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
     };
@@ -1598,8 +1593,7 @@ $(document).ready(function () {
         $("#code3a-line-10").animate({backgroundColor: 'transparent'}, 1000);
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-11").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3a-link").removeClass("yellow");
-        $(".d3a-link").removeClass("red");
+
         $("#d3a-rtnval-val").delay(1000).show(400).delay(200);
     };
 
@@ -1607,11 +1601,13 @@ $(document).ready(function () {
     var p3_c1_line12 = function () {
         $("#code3a-line-11").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3a-line-12").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3a-link").removeClass("yellow");
+
         $(".d3a-hide-all").delay(1000).hide(400);
         $("#d3a-pointer-addr").delay(1000).animate({color: '#777'}, 150);
         $("#code3a-line-12").promise().done(function () {
             p3_c1_hideBorders();
+            $("#d3a-pointer-top").removeClass("stack-pointer-top");
+            $("#d3a-pointer-bot").removeClass("stack-pointer-bottom");
         });
     };
 
@@ -1659,6 +1655,9 @@ $(document).ready(function () {
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#777'}, 0);
 
+        $("#d3a-pointer-top").removeClass("stack-pointer-top");
+        $("#d3a-pointer-bot").removeClass("stack-pointer-bottom");
+
         $(".d3a-hide-all").hide();
         p3_c1_hideBorders();
         p3_c1_unhighlight();
@@ -1675,6 +1674,9 @@ $(document).ready(function () {
         $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#777'}, 0);
+
+        $("#d3a-pointer-top").removeClass("stack-pointer-top");
+        $("#d3a-pointer-bot").removeClass("stack-pointer-bottom");
 
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
@@ -1694,6 +1696,9 @@ $(document).ready(function () {
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#777'}, 0);
         $("#d3a-mumAge-val").html('49');
+
+        $("#d3a-pointer-top").removeClass("stack-pointer-top");
+        $("#d3a-pointer-bot").removeClass("stack-pointer-bottom");
 
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
@@ -1715,6 +1720,9 @@ $(document).ready(function () {
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('49');
 
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
+
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
         $(".d3a-show1").show();
@@ -1731,10 +1739,13 @@ $(document).ready(function () {
         $(".d3a-link").removeClass("green");
         $(".d3a-link").removeClass("red");
         $("#code3a-line-5").addClass("green");
-        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-mumAge-val").animate({backgroundColor: '#d1d1d1'}, 0);
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('50');
+
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
@@ -1756,6 +1767,9 @@ $(document).ready(function () {
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('50');
+
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
@@ -1779,6 +1793,9 @@ $(document).ready(function () {
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('50');
 
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
+
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
         $(".d3a-show1").show();
@@ -1797,10 +1814,13 @@ $(document).ready(function () {
         $(".d3a-link").removeClass("green");
         $(".d3a-link").removeClass("red");
         $("#code3a-line-8").addClass("green");
-        $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3a-mumAge-val").animate({backgroundColor: '#d1d1d1'}, 0);
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('51');
+
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
@@ -1825,6 +1845,9 @@ $(document).ready(function () {
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('51');
 
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
+
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
         $(".d3a-show1").show();
@@ -1848,6 +1871,9 @@ $(document).ready(function () {
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('51');
+
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
@@ -1874,6 +1900,9 @@ $(document).ready(function () {
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('51');
 
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
+
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
         $(".d3a-show1").show();
@@ -1898,6 +1927,9 @@ $(document).ready(function () {
         $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
         $("#d3a-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3a-mumAge-val").html('51');
+
+        $("#d3a-pointer-top").addClass("stack-pointer-top");
+        $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c1_showBorders();
         $(".d3a-hide-all").hide();
@@ -1925,6 +1957,9 @@ $(document).ready(function () {
             $("#d3a-mumAge-val").animate({backgroundColor: 'transparent'}, 0);
             $("#d3a-const-l10").animate({backgroundColor: 'transparent'}, 0);
             $("#d3a-pointer-addr").animate({color: '#777'}, 0);
+
+            $("#d3a-pointer-top").removeClass("stack-pointer-top");
+            $("#d3a-pointer-bot").removeClass("stack-pointer-bottom");
 
             $(".d3a-hide-all").hide();
             p3_c1_hideBorders();
@@ -1989,9 +2024,12 @@ $(document).ready(function () {
     $("#start-button-3b").click(function () {
         currentLine3b = 1;
         $(".d3b-hide-all").hide();
+        $("#d3b-pointer-top").removeClass("stack-pointer-top");
+        $("#d3b-pointer-bot").removeClass("stack-pointer-bottom");
         p3_c2_hideBorders();
         $("#code3b-line-8").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
+        $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 0);
         $(".table .stack-heap-3b").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#777'}, 0);
         p3_c2_line1();
@@ -2022,6 +2060,7 @@ $(document).ready(function () {
     var p3_c2_line1 = function () {
         $("#code3b-line-1").animate({backgroundColor: '#ffff00'}, 600);
         $(".d3b-link").removeClass("yellow");
+        $(".d3b-link").removeClass("red");
         $(".table .stack-heap-3b").animate({backgroundColor: '#F5F5F5'}, 500);
         $(".table .d3b-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
         $(".table .d3b-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
@@ -2036,7 +2075,7 @@ $(document).ready(function () {
     var p3_c2_line2 = function () {
         $("#code3b-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3b-link").removeClass("yellow");
+
         $("#d3b-mumPh-val").html('1111111');
         $("#d3b-mumPh").delay(1000).show(400);
         $("#d3b-mumPh-val").delay(1400).show(400);
@@ -2046,7 +2085,11 @@ $(document).ready(function () {
     var p3_c2_line3 = function () {
         $("#code3b-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3b-link").removeClass("yellow");
+
+        setTimeout(function(){
+            $("#d3b-pointer-top").addClass("stack-pointer-top");
+            $("#d3b-pointer-bot").addClass("stack-pointer-bottom");
+        }, 800);
         $("#d3b-myPh").delay(1000).show(400);
         $("#d3b-pointer-addr").delay(1400).animate({color: '#532A78', fontWeight: 'bold'}, 150);
         $("#d3b-myPh-val").delay(1400).show(400);
@@ -2056,7 +2099,7 @@ $(document).ready(function () {
     var p3_c2_line4 = function () {
         $("#code3b-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-4").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3b-link").removeClass("yellow");
+
         $("#d3b-flatPh").delay(1000).show(400);
         $("#d3b-flatPh-val").delay(1400).show(400);
     };
@@ -2065,18 +2108,19 @@ $(document).ready(function () {
     var p3_c2_line5 = function () {
         $("#code3b-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-5").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3b-link").removeClass("yellow");
+
+        $("#d3b-mumPh-val").delay(1000).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function () {
             $("#d3b-mumPh-val").html('7777777');
-        }, 1050);
-        $("#d3b-mumPh-val").delay(1000).animate({backgroundColor: 'transparent'}, 500);
+        }, 1900);
+        $("#d3b-mumPh-val").delay(1900).show(400);
     };
 
     //p3 c2 line 6 function
     var p3_c2_line6 = function () {
         $("#code3b-line-5").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-6").animate({backgroundColor: '#dd747b'}, 1000);
-        $(".d3b-link").removeClass("yellow");
+        $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 1000);
 
         $("#d3b-const-l6").delay(1000).animate({backgroundColor: '#dd747b'}, 1000);
         $("#d3b-error-l6").delay(1500).show(400);
@@ -2087,8 +2131,7 @@ $(document).ready(function () {
         $("#code3b-line-6").animate({backgroundColor: 'transparent'}, 1000);
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-7").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3b-link").removeClass("yellow");
-        $(".d3b-link").removeClass("red");
+
         $("#d3b-rtnval-val").delay(1000).show(400).delay(200);
     };
 
@@ -2096,11 +2139,13 @@ $(document).ready(function () {
     var p3_c2_line8 = function () {
         $("#code3b-line-7").animate({backgroundColor: 'transparent'}, 1000);
         $("#code3b-line-8").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d3b-link").removeClass("yellow");
+
         $(".d3b-hide-all").delay(1000).hide(400);
         $("#d3b-pointer-addr").delay(1000).animate({color: '#777'}, 150);
         $("#code3b-line-8").promise().done(function () {
             p3_c2_hideBorders();
+            $("#d3b-pointer-top").removeClass("stack-pointer-top");
+            $("#d3b-pointer-bot").removeClass("stack-pointer-bottom");
         });
     };
 
@@ -2142,6 +2187,9 @@ $(document).ready(function () {
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#777'}, 0);
 
+        $("#d3b-pointer-top").removeClass("stack-pointer-top");
+        $("#d3b-pointer-bot").removeClass("stack-pointer-bottom");
+
         $(".d3b-hide-all").hide();
         p3_c2_hideBorders();
         p3_c2_unhighlight();
@@ -2156,6 +2204,10 @@ $(document).ready(function () {
         $("#code3b-line-2").addClass("yellow");
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#777'}, 0);
+        $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 0);
+
+        $("#d3b-pointer-top").removeClass("stack-pointer-top");
+        $("#d3b-pointer-bot").removeClass("stack-pointer-bottom");
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -2173,6 +2225,10 @@ $(document).ready(function () {
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#777'}, 0);
         $("#d3b-mumPh-val").html('1111111');
+        $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 0);
+
+        $("#d3b-pointer-top").removeClass("stack-pointer-top");
+        $("#d3b-pointer-bot").removeClass("stack-pointer-bottom");
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -2191,6 +2247,10 @@ $(document).ready(function () {
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3b-mumPh-val").html('1111111');
+        $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 0);
+
+        $("#d3b-pointer-top").addClass("stack-pointer-top");
+        $("#d3b-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -2210,6 +2270,10 @@ $(document).ready(function () {
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3b-mumPh-val").html('1111111');
+        $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 0);
+
+        $("#d3b-pointer-top").addClass("stack-pointer-top");
+        $("#d3b-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -2230,6 +2294,10 @@ $(document).ready(function () {
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3b-mumPh-val").html('7777777');
+        $("#d3b-mumPh-val").animate({backgroundColor: '#d1d1d1'}, 0);
+
+        $("#d3b-pointer-top").addClass("stack-pointer-top");
+        $("#d3b-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -2250,6 +2318,10 @@ $(document).ready(function () {
         $("#d3b-const-l6").animate({backgroundColor: '#dd747b'}, 0);
         $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3b-mumPh-val").html('7777777');
+        $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 0);
+
+        $("#d3b-pointer-top").addClass("stack-pointer-top");
+        $("#d3b-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -2271,6 +2343,10 @@ $(document).ready(function () {
         $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
         $("#d3b-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d3b-mumPh-val").html('7777777');
+        $("#d3b-mumPh-val").animate({backgroundColor: 'transparent'}, 0);
+
+        $("#d3b-pointer-top").addClass("stack-pointer-top");
+        $("#d3b-pointer-bot").addClass("stack-pointer-bottom");
 
         p3_c2_showBorders();
         $(".d3b-hide-all").hide();
@@ -2294,6 +2370,9 @@ $(document).ready(function () {
             $("#code3b-line-1").addClass("yellow");
             $("#d3b-const-l6").animate({backgroundColor: 'transparent'}, 0);
             $("#d3b-pointer-addr").animate({color: '#777'}, 0);
+
+            $("#d3b-pointer-top").removeClass("stack-pointer-top");
+            $("#d3b-pointer-bot").removeClass("stack-pointer-bottom");
 
             $(".d3b-hide-all").hide();
             p3_c2_hideBorders();
