@@ -352,36 +352,52 @@ $(document).ready(function () {
         }
         else if (currentLine1a == 2) {
             //do line 2 things here
+            $(".d1a-link").removeClass("yellow");
+            $(".d1a-link").removeClass("green");
             p1_c1_line2();
             currentLine1a = 3;
         }
         else if (currentLine1a == 3) {
             //do line 3 things here
+            $(".d1a-link").removeClass("yellow");
+            $(".d1a-link").removeClass("green");
             p1_c1_line3();
             currentLine1a = 4;
         }
         else if (currentLine1a == 4) {
             //do line 4 things here
+            $(".d1a-link").removeClass("yellow");
+            $(".d1a-link").removeClass("green");
             p1_c1_line4();
             currentLine1a = 5;
         }
         else if (currentLine1a == 5) {
+            $(".d1a-link").removeClass("yellow");
+            $(".d1a-link").removeClass("green");
             p1_c1_line5();
             currentLine1a = 6;
         }
         else if (currentLine1a == 6) {
+            $(".d1a-link").removeClass("yellow");
+            $(".d1a-link").removeClass("green");
             p1_c1_line6();
             currentLine1a = 7;
         }
         else if (currentLine1a == 7) {
+            $(".d1a-link").removeClass("yellow");
+            $(".d1a-link").removeClass("green");
             p1_c1_line7();
             currentLine1a = 8;
         }
         else if (currentLine1a == 8) {
+            $(".d1a-link").removeClass("yellow");
+            $(".d1a-link").removeClass("green");
             p1_c1_line8();
             currentLine1a = 9;
         }
         else if (currentLine1a == 9) {
+            $(".d1a-link").removeClass("yellow");
+            $(".d1a-link").removeClass("green");
             p1_c1_line9();
             currentLine1a = 1;
         }
@@ -591,21 +607,29 @@ $(document).ready(function () {
         }
         else if (currentLine1b == 2) {
             //do line 2 things here
+            $(".d1b-link").removeClass("yellow");
+            $(".d1b-link").removeClass("red");
             p1_c2_line2();
             currentLine1b = 3;
         }
         else if (currentLine1b == 3) {
             //do line 3 things here
+            $(".d1b-link").removeClass("yellow");
+            $(".d1b-link").removeClass("red");
             p1_c2_line3();
             currentLine1b = 4;
         }
         else if (currentLine1b == 4) {
             //do line 4 things here
+            $(".d1b-link").removeClass("yellow");
+            $(".d1b-link").removeClass("red");
             p1_c2_line4();
             currentLine1b = 5;
         }
         else if (currentLine1b == 5) {
             //do line 5 things here
+            $(".d1b-link").removeClass("yellow");
+            $(".d1b-link").removeClass("red");
             p1_c2_line5();
             currentLine1b = 1;
         }
@@ -887,24 +911,34 @@ $(document).ready(function () {
         }
         else if (currentLine2a == 2) {
             //do line 2 things here
+            $(".d2a-link").removeClass("yellow");
+            $(".d2a-link").removeClass("red");
             p2_c1_line2();
             currentLine2a = 3;
         }
         else if (currentLine2a == 3) {
             //do line 3 things here
+            $(".d2a-link").removeClass("yellow");
+            $(".d2a-link").removeClass("red");
             p2_c1_line3();
             currentLine2a = 4;
         }
         else if (currentLine2a == 4) {
             //do line 4 things here
+            $(".d2a-link").removeClass("yellow");
+            $(".d2a-link").removeClass("red");
             p2_c1_line4();
             currentLine2a = 5;
         }
         else if (currentLine2a == 5) {
+            $(".d2a-link").removeClass("yellow");
+            $(".d2a-link").removeClass("red");
             p2_c1_line5();
             currentLine2a = 6;
         }
         else if (currentLine2a == 6) {
+            $(".d2a-link").removeClass("yellow");
+            $(".d2a-link").removeClass("red");
             p2_c1_line6();
             currentLine2a = 1;
         }
@@ -1388,40 +1422,58 @@ $(document).ready(function () {
         }
         else if (currentLine2b == 2) {
             //do line 2 things here
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line2();
             currentLine2b = 3;
         }
         else if (currentLine2b == 3) {
             //do line 3 things here
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line3();
             currentLine2b = 4;
         }
         else if (currentLine2b == 4) {
             //do line 4 things here
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line4();
             currentLine2b = 5;
         }
         else if (currentLine2b == 5) {
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line5();
             currentLine2b = 6;
         }
         else if (currentLine2b == 6) {
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line6();
             currentLine2b = 7;
         }
         else if (currentLine2b == 7) {
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line7();
             currentLine2b = 8;
         }
         else if (currentLine2b == 8) {
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line8();
             currentLine2b = 9;
         }
         else if (currentLine2b == 9) {
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line9();
             currentLine2b = 10;
         }
         else if (currentLine2b == 10) {
+            $(".d2b-link").removeClass("yellow");
+            $(".d2b-link").removeClass("green");
             p2_c2_line10();
             currentLine2b = 1;
         }
@@ -1970,48 +2022,81 @@ $(document).ready(function () {
         }
         else if (currentLine3a == 2) {
             //do line 2 things here
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line2();
             currentLine3a = 3;
         }
         else if (currentLine3a == 3) {
             //do line 3 things here
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line3();
             currentLine3a = 4;
         }
         else if (currentLine3a == 4) {
             //do line 4 things here
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line4();
             currentLine3a = 5;
         }
         else if (currentLine3a == 5) {
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line5();
             currentLine3a = 6;
         }
         else if (currentLine3a == 6) {
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line6();
             currentLine3a = 7;
         }
         else if (currentLine3a == 7) {
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line7();
             currentLine3a = 8;
         }
         else if (currentLine3a == 8) {
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line8();
             currentLine3a = 9;
         }
         else if (currentLine3a == 9) {
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line9();
             currentLine3a = 10;
         }
         else if (currentLine3a == 10) {
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line10();
             currentLine3a = 11;
         }
         else if (currentLine3a == 11) {
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line11();
             currentLine3a = 12;
         }
         else if (currentLine3a == 12) {
+            $(".d3a-link").removeClass("yellow");
+            $(".d3a-link").removeClass("green");
+            $(".d3a-link").removeClass("red");
             p3_c1_line12();
             currentLine3a = 1;
         }
@@ -2383,32 +2468,46 @@ $(document).ready(function () {
         }
         else if (currentLine3b == 2) {
             //do line 2 things here
+            $(".d3b-link").removeClass("yellow");
+            $(".d3b-link").removeClass("red");
             p3_c2_line2();
             currentLine3b = 3;
         }
         else if (currentLine3b == 3) {
             //do line 3 things here
+            $(".d3b-link").removeClass("yellow");
+            $(".d3b-link").removeClass("red");
             p3_c2_line3();
             currentLine3b = 4;
         }
         else if (currentLine3b == 4) {
             //do line 4 things here
+            $(".d3b-link").removeClass("yellow");
+            $(".d3b-link").removeClass("red");
             p3_c2_line4();
             currentLine3b = 5;
         }
         else if (currentLine3b == 5) {
+            $(".d3b-link").removeClass("yellow");
+            $(".d3b-link").removeClass("red");
             p3_c2_line5();
             currentLine3b = 6;
         }
         else if (currentLine3b == 6) {
+            $(".d3b-link").removeClass("yellow");
+            $(".d3b-link").removeClass("red");
             p3_c2_line6();
             currentLine3b = 7;
         }
         else if (currentLine3b == 7) {
+            $(".d3b-link").removeClass("yellow");
+            $(".d3b-link").removeClass("red");
             p3_c2_line7();
             currentLine3b = 8;
         }
         else if (currentLine3b == 8) {
+            $(".d3b-link").removeClass("yellow");
+            $(".d3b-link").removeClass("red");
             p3_c2_line8();
             currentLine3b = 1;
         }
@@ -2894,44 +2993,74 @@ $(document).ready(function () {
         }
         else if (currentLine4a == 2) {
             //do line 2 things here
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line2();
             currentLine4a = 3;
         }
         else if (currentLine4a == 3) {
             //do line 3 things here
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line3();
             currentLine4a = 4;
         }
         else if (currentLine4a == 4) {
             //do line 4 things here
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line4();
             currentLine4a = 5;
         }
         else if (currentLine4a == 5) {
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line5();
             currentLine4a = 6;
         }
         else if (currentLine4a == 6) {
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line6();
             currentLine4a = 7;
         }
         else if (currentLine4a == 7) {
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line7();
             currentLine4a = 8;
         }
         else if (currentLine4a == 8) {
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line8();
             currentLine4a = 9;
         }
         else if (currentLine4a == 9) {
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line9();
             currentLine4a = 10;
         }
         else if (currentLine4a == 10) {
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line10();
             currentLine4a = 11;
         }
         else if (currentLine4a == 11) {
+            $(".d4a-link").removeClass("yellow");
+            $(".d4a-link").removeClass("green");
+            $(".d4a-link").removeClass("red");
             p4_c1_line11();
             currentLine4a = 1;
         }
@@ -3162,20 +3291,28 @@ $(document).ready(function () {
         }
         else if (currentLine4b == 2) {
             //do line 2 things here
+            $(".d4b-link").removeClass("yellow");
+            $(".d4b-link").removeClass("red");
             p4_c2_line2();
             currentLine4b = 3;
         }
         else if (currentLine4b == 3) {
             //do line 3 things here
+            $(".d4b-link").removeClass("yellow");
+            $(".d4b-link").removeClass("red");
             p4_c2_line3();
             currentLine4b = 4;
         }
         else if (currentLine4b == 4) {
             //do line 4 things here
+            $(".d4b-link").removeClass("yellow");
+            $(".d4b-link").removeClass("red");
             p4_c2_line4();
             currentLine4b = 5;
         }
         else if (currentLine4b == 5) {
+            $(".d4b-link").removeClass("yellow");
+            $(".d4b-link").removeClass("red");
             p4_c2_line5();
             currentLine4b = 1;
         }
@@ -3477,28 +3614,40 @@ $(document).ready(function () {
         }
         else if (currentLine4c == 2) {
             //do line 2 things here
+            $(".d4c-link").removeClass("yellow");
+            $(".d4c-link").removeClass("red");
             p4_c3_line2();
             currentLine4c = 3;
         }
         else if (currentLine4c == 3) {
             //do line 3 things here
+            $(".d4c-link").removeClass("yellow");
+            $(".d4c-link").removeClass("red");
             p4_c3_line3();
             currentLine4c = 4;
         }
         else if (currentLine4c == 4) {
             //do line 4 things here
+            $(".d4c-link").removeClass("yellow");
+            $(".d4c-link").removeClass("red");
             p4_c3_line4();
             currentLine4c = 5;
         }
         else if (currentLine4c == 5) {
+            $(".d4c-link").removeClass("yellow");
+            $(".d4c-link").removeClass("red");
             p4_c3_line5();
             currentLine4c = 6;
         }
         else if (currentLine4c == 6) {
+            $(".d4c-link").removeClass("yellow");
+            $(".d4c-link").removeClass("red");
             p4_c3_line6();
             currentLine4c = 7;
         }
         else if (currentLine4c == 7) {
+            $(".d4c-link").removeClass("yellow");
+            $(".d4c-link").removeClass("red");
             p4_c3_line7();
             currentLine4c = 1;
         }
