@@ -401,7 +401,7 @@
                     <!--pre tag indentations-->
                     <pre><code>
 <button class="link d2b-link" id="code2b-line-1">int main() {</button>
-    <button class="link d2b-link" id="code2b-line-2">int *faveNum = 100;</button>
+    <button class="link d2b-link" id="code2b-line-2">int *faveNum = new int(100);</button>
     <button class="link d2b-link" id="code2b-line-3">delete faveNum;</button>
     <button class="link d2b-link" id="code2b-line-4">faveNum = 0;</button>
     <button class="link d2b-link" id="code2b-line-5">return 0;</button>
@@ -463,7 +463,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d2b-pointer-addr" style="color: #777"><i>0x001d54f8</i></td>
-                                    <td class="stack-heap d2b-heap1"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-heap-faveNum-val">100</span></td>
+                                    <td class="stack-heap d2b-heap1"><span class="hide-all d2b-hide-all-heap d2b-show2" id="d2b-heap-faveNum-val">100</span></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -494,7 +494,7 @@
     <button class="link d2c-link" id="code2c-line-4">faveNum = 0;</button>
     <button class="link d2c-link" id="code2c-line-5">*faveNum = new int(21);</button>
     <button class="link d2c-link" id="code2c-line-6">return 0;</button>
-}
+<button class="link d2c-link" id="code2c-line-7">}</button>
                     </code></pre>
 
                     <button type="button" class="btn btn-default" id="step-button-2c">Step</button>
@@ -511,7 +511,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-top" style="color: #532A78;"><span class="hide-all d2c-hide-all d2c-show2-delete-temp" id="d2c-faveNum-val">0x001d54f0</span></td>
+                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-top" style="color: #532A78;"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-faveNum-val">0x001d54f0</span></td>
                                     <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-faveNum">int *faveNum;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -521,7 +521,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-bottom"><span class="hide-all d2c-hide-all" id="d2c-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-bottom"><span class="hide-all d2c-hide-all d2c-show6" id="d2c-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show1" id="d2c-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -542,7 +542,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d2c-pointer-addr1" style="color: #777"><i>0x001d54f0</i></td>
-                                    <td class="stack-heap d2c-heap1"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-heap-faveNum-val1">73</span></td>
+                                    <td class="stack-heap d2c-heap1"><span class="hide-all d2c-hide-all-heap d2c-show2" id="d2c-heap-faveNum-val1">73</span></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -557,8 +557,8 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d2c-pointer-addr2" style="color: #777"><i>0x001d54fc</i></td>
-                                    <td class="stack-heap d2c-heap2"><span class="hide-all d2c-hide-all d2c-show4" id="d2c-heap-faveNum-val2">21</span></td>
-                                    <td class="not-stack"></td>
+                                    <td class="stack-heap d2c-heap2"><span class="hide-all d2c-hide-all-heap d2c-show4" id="d2c-heap-faveNum-val2">21</span></td>
+                                    <td class="not-stack"><span class="hide-all d2c-hide-all-heap d2c-show6" id="d2c-mem-leak" style="color: #D9534F"><i>memory leak!</i></span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x001d5500</i></td>
