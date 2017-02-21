@@ -316,9 +316,9 @@
                     <pre><code>
 <button class="link d2a-link" id="code2a-line-1">int main() {</button>
     <button class="link d2a-link" id="code2a-line-2">int *faveNum = new int(93);</button>
-    <button class="link d2a-link" id="code2a-line-3">*faveNum = new int(51);</button>
+    <button class="link d2a-link" id="code2a-line-3">faveNum = new int(51);</button>
     <button class="link d2a-link" id="code2a-line-4">return 0;</button>
-}
+<button class="link d2a-link" id="code2a-line-5">}</button>
                     </code></pre>
 
                     <button type="button" class="btn btn-default" id="step-button-2a">Step</button>
@@ -366,13 +366,13 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d2a-pointer-addr1" style="color: #777"><i>0x001d54f0</i></td>
-                                    <td class="stack-heap d2a-heap1"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-heap-faveNum-val1">93</span></td>
-                                    <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-mem-leak" style="color: #D9534F"><i>memory leak!</i></span></td>
+                                    <td class="stack-heap d2a-heap1"><span class="hide-all d2a-hide-all-heap d2a-show2" id="d2a-heap-faveNum-val1">93</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all-heap d2a-show3" id="d2a-mem-leak1" style="color: #D9534F"><i>memory leak!</i></span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" id="d2a-pointer-addr2" style="color: #777"><i>0x001d54f4</i></td>
-                                    <td class="stack-heap d2a-heap2"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-heap-faveNum-val2">51</span></td>
-                                    <td class="not-stack"></td>
+                                    <td class="stack-heap d2a-heap2"><span class="hide-all d2a-hide-all-heap d2a-show3" id="d2a-heap-faveNum-val2">51</span></td>
+                                    <td class="not-stack"><span class="hide-all d2a-hide-all-heap d2a-show4" id="d2a-mem-leak2" style="color: #D9534F"><i>memory leak!</i></span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x001d54f8</i></td>
@@ -405,7 +405,7 @@
     <button class="link d2b-link" id="code2b-line-3">delete faveNum;</button>
     <button class="link d2b-link" id="code2b-line-4">faveNum = 0;</button>
     <button class="link d2b-link" id="code2b-line-5">return 0;</button>
-}
+<button class="link d2b-link" id="code2b-line-6">}</button>
                     </code></pre>
 
                     <button type="button" class="btn btn-default" id="step-button-2b">Step</button>
@@ -422,7 +422,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2-delete-temp" id="d2b-faveNum-val">0x001d54f8</span></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-faveNum-val">0x001d54f8</span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-faveNum">int *faveNum;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -432,7 +432,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-bottom"><span class="hide-all d2b-hide-all" id="d2b-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-bottom"><span class="hide-all d2b-hide-all d2b-show5" id="d2b-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show1" id="d2b-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">

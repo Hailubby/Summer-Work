@@ -780,8 +780,10 @@ $(document).ready(function () {
     $("#start-button-2a").click(function () {
         currentLine2a = 1;
         $(".d2a-hide-all").hide();
+        $(".d2a-hide-all-heap").hide();
         p2_c1_hideBorders();
-        $("#code2a-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $(".d2a-link").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2a-faveNum-val").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d2a-heap1").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d2a-heap2").animate({backgroundColor: 'transparent'}, 0);
         $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
@@ -791,8 +793,11 @@ $(document).ready(function () {
             p2_c1_line2();
             $("#d2a-heap-faveNum-val1").promise().done(function () {
                 p2_c1_line3();
-                $("#d2a-mem-leak").promise().done(function () {
+                $("#d2a-mem-leak1").promise().done(function () {
                     p2_c1_line4();
+                    $("#d2a-mem-leak2").promise().done(function () {
+                        p2_c1_line5();
+                    });
                 });
             });
         });
@@ -816,7 +821,7 @@ $(document).ready(function () {
     var p2_c1_line2 = function () {
         $("#code2a-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2a-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d2a-link").removeClass("yellow");
+
         $("#d2a-faveNum").delay(1000).show(400);
         $(".table .d2a-heap1").delay(1200).animate({backgroundColor: '#F5F5F5'},500);
         $("#d2a-pointer-addr1").delay(1600).animate({color: '#532A78', fontWeight: 'bold'}, 150);
@@ -829,24 +834,40 @@ $(document).ready(function () {
     var p2_c1_line3 = function () {
         $("#code2a-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2a-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d2a-link").removeClass("yellow");
+
         $(".table .d2a-heap2").delay(1200).animate({backgroundColor: '#F5F5F5'},500);
         $("#d2a-pointer-addr2").delay(1600).animate({color: '#532A78', fontWeight: 'bold'}, 150);
         $("#d2a-pointer-addr1").delay(1600).animate({color: '#777'}, 150);
+
+        $("#d2a-faveNum-val").delay(1000).animate({backgroundColor: '#d1d1d1'}, 500);
         setTimeout(function(){
             $("#d2a-faveNum-val").html('0x001d54f4');
-        }, 1600);
-        $("#d2a-heap-faveNum-val2").delay(1800).show(400);
-        $(".d2a-heap1").delay(2200).animate({backgroundColor: '#dd747b'}, 700);
-        $("#d2a-mem-leak").delay(2900).show(400);
+        }, 1900);
+        $("#d2a-heap-faveNum-val2").delay(2100).show(400);
+        $(".d2a-heap1").delay(2500).animate({backgroundColor: '#dd747b'}, 700);
+        $("#d2a-mem-leak1").delay(3200).show(400);
     };
 
     //p2 c1 line 4 function
     var p2_c1_line4 = function () {
         $("#code2a-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2a-line-4").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d2a-link").removeClass("yellow");
+        $("#d2a-faveNum-val").animate({backgroundColor: 'transparent'}, 1000);
+
         $("#d2a-rtnval-val").delay(1000).show(400);
+        $(".d2a-heap2").delay(1400).animate({backgroundColor: '#dd747b'}, 700);
+        $("#d2a-mem-leak2").delay(2100).show(400).delay(400);
+    };
+
+    //p2 c1 line 5 function
+    var p2_c1_line5 = function () {
+        $("#code2a-line-4").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code2a-line-5").animate({backgroundColor: '#ffff00'}, 1000);
+
+        $(".d2a-hide-all").delay(1000).hide(400);
+        $("#code2a-line-5").promise().done(function () {
+            p2_c1_hideBorders();
+        });
     };
 
     //unhighlight all lines
@@ -855,6 +876,7 @@ $(document).ready(function () {
         $("#code2a-line-2").animate({backgroundColor: 'transparent'}, 0);
         $("#code2a-line-3").animate({backgroundColor: 'transparent'}, 0);
         $("#code2a-line-4").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2a-line-5").animate({backgroundColor: 'transparent'}, 0);
     };
 
     //show stack border
@@ -873,8 +895,6 @@ $(document).ready(function () {
         $(".table .d2a-stack-left").animate({borderLeftWidth: '1px', borderLeftColor: '#dddddd'},0);
         $(".table .d2a-stack-right").animate({borderRightWidth: '1px', borderRightColor: '#dddddd'},0);
         $(".table .stack-heap-2a").animate({backgroundColor: 'transparent'}, 0);
-        $(".table .d2a-heap1").animate({backgroundColor: 'transparent'}, 0);
-        $(".table .d2a-heap2").animate({backgroundColor: 'transparent'}, 0);
     };
 
     //stepping function
@@ -882,9 +902,13 @@ $(document).ready(function () {
         $(".d2a-link").removeClass("yellow");
         $("#code2a-line-1").addClass("yellow");
 
-        $(".d2a-hide-all").hide();
+        $(".table .d2a-heap1").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .d2a-heap2").animate({backgroundColor: 'transparent'}, 0);
         $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
         $("#d2a-pointer-addr2").animate({color: '#777'}, 0);
+
+        $(".d2a-hide-all").hide();
+        $(".d2a-hide-all-heap").hide();
         p2_c1_hideBorders();
         p2_c1_unhighlight();
 
@@ -896,12 +920,15 @@ $(document).ready(function () {
         $(".d2a-link").removeClass("yellow");
         $("#code2a-line-2").addClass("yellow");
 
-        p2_c1_showBorders();
-        $(".d2a-hide-all").hide();
+        $("#d2a-faveNum-val").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d2a-heap1").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d2a-heap2").animate({backgroundColor: 'transparent'}, 0);
         $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
         $("#d2a-pointer-addr2").animate({color: '#777'}, 0);
+
+        p2_c1_showBorders();
+        $(".d2a-hide-all").hide();
+        $(".d2a-hide-all-heap").hide();
         $(".d2a-show1").show();
         p2_c1_unhighlight();
 
@@ -913,12 +940,15 @@ $(document).ready(function () {
         $(".d2a-link").removeClass("yellow");
         $("#code2a-line-3").addClass("yellow");
 
-        p2_c1_showBorders();
+        $("#d2a-faveNum-val").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d2a-heap1").animate({backgroundColor: '#F5F5F5'}, 0);
         $(".table .d2a-heap2").animate({backgroundColor: 'transparent'}, 0);
         $("#d2a-pointer-addr1").animate({color: '#532A78'}, 0);
         $("#d2a-pointer-addr2").animate({color: '#777'}, 0);
+
+        p2_c1_showBorders();
         $(".d2a-hide-all").hide();
+        $(".d2a-hide-all-heap").hide();
         $("#d2a-faveNum-val").html('0x001d54f0');
         $(".d2a-show1").show();
         $(".d2a-show2").show();
@@ -932,12 +962,15 @@ $(document).ready(function () {
         $(".d2a-link").removeClass("yellow");
         $("#code2a-line-4").addClass("yellow");
 
-        p2_c1_showBorders();
+        $("#d2a-faveNum-val").animate({backgroundColor: '#d1d1d1'}, 0);
         $(".table .d2a-heap1").animate({backgroundColor: '#dd747b'}, 0);
         $(".table .d2a-heap2").animate({backgroundColor: '#F5F5F5'}, 0);
         $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
         $("#d2a-pointer-addr2").animate({color: '#532A78'}, 0);
+
+        p2_c1_showBorders();
         $(".d2a-hide-all").hide();
+        $(".d2a-hide-all-heap").hide();
         $("#d2a-faveNum-val").html('0x001d54f4');
         $(".d2a-show1").show();
         $(".d2a-show2").show();
@@ -945,6 +978,30 @@ $(document).ready(function () {
         p2_c1_unhighlight();
 
         p2_c1_line4();
+        currentLine2a = 5;
+    });
+
+    $("#code2a-line-5").click(function(){
+        $(".d2a-link").removeClass("yellow");
+        $("#code2a-line-5").addClass("yellow");
+
+        $("#d2a-faveNum-val").animate({backgroundColor: 'transparent'}, 0);
+        $(".table .d2a-heap1").animate({backgroundColor: '#dd747b'}, 0);
+        $(".table .d2a-heap2").animate({backgroundColor: '#dd747b'}, 0);
+        $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2a-pointer-addr2").animate({color: '#532A78'}, 0);
+
+        p2_c1_showBorders();
+        $(".d2a-hide-all").hide();
+        $(".d2a-hide-all-heap").hide();
+        $("#d2a-faveNum-val").html('0x001d54f4');
+        $(".d2a-show1").show();
+        $(".d2a-show2").show();
+        $(".d2a-show3").show();
+        $(".d2a-show4").show();
+        p2_c1_unhighlight();
+
+        p2_c1_line5();
         currentLine2a = 1;
     });
 
@@ -955,9 +1012,13 @@ $(document).ready(function () {
             $(".d2a-link").removeClass("yellow");
             $("#code2a-line-1").addClass("yellow");
 
-            $(".d2a-hide-all").hide();
+            $(".table .d2a-heap1").animate({backgroundColor: 'transparent'}, 0);
+            $(".table .d2a-heap2").animate({backgroundColor: 'transparent'}, 0);
             $("#d2a-pointer-addr1").animate({color: '#777'}, 0);
             $("#d2a-pointer-addr2").animate({color: '#777'}, 0);
+
+            $(".d2a-hide-all").hide();
+            $(".d2a-hide-all-heap").hide();
             p2_c1_hideBorders();
             p2_c1_unhighlight();
 
@@ -966,17 +1027,26 @@ $(document).ready(function () {
         }
         else if (currentLine2a == 2) {
             //do line 2 things here
+            $(".d2a-link").removeClass("yellow");
             p2_c1_line2();
             currentLine2a = 3;
         }
         else if (currentLine2a == 3) {
             //do line 3 things here
+            $(".d2a-link").removeClass("yellow");
             p2_c1_line3();
             currentLine2a = 4;
         }
         else if (currentLine2a == 4) {
             //do line 4 things here
+            $(".d2a-link").removeClass("yellow");
             p2_c1_line4();
+            currentLine2a = 5;
+        }
+        else if (currentLine2a == 5) {
+            //do line 5 things here
+            $(".d2a-link").removeClass("yellow");
+            p2_c1_line5();
             currentLine2a = 1;
         }
     });
@@ -989,7 +1059,7 @@ $(document).ready(function () {
         currentLine2b = 1;
         $(".d2b-hide-all").hide();
         p2_c2_hideBorders();
-        $("#code2b-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $(".d2b-link").animate({backgroundColor: 'transparent'}, 0);
         $(".table .d2b-heap1").animate({backgroundColor: 'transparent'}, 0);
         $("#d2b-pointer-addr").animate({color: '#777'}, 0);
         p2_c2_line1();
@@ -1001,6 +1071,9 @@ $(document).ready(function () {
                     p2_c2_line4();
                     $("#d2b-faveNum-val").promise().done(function () {
                         p2_c2_line5();
+                        $("#d2b-rtnval-val").promise().done(function () {
+                            p2_c2_line6();
+                        });
                     });
                 });
             });
@@ -1025,7 +1098,7 @@ $(document).ready(function () {
     var p2_c2_line2 = function () {
         $("#code2b-line-1").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2b-line-2").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d2b-link").removeClass("yellow");
+
         $("#d2b-faveNum").delay(1000).show(400);
         $(".table .d2b-heap1").delay(1200).animate({backgroundColor: '#F5F5F5'},500);
         $("#d2b-pointer-addr").delay(1600).animate({color: '#532A78', fontWeight: 'bold'}, 150);
@@ -1039,28 +1112,43 @@ $(document).ready(function () {
     var p2_c2_line3 = function () {
         $("#code2b-line-2").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2b-line-3").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d2b-link").removeClass("yellow");
+
         $("#d2b-pointer-addr").delay(1000).animate({color: '#777', fontWeight: 'bold'}, 150);
-        $("#d2b-faveNum-val").delay(1000).hide(400);
-        $(".table .d2b-heap1").delay(1000).animate({backgroundColor: 'transparent'},500);
+        $("#d2b-faveNum-val").delay(1000).animate({color: '#777', fontWeight: 'bold'}, 150);
+        $(".table .d2b-heap1").delay(1000).animate({backgroundColor: 'transparent'},500).delay(700);
     };
 
     //p2 c2 line 4 function
     var p2_c2_line4 = function () {
         $("#code2b-line-3").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2b-line-4").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d2b-link").removeClass("yellow");
-        $("#d2b-faveNum-val").html('0');
+
         $("#d2b-faveNum-val").animate({color: '#777', fontWeight: 'bold'}, 0);
-        $("#d2b-faveNum-val").delay(1000).show(400);
+        $("#d2b-faveNum-val").delay(1000).animate({backgroundColor: '#d1d1d1'}, 500);
+        setTimeout(function(){
+            $("#d2b-faveNum-val").html('0');
+        }, 1900);
+        $("#d2b-faveNum-val").delay(1900).show(400);
     };
 
     //p2 c2 line 5 function
     var p2_c2_line5 = function () {
         $("#code2b-line-4").animate({backgroundColor: 'transparent'}, 1000);
         $("#code2b-line-5").animate({backgroundColor: '#ffff00'}, 1000);
-        $(".d2b-link").removeClass("yellow");
+        $("#d2b-faveNum-val").animate({backgroundColor: 'transparent'}, 1000);
+
         $("#d2b-rtnval-val").delay(1000).show(400);
+    };
+
+    //p2 c2 line 6 function
+    var p2_c2_line6 = function () {
+        $("#code2b-line-5").animate({backgroundColor: 'transparent'}, 1000);
+        $("#code2b-line-6").animate({backgroundColor: '#ffff00'}, 1000);
+
+        $(".d2b-hide-all").delay(1000).hide(400);
+        $("#code2b-line-6").promise().done(function () {
+            p2_c2_hideBorders();
+        });
     };
 
     //unhighlight all lines
@@ -1070,6 +1158,7 @@ $(document).ready(function () {
         $("#code2b-line-3").animate({backgroundColor: 'transparent'}, 0);
         $("#code2b-line-4").animate({backgroundColor: 'transparent'}, 0);
         $("#code2b-line-5").animate({backgroundColor: 'transparent'}, 0);
+        $("#code2b-line-6").animate({backgroundColor: 'transparent'}, 0);
     };
 
     //show stack border
@@ -1112,6 +1201,7 @@ $(document).ready(function () {
         p2_c2_showBorders();
         $(".d2b-hide-all").hide();
         $(".table .d2b-heap1").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2b-faveNum-val").animate({backgroundColor: 'transparent'}, 0);
         $("#d2b-pointer-addr").animate({color: '#777'}, 0);
         $(".d2b-show1").show();
         p2_c2_unhighlight();
@@ -1129,10 +1219,10 @@ $(document).ready(function () {
         $("#d2b-pointer-addr").animate({color: '#532A78'}, 0);
         $("#d2b-faveNum-val").html("0x001d54f8");
         $("#d2b-faveNum-val").animate({color: '#532A78', fontWeight: 'bold'}, 0);
+        $("#d2b-faveNum-val").animate({backgroundColor: 'transparent'}, 0);
         $(".d2b-hide-all").hide();
         $(".d2b-show1").show();
         $(".d2b-show2").show();
-        $(".d2b-show2-delete-temp").show();
         p2_c2_unhighlight();
 
         p2_c2_line3();
@@ -1146,6 +1236,9 @@ $(document).ready(function () {
         p2_c2_showBorders();
         $(".table .d2b-heap1").animate({backgroundColor: '#transparent'}, 0);
         $("#d2b-pointer-addr").animate({color: '#777'}, 0);
+        $("#d2b-faveNum-val").html("0x001d54f8");
+        $("#d2b-faveNum-val").animate({color: '#777', fontWeight: 'bold'}, 0);
+        $("#d2b-faveNum-val").animate({backgroundColor: 'transparent'}, 0);
         $(".d2b-hide-all").hide();
         $(".d2b-show1").show();
         $(".d2b-show2").show();
@@ -1164,13 +1257,33 @@ $(document).ready(function () {
         $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
         $("#d2b-faveNum-val").html("0");
         $("#d2b-faveNum-val").animate({color: '#777', fontWeight: 'bold'}, 0);
+        $("#d2b-faveNum-val").animate({backgroundColor: '#d1d1d1'}, 0);
         $(".d2b-hide-all").hide();
         $(".d2b-show1").show();
         $(".d2b-show2").show();
-        $(".d2b-show2-delete-temp").show();
         p2_c2_unhighlight();
 
         p2_c2_line5();
+        currentLine2b = 6;
+    });
+
+    $("#code2b-line-6").click(function(){
+        $(".d2b-link").removeClass("yellow");
+        $("#code2b-line-6").addClass("yellow");
+
+        p2_c2_showBorders();
+        $(".table .d2b-heap1").animate({backgroundColor: 'transparent'}, 0);
+        $("#d2b-pointer-addr1").animate({color: '#777'}, 0);
+        $("#d2b-faveNum-val").html("0");
+        $("#d2b-faveNum-val").animate({color: '#777', fontWeight: 'bold'}, 0);
+        $("#d2b-faveNum-val").animate({backgroundColor: 'transparent'}, 0);
+        $(".d2b-hide-all").hide();
+        $(".d2b-show1").show();
+        $(".d2b-show2").show();
+        $(".d2b-show5").show();
+        p2_c2_unhighlight();
+
+        p2_c2_line6();
         currentLine2b = 1;
     });
 
@@ -1191,22 +1304,32 @@ $(document).ready(function () {
         }
         else if (currentLine2b == 2) {
             //do line 2 things here
+            $(".d2b-link").removeClass("yellow");
             p2_c2_line2();
             currentLine2b = 3;
         }
         else if (currentLine2b == 3) {
             //do line 3 things here
+            $(".d2b-link").removeClass("yellow");
             p2_c2_line3();
             currentLine2b = 4;
         }
         else if (currentLine2b == 4) {
             //do line 4 things here
+            $(".d2b-link").removeClass("yellow");
             p2_c2_line4();
             currentLine2b = 5;
         }
         else if (currentLine2b == 5) {
-            //do line 4 things here
+            //do line 5 things here
+            $(".d2b-link").removeClass("yellow");
             p2_c2_line5();
+            currentLine2b = 6;
+        }
+        else if (currentLine2b == 6) {
+            //do line 6 things here
+            $(".d2b-link").removeClass("yellow");
+            p2_c2_line6();
             currentLine2b = 1;
         }
     });
