@@ -370,9 +370,13 @@
                     <pre><code>
 <button class="link d2b-link" id="code2b-line-1">int main() {</button>
     <button class="link d2b-link" id="code2b-line-2">Person *jack = new Person();</button>
-    <button class="link d2b-link" id="code2b-line-3">jack = new Person();</button>
-    <button class="link d2b-link" id="code2b-line-4">return 0;</button>
-<button class="link d2b-link" id="code2b-line-5">}</button>
+    <button class="link d2b-link" id="code2b-line-3">delete jack;</button>
+    <button class="link d2b-link" id="code2b-line-4">jack = 0;</button>
+    <button class="link d2b-link" id="code2b-line-5">jack = new Person();</button>
+    <button class="link d2b-link" id="code2b-line-6">delete jack;</button>
+    <button class="link d2b-link" id="code2b-line-7">jack = 0;</button>
+    <button class="link d2b-link" id="code2b-line-8">return 0;</button>
+<button class="link d2b-link" id="code2b-line-9">}</button>
                     </code></pre>
 
                     <button type="button" class="btn btn-default" id="step-button-2b">Step</button>
@@ -389,7 +393,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-jack-val">0x001d54f8</span></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-jack-val">0x001d54f0</span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-jack">Person *jack;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -399,7 +403,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-bottom"><span class="hide-all d2b-hide-all d2b-show4" id="d2b-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-bottom"><span class="hide-all d2b-hide-all d2b-show8" id="d2b-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show1" id="d2b-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -419,149 +423,39 @@
                                     <th class="col-md-5 not-stack"></th>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x001d54f0</i></td>
-                                    <td class="stack-heap"></td>
-                                    <td class="not-stack"></td>
+                                    <td class="not-stack" id="d2b-pointer-addr1" style="color: #777"><i>0x001d54f0</i></td>
+                                    <td class="stack-heap d2b-heap-class1" id="d2b-string-top1"><span class="hide-all d2b-hide-all-heap d2b-show2" id="d2b-name1-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all-heap d2b-show2" id="d2b-name1">String name;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x001d54f4</i></td>
-                                    <td class="stack-heap"></td>
-                                    <td class="not-stack"><span class="hide-all d2b-hide-all-heap d2b-show3" id="d2b-mem-leak" style="color: #D9534F"><i>memory leak!</i></span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" id="d2b-pointer-addr" style="color: #777"><i>0x001d54f8</i></td>
-                                    <td class="stack-heap d2b-heap-class" id="d2b-string-top"><span class="hide-all d2b-hide-all-heap d2c-show2" id="d2b-name-val">-</span></td>
-                                    <td class="not-stack"><span class="hide-all d2b-hide-all-heap d2b-show2" id="d2b-name">string name;</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x001d54fc</i></td>
-                                    <td class="stack-heap d2b-heap-class" id="d2b-string-bot"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x001d5500</i></td>
-                                    <td class="stack-heap d2b-heap-class"><span class="hide-all d2b-hide-all-heap d2b-show2" id="d2b-age-val">-</span></td>
-                                    <td class="not-stack"><span class="hide-all d2b-hide-all-heap d2b-show2" id="d2b-age">int age;</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x001d5504</i></td>
-                                    <td class="stack-heap"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x001d5508</i></td>
-                                    <td class="heap-bottom"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--panel 2 code 3-->
-            <div class="row" style="margin-bottom: 25px;">
-                <div class="col-md-4">
-                    <!--pre tag indentations-->
-                    <pre class="class-panel"><code>
-<span>class Person {</span>
-    <span>private:</span>
-        <span class="d2c-link" id="class2c-line-1">string name;</span>
-        <span class="d2c-link" id="class2c-line-2">int age;</span>
-    <span>public:</span>
-        <span class="d2c-link" id="class2c-line-3">Person() { }</span>
-<span>}</span>
-                    </code></pre>
-
-                    <pre><code>
-<button class="link d2c-link" id="code2c-line-1">int main() {</button>
-    <button class="link d2c-link" id="code2c-line-2">Person *jack = new Person();</button>
-    <button class="link d2c-link" id="code2c-line-3">delete jack;</button>
-    <button class="link d2c-link" id="code2c-line-4">jack = 0;</button>
-    <button class="link d2c-link" id="code2c-line-5">jack = new Person();</button>
-    <button class="link d2c-link" id="code2c-line-6">delete jack;</button>
-    <button class="link d2c-link" id="code2c-line-7">jack = 0;</button>
-    <button class="link d2c-link" id="code2c-line-8">return 0;</button>
-<button class="link d2c-link" id="code2c-line-9">}</button>
-                    </code></pre>
-
-                    <button type="button" class="btn btn-default" id="step-button-2c">Step</button>
-                    <button type="button" class="btn btn-default" id="start-button-2c">Start</button>
-                </div>
-                <div class="col-md-8">
-                    <div class="col-md-6" style="margin-top: 40px;">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack-top"></td>
-                                    <td class="not-stack"></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-top" style="color: #532A78;"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-jack-val">0x001d54f0</span></td>
-                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-jack">Person *jack;</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
-                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left"><span class="hide-all d2c-hide-all d2c-show1" id="d2c-rtn-addr-val"><i>0x0061ff2d</i></span></td>
-                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show1" id="d2c-rtn-addr">rtn addr</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-bottom"><span class="hide-all d2c-hide-all d2c-show8" id="d2c-rtnval-val">0</span></td>
-                                    <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show1" id="d2c-rtnval">rtn val</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <th class="col-md-1 not-stack"></th>
-                                    <th class="col-md-6 stack">Stack</th>
-                                    <th class="col-md-5 not-stack"></th>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tr class="row-height-1">
-                                    <th class="col-md-1 not-stack"></th>
-                                    <th class="col-md-6 not-stack">Heap</th>
-                                    <th class="col-md-5 not-stack"></th>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" id="d2c-pointer-addr1" style="color: #777"><i>0x001d54f0</i></td>
-                                    <td class="stack-heap d2c-heap-class" id="d2c-string-top1"><span class="hide-all d2c-hide-all-heap d1c-show2" id="d2c-name1-val">-</span></td>
-                                    <td class="not-stack"><span class="hide-all d2c-hide-all-heap d1c-show2" id="d2c-name1">-</span></td>
-                                </tr>
-                                <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x001d54f4</i></td>
-                                    <td class="stack-heap d2c-heap-class" id="d2c-string-bot1"></td>
+                                    <td class="stack-heap d2b-heap-class1" id="d2b-string-bot1"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x001d54f8</i></td>
-                                    <td class="stack-heap d2c-heap-class"><span class="hide-all d2c-hide-all-heap d2c-show2" id="d2c-age1-val">-</span></td>
-                                    <td class="not-stack"><span class="hide-all d2c-hide-all-heap d2c-show2" id="d2c-age1">int age;</span></td>
+                                    <td class="stack-heap d2b-heap-class1"><span class="hide-all d2b-hide-all-heap d2b-show2" id="d2b-age1-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all-heap d2b-show2" id="d2b-age1">int age;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x001d54fc</i></td>
-                                    <td class="stack-heap d2c-heap-class"></td>
+                                    <td class="stack-heap"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" id="d2c-pointer-addr2" style="color: #777"><i>0x001d5500</i></td>
-                                    <td class="stack-heap d2c-heap-class" id="d2c-string-top2"><span class="hide-all d2c-hide-all-heap d1c-show5" id="d2c-name2-val">-</span></td>
-                                    <td class="not-stack"><span class="hide-all d2c-hide-all-heap d1c-show5" id="d2c-name2">-</span></td>
+                                    <td class="not-stack" id="d2b-pointer-addr2" style="color: #777"><i>0x001d5500</i></td>
+                                    <td class="stack-heap d2b-heap-class2" id="d2b-string-top2"><span class="hide-all d2b-hide-all-heap d2b-show5" id="d2b-name2-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all-heap d2b-show5" id="d2b-name2">String name;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x001d5504</i></td>
-                                    <td class="stack-heap d2c-heap-class" id="d2c-string-bot2"></td>
+                                    <td class="stack-heap d2b-heap-class2" id="d2b-string-bot2"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x001d5508</i></td>
-                                    <td class="stack-heap d2c-heap-class"><span class="hide-all d2c-hide-all-heap d2c-show5" id="d2c-age2-val">-</span></td>
-                                    <td class="not-stack"><span class="hide-all d2c-hide-all-heap d2c-show5" id="d2c-age2">int age;</span></td>
+                                    <td class="stack-heap d2b-heap-class2"><span class="hide-all d2b-hide-all-heap d2b-show5" id="d2b-age2-val">-</span></td>
+                                    <td class="not-stack"><span class="hide-all d2b-hide-all-heap d2b-show5" id="d2b-age2">int age;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x001d550c</i></td>
