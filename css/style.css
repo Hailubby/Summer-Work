@@ -143,7 +143,7 @@ button.link{
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 66px;
+    height: 75px;
     background-color: #e6e6e6;
     text-align: center;
     margin: 0px auto;
@@ -153,14 +153,14 @@ button.link{
 #footer-text{
     display: inline-block;
     vertical-align: top;
-    padding-top: 5px;
+    padding-top: 8px;
 }
 
 #footer-logo{
     width: 181px;
-    height: 60px;
+    height: 65px;
     display: inline-block;
-    padding-top: 5px;
+    padding-top: 8px;
 }
 
 /*button tool bar styles*/
