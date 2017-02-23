@@ -34,12 +34,37 @@
     </div>
 </nav>
 
+<!--panel 2 modal-->
+<div id="d2-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Memory leak</h4>
+            </div>
+            <div class="modal-body">
+                <p><b>Memory leak:</b> occurs when a piece of memory previously allocated by a programmer is not properly de-allocated. The memory remains <i>reserved</i> even though it is not in use anymore and cannot be allocated/used by the program until de-allocated.</p>
+                <p>It is important to note that pointers should be set to 0 once what they have been pointing to is deleted.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <div class="container content-container" style="margin-bottom: 100px;">
     <h1>Heap</h1>
-    <p>A brief summary may go here... eg info about stack and heap</p>
+    <br />
+    <p>The heap is memory set aside for dynamic allocation. Unlike the stack, you can allocate a block of memory at anytime using the <b>"new"</b> keyword. But once you have allocated memory on the heap, you are responsible for deallocating the moemory once you don't need it anymore by using the <b>"delete"</b> keyword. Failure to do so will result in a memory leak.</p>
+    <p>Pointers are used to access memory on the heap meaning that variables can be accessed globally.</p>
+    <br />
     <div class="panel panel-default anim-panel-container">
         <div class="panel-body" id="anim-1" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">Allocating space on heap<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">Allocating space on heap</h2>
 
             <!--panel 1 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -67,7 +92,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left d1a-stack-top" style="color: #532A78;"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-age-val">0x001d54f4</span></td>
+                                    <td class="stack-heap stack-heap-1a d1a-stack-right d1a-stack-left d1a-stack-top" style="color: #532A78;"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-age-val"><i>0x001d54f4</i></span></td>
                                     <td class="not-stack"><span class="hide-all d1a-hide-all d1a-show2" id="d1a-age">int *age;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -153,7 +178,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-top" style="color: #532A78;"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-age-val">0x001d54f0</span></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-top" style="color: #532A78;"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-age-val"><i>0x001d54f0</i></span></td>
                                     <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2" id="d1b-age">int *age;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -239,12 +264,12 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
-                                    <td class="stack-heap stack-heap-1c d1c-stack-right d1c-stack-left d1c-stack-top" style="color: #532A78;"><span class="hide-all d1c-hide-all d1c-show3" id="d1c-drivingAge-val">0x001d54fc</span></td>
+                                    <td class="stack-heap stack-heap-1c d1c-stack-right d1c-stack-left d1c-stack-top" style="color: #532A78;"><span class="hide-all d1c-hide-all d1c-show3" id="d1c-drivingAge-val"><i>0x001d54fc</i></span></td>
                                     <td class="not-stack"><span class="hide-all d1c-hide-all d1c-show3" id="d1c-drivingAge">int *drivingAge;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-1c d1c-stack-right d1c-stack-left" style="color: #532A78;"><span class="hide-all d1c-hide-all d1c-show2" id="d1c-age-val">0x001d54f4</span></td>
+                                    <td class="stack-heap stack-heap-1c d1c-stack-right d1c-stack-left" style="color: #532A78;"><span class="hide-all d1c-hide-all d1c-show2" id="d1c-age-val"><i>0x001d54f4</i></span></td>
                                     <td class="not-stack"><span class="hide-all d1c-hide-all d1c-show2" id="d1c-age">int *age;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -306,7 +331,7 @@
         </div>
 
         <div class="panel-body" id="anim-2" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">Delete <a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">Delete <a href="#" data-toggle="modal" data-target="#d2-modal"><span class="badge question-icon">?</span></a></h2>
 
             <!--panel 2 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -334,7 +359,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-faveNum-val">0x001d54f0</span></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-faveNum-val"><i>0x001d54f0</i></span></td>
                                     <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show2" id="d2a-faveNum">int *age;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -421,7 +446,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-faveNum-val">0x001d54f8</span></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-faveNum-val"><i>0x001d54f8</i></span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-faveNum">int *faveNum;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -510,7 +535,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-top" style="color: #532A78;"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-faveNum-val">0x001d54f0</span></td>
+                                    <td class="stack-heap stack-heap-2c d2c-stack-right d2c-stack-left d2c-stack-top" style="color: #532A78;"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-faveNum-val"><i>0x001d54f0</i></span></td>
                                     <td class="not-stack"><span class="hide-all d2c-hide-all d2c-show2" id="d2c-faveNum">int *faveNum;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -574,7 +599,7 @@
 
     <div class="btn-toolbar" role="toolbar">
         <div class="btn-group" role="group">
-            <button class="btn btn-default disabled" id="prev" type="button"><span class="glyphicon glyphicon-menu-left"></span></button>
+            <button class="btn btn-default disabled" id="prev" type="button"><b><</b></button>
         </div>
         <div class="btn-group" role="group">
             <button class="btn btn-default active" id="anim-1-btn" type="button">1</button>
@@ -582,7 +607,7 @@
             <!--<button class="btn btn-default" id="anim-3-btn" type="button">3</button>-->
         </div>
         <div class="btn-group" role="group">
-            <button class="btn btn-default" id="next" type="button"><span class="glyphicon glyphicon-menu-right"></span></button>
+            <button class="btn btn-default" id="next" type="button"><b>></b></button>
         </div>
     </div>
 </div>

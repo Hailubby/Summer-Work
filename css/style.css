@@ -11,7 +11,13 @@ body {
 
 .question-icon{
     float: right;
-    font-size: 0.8em;
+    font-size: 0.55em;
+}
+
+.question-icon:hover,
+.question-icon:focus {
+    color: #ffffff;
+    background-color: #8849AD;
 }
 
 /*Modal styling*/

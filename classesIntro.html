@@ -35,11 +35,15 @@
 </nav>
 
 <div class="container content-container" style="margin-bottom: 100px;">
-    <h1>Introduction to object oriented programming</h1>
-    <p>A brief summary may go here... eg info about methods/p>
+    <h1>Introduction to classes</h1>
+    <br />
+    <p>A class is a template which defines the entities we want to model by combining data representation and methods for manipulating that data into one package.</p>
+    <p>We can create many different instances of a class which have property values which are different from each other even though they come from the same template.</p>
+    <p>A class can be instantiated both on the stack and the heap, but they most commonly instantiated on the heap.</p>
+    <br />
     <div class="panel panel-default anim-panel-container">
         <div class="panel-body" id="anim-1" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">Classes on stack vs heap<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">Classes on stack vs heap</h2>
 
             <!--panel 1 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -157,7 +161,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-top" style="color: #532A78;"><span class="hide-all d1b-hide-all d1b-show2a" id="d1b-favCol-val">0x001d54f4</span></td>
+                                    <td class="stack-heap stack-heap-1b d1b-stack-right d1b-stack-left d1b-stack-top" style="color: #532A78;"><span class="hide-all d1b-hide-all d1b-show2a" id="d1b-favCol-val"><i>0x001d54f4</i></span></td>
                                     <td class="not-stack"><span class="hide-all d1b-hide-all d1b-show2a" id="d1b-favCol">Colour *favCol;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -228,7 +232,7 @@
             </div>
         </div>
         <div class="panel-body" id="anim-2" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">Classes on stack vs heap - delete<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">Classes on stack vs heap - delete</a></h2>
 
             <!--panel 2 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -268,7 +272,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
-                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-jack-val">0x001d54f4</span></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-jack-val"><i>0x001d54f4</i></span></td>
                                     <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-jack">Person *jack;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -393,7 +397,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-jack-val">0x001d54f0</span></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-jack-val"><i>0x001d54f0</i></span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show2" id="d2b-jack">Person *jack;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -477,14 +481,14 @@
 
     <div class="btn-toolbar" role="toolbar">
         <div class="btn-group" role="group">
-            <button class="btn btn-default disabled" id="prev" type="button"><span class="glyphicon glyphicon-menu-left"></span></button>
+            <button class="btn btn-default disabled" id="prev" type="button"><b><</b></button>
         </div>
         <div class="btn-group" role="group">
             <button class="btn btn-default active" id="anim-1-btn" type="button">1</button>
             <button class="btn btn-default" id="anim-2-btn" type="button">2</button>
         </div>
         <div class="btn-group" role="group">
-            <button class="btn btn-default" id="next" type="button"><span class="glyphicon glyphicon-menu-right"></span></button>
+            <button class="btn btn-default" id="next" type="button"><b>></b></button>
         </div>
     </div>
 </div>

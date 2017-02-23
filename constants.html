@@ -34,12 +34,118 @@
     </div>
 </nav>
 
+<!--panel 1 modal-->
+<div id="d1-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Explanation</h4>
+            </div>
+            <div class="modal-body">
+                <p>As you can see in the first example, the minDrinkingAge can be altered to any value you like, making it possible for people of any age able to buy alcohol if they change the value so it is lower or equal to their own age.</p>
+                <p>To prevent this, the minDrinkingAge is made constant in the second example resulting in a compiler error when any changes are attempted to be made to it's value.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--panel 2 modal-->
+<div id="d2-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Pointers and "const" together - rules</h4>
+            </div>
+            <div class="modal-body">
+                <code style="color: #777">int i = 5;<br/> const int *p = &amp;i;</code>
+                <p><i><b>p is a pointer</b> to an <b>int</b> that is <b>constant</b></i></p>
+                <br/>
+                <p>This means that the pointer cannot change the value of the variable it is pointing to, but:</p>
+                <ul>
+                    <li>The variable which is points to can change it's own value if it is not declared as a const.</li>
+                    <li>The pointer can change to point to something else.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--panel 3 modal-->
+<div id="d3-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">"const" pointers - rules</h4>
+            </div>
+            <div class="modal-body">
+                <code style="color: #777">int i = 5;<br/> int * const p = &amp;i;</code>
+                <p><i><b>p</b> is a <b>constant pointer</b> to an <b>int</b></i></p>
+                <br/>
+                <p>Once a pointer is declared and initialised to point to something, it cannot change to point to somewhere else. However:</p>
+                <ul>
+                    <li>The constant pointer can change the value of what it is pointing to.</li>
+                    <li>The value of what the constant pointer is pointing to can also change.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--panel 4 modal-->
+<div id="d4-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">References and "const" together - rules</h4>
+            </div>
+            <div class="modal-body">
+                <p>It would be wrong to change a constant variable via a non-constant reference. This means that you cannot bind a non-const reference to a const variable, however:</p>
+                <ul>
+                    <li>A const reference can be bound to a non-const variable, but the value of the variable cannot be changed via the reference.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <div class="container content-container" style="margin-bottom: 100px;">
     <h1>Constants</h1>
-    <p>A brief summary may go here... eg info about const key word/p>
+    <br />
+    <p>By declaring a variable as <i>"const"</i>, indicates that you have no intention of modifying that variable. But this does not mean that others don't have.</p>
+    <p><i>"const"</i> applies to whatever is on it's immediate left. If there is nothing, in which case it applies to whatever is on it's immediate right.</p>
+    <p>Constants must be intialised when declared.</p>
+    <br />
     <div class="panel panel-default anim-panel-container">
         <div class="panel-body" id="anim-1" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">"const" variables<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">"const" variables<a href="#" data-toggle="modal" data-target="#d1-modal"><span class="badge question-icon">?</span></a></h2>
 
             <!--panel 1 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -160,7 +266,7 @@
             </div>
         </div>
         <div class="panel-body" id="anim-2" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">Pointers and "const" together<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">Pointers and "const" together<a href="#" data-toggle="modal" data-target="#d2-modal"><span class="badge question-icon">?</span></a></h2>
 
             <!--panel 2 code 1-->
             <div class="row">
@@ -189,7 +295,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" id="d2a-pointer-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-luckyNum-val">0x0061ff14</span></td>
+                                    <td class="stack-heap stack-heap-2a d2a-stack-right d2a-stack-left d2a-stack-top" id="d2a-pointer-top" style="color: #532A78;"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-luckyNum-val"><i>0x0061ff14</i></span></td>
                                     <td class="not-stack"><span class="hide-all d2a-hide-all d2a-show3" id="d2a-luckyNum"><span id="d2a-const-l4">const int</span> *luckyNum;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -257,7 +363,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
-                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" id="d2b-pointer-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show4" id="d2b-luckyNum-val">0x0061ff14</span></td>
+                                    <td class="stack-heap stack-heap-2b d2b-stack-right d2b-stack-left d2b-stack-top" id="d2b-pointer-top" style="color: #532A78;"><span class="hide-all d2b-hide-all d2b-show4" id="d2b-luckyNum-val"><i>0x0061ff14</i></span></td>
                                     <td class="not-stack"><span class="hide-all d2b-hide-all d2b-show4" id="d2b-luckyNum">const int *luckyNum;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -305,7 +411,7 @@
         </div>
 
         <div class="panel-body" id="anim-3" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">"const" pointers<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">"const" pointers<a href="#" data-toggle="modal" data-target="#d3-modal"><span class="badge question-icon">?</span></a></h2>
 
             <!--panel 3 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -340,7 +446,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-top" id="d3a-pointer-top" style="color: #532A78;"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge-val">0x0061ff14</span></td>
+                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-top" id="d3a-pointer-top" style="color: #532A78;"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge-val"><i>0x0061ff14</i></span></td>
                                     <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge">int <span id="d3a-const-l10">*const</span> dadAge;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -415,7 +521,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-heap stack-heap-3b d3b-stack-right d3b-stack-left" id="d3b-pointer-top" style="color: #532A78;"><span class="hide-all d3b-hide-all d3b-show3" id="d3b-myPh-val">0x0061ff14</span></td>
+                                    <td class="stack-heap stack-heap-3b d3b-stack-right d3b-stack-left" id="d3b-pointer-top" style="color: #532A78;"><span class="hide-all d3b-hide-all d3b-show3" id="d3b-myPh-val"><i>0x0061ff14</i></span></td>
                                     <td class="not-stack"><span class="hide-all d3b-hide-all d3b-show3" id="d3b-myPh">int <span id="d3b-const-l6">*const</span> myHomePh;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -456,7 +562,7 @@
         </div>
 
         <div class="panel-body" id="anim-4" style="min-height: 400px;">
-            <h2 style="margin: 0 0 25px 10px;">References and "const" together<a href="#" data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-question-sign question-icon"></span></a></h2>
+            <h2 style="margin: 0 0 25px 10px;">References and "const" together<a href="#" data-toggle="modal" data-target="#d4-modal"><span class="badge question-icon">?</span></a></h2>
 
             <!--panel 4 code 1-->
             <div class="row" style="margin-bottom: 25px;">
@@ -647,7 +753,7 @@
 
     <div class="btn-toolbar" role="toolbar">
         <div class="btn-group" role="group">
-            <button class="btn btn-default disabled" id="prev" type="button"><span class="glyphicon glyphicon-menu-left"></span></button>
+            <button class="btn btn-default disabled" id="prev" type="button"><b><</b></button>
         </div>
         <div class="btn-group" role="group">
             <button class="btn btn-default active" id="anim-1-btn" type="button">1</button>
@@ -656,7 +762,7 @@
             <button class="btn btn-default" id="anim-4-btn" type="button">4</button>
         </div>
         <div class="btn-group" role="group">
-            <button class="btn btn-default" id="next" type="button"><span class="glyphicon glyphicon-menu-right"></span></button>
+            <button class="btn btn-default" id="next" type="button"><b>></b></button>
         </div>
     </div>
 </div>
