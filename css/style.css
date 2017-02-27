@@ -72,6 +72,9 @@ button.link{
     z-index: 0;
 }
 
+.vertical {
+    writing-mode: vertical-rl;
+}
 
 .table .not-stack{
     border-top: none;
