@@ -419,17 +419,18 @@
                     <!--pre tag indentations-->
                         <pre><code>
 <button class="link d3a-link" id="code3a-line-1">int main() {</button>
-    <button class="link d3a-link" id="code3a-line-2">int mumAge = 49;</button>
-    <button class="link d3a-link" id="code3a-line-3">int *const dadAge = &amp;mumAge;</button>
-    <button class="link d3a-link" id="code3a-line-4">*dadAge = 50;  <span style="color: #457D46">//OK</span></button>
-    <button class="link d3a-link" id="code3a-line-5">cout << "*mumAge:" << *mumAge << endl;</button>
-    <button class="link d3a-link" id="code3a-line-6">cout << "*dadAge:" << *dadAge << endl;</button>
-    <button class="link d3a-link" id="code3a-line-7">mumAge = 51;   <span style="color: #457D46">//OK</span></button>
-    <button class="link d3a-link" id="code3a-line-8">cout << "*mumAge:" << *mumAge << endl;</button>
-    <button class="link d3a-link" id="code3a-line-9">cout << "*dadAge:" << *dadAge << endl;</button>
-    <button class="link d3a-link" id="code3a-line-10">dadAge = &amp;myAge;   <span style="color: #D9534F">//compiler error</span></button>
-    <button class="link d3a-link" id="code3a-line-11">return 0;</button>
-<button class="link d3a-link" id="code3a-line-12">}</button>
+    <button class="link d3a-link" id="code3a-line-2">int myAge = 20;</button>
+    <button class="link d3a-link" id="code3a-line-3">int mumAge = 49;</button>
+    <button class="link d3a-link" id="code3a-line-4">int *const dadAge = &amp;mumAge;</button>
+    <button class="link d3a-link" id="code3a-line-5">*dadAge = 50;  <span style="color: #457D46">//OK</span></button>
+    <button class="link d3a-link" id="code3a-line-6">cout << "*mumAge:" << *mumAge << endl;</button>
+    <button class="link d3a-link" id="code3a-line-7">cout << "*dadAge:" << *dadAge << endl;</button>
+    <button class="link d3a-link" id="code3a-line-8">mumAge = 51;   <span style="color: #457D46">//OK</span></button>
+    <button class="link d3a-link" id="code3a-line-9">cout << "*mumAge:" << *mumAge << endl;</button>
+    <button class="link d3a-link" id="code3a-line-10">cout << "*dadAge:" << *dadAge << endl;</button>
+    <button class="link d3a-link" id="code3a-line-11">dadAge = &amp;myAge;   <span style="color: #D9534F">//compiler error</span></button>
+    <button class="link d3a-link" id="code3a-line-12">return 0;</button>
+<button class="link d3a-link" id="code3a-line-13">}</button>
                         </code></pre>
 
                     <button type="button" class="btn btn-default" id="step-button-3a">Step</button>
@@ -440,24 +441,29 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff04</i></td>
                                     <td class="stack-top"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
-                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-top" id="d3a-pointer-top" style="color: #532A78;"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge-val"><i>0x0061ff14</i></span></td>
-                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-dadAge">int <span id="d3a-const-l10">*const</span> dadAge;</span></td>
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff08</i></td>
+                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-top" id="d3a-pointer-top" style="color: #532A78;"><span class="hide-all d3a-hide-all d3a-show4" id="d3a-dadAge-val"><i>0x0061ff10</i></span></td>
+                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show4" id="d3a-dadAge">int <span id="d3a-const-l11">*const</span> dadAge;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff0c</i></td>
                                     <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left" id="d3a-pointer-bot"></td>
                                     <td class="not-stack"></td>
                                 </tr>
                                 <tr class="row-height-1">
-                                    <td class="not-stack" id="d3a-pointer-addr" style="color: #777"><i>0x0061ff14</i></td>
-                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left"><span class="hide-all d3a-hide-all d3a-show2" id="d3a-mumAge-val">49</span></td>
-                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show2" id="d3a-mumAge">int mumAge;</span></td>
+                                    <td class="not-stack" id="d3a-pointer-addr" style="color: #777"><i>0x0061ff10</i></td>
+                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-mumAge-val">49</span></td>
+                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show3" id="d3a-mumAge">int mumAge;</span></td>
+                                </tr>
+                                <tr class="row-height-1">
+                                    <td class="not-stack" style="color: #777"><i>0x0061ff14</i></td>
+                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left"><span class="hide-all d3a-hide-all d3a-show2" id="d3a-myAge-val">20</span></td>
+                                    <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show2" id="d3a-myAge">int myAge;</span></td>
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff18</i></td>
@@ -466,7 +472,7 @@
                                 </tr>
                                 <tr class="row-height-1">
                                     <td class="not-stack" style="color: #777"><i>0x0061ff1c</i></td>
-                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-bottom"><span class="hide-all d3a-hide-all d3a-show11" id="d3a-rtnval-val">0</span></td>
+                                    <td class="stack-heap stack-heap-3a d3a-stack-right d3a-stack-left d3a-stack-bottom"><span class="hide-all d3a-hide-all d3a-show12" id="d3a-rtnval-val">0</span></td>
                                     <td class="not-stack"><span class="hide-all d3a-hide-all d3a-show1" id="d3a-rtnval">rtn val</span></td>
                                 </tr>
                                 <tr class="row-height-1">
@@ -480,10 +486,10 @@
                     <div class="col-sm-4">
                         <br />
                         <p>Output:</p>
-                        <p class="hide-all d3a-hide-all d3a-show5" id="d3a-print-l5">*mumAge: 50</p>
-                        <p class="hide-all d3a-hide-all d3a-show6" id="d3a-print-l6">*dadAge: 50</p>
-                        <p class="hide-all d3a-hide-all d3a-show8" id="d3a-print-l8">*mumAge: 51</p>
-                        <p class="hide-all d3a-hide-all d3a-show9" id="d3a-print-l9">*dadAge: 51</p>
+                        <p class="hide-all d3a-hide-all d3a-show6" id="d3a-print-l6">*mumAge: 50</p>
+                        <p class="hide-all d3a-hide-all d3a-show7" id="d3a-print-l7">*dadAge: 50</p>
+                        <p class="hide-all d3a-hide-all d3a-show9" id="d3a-print-l9">*mumAge: 51</p>
+                        <p class="hide-all d3a-hide-all d3a-show10" id="d3a-print-l10">*dadAge: 51</p>
                     </div>
                 </div>
             </div>
