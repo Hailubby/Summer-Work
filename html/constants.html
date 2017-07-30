@@ -423,10 +423,10 @@
     <button class="link d3a-link" id="code3a-line-3">int mumAge = 49;</button>
     <button class="link d3a-link" id="code3a-line-4">int *const dadAge = &amp;mumAge;</button>
     <button class="link d3a-link" id="code3a-line-5">*dadAge = 50;  <span style="color: #457D46">//OK</span></button>
-    <button class="link d3a-link" id="code3a-line-6">cout << "*mumAge:" << *mumAge << endl;</button>
+    <button class="link d3a-link" id="code3a-line-6">cout << "mumAge:" << mumAge << endl;</button>
     <button class="link d3a-link" id="code3a-line-7">cout << "*dadAge:" << *dadAge << endl;</button>
     <button class="link d3a-link" id="code3a-line-8">mumAge = 51;   <span style="color: #457D46">//OK</span></button>
-    <button class="link d3a-link" id="code3a-line-9">cout << "*mumAge:" << *mumAge << endl;</button>
+    <button class="link d3a-link" id="code3a-line-9">cout << "mumAge:" << mumAge << endl;</button>
     <button class="link d3a-link" id="code3a-line-10">cout << "*dadAge:" << *dadAge << endl;</button>
     <button class="link d3a-link" id="code3a-line-11">dadAge = &amp;myAge;   <span style="color: #D9534F">//compiler error</span></button>
     <button class="link d3a-link" id="code3a-line-12">return 0;</button>
@@ -486,9 +486,9 @@
                     <div class="col-sm-4">
                         <br />
                         <p>Output:</p>
-                        <p class="hide-all d3a-hide-all d3a-show6" id="d3a-print-l6">*mumAge: 50</p>
+                        <p class="hide-all d3a-hide-all d3a-show6" id="d3a-print-l6">mumAge: 50</p>
                         <p class="hide-all d3a-hide-all d3a-show7" id="d3a-print-l7">*dadAge: 50</p>
-                        <p class="hide-all d3a-hide-all d3a-show9" id="d3a-print-l9">*mumAge: 51</p>
+                        <p class="hide-all d3a-hide-all d3a-show9" id="d3a-print-l9">mumAge: 51</p>
                         <p class="hide-all d3a-hide-all d3a-show10" id="d3a-print-l10">*dadAge: 51</p>
                     </div>
                 </div>
@@ -577,7 +577,7 @@
                     <pre><code>
 <button class="link d4a-link" id="code4a-line-1">int main() {</button>
     <button class="link d4a-link" id="code4a-line-2">string primeCol = "red";</button>
-    <button class="link d4a-link" id="code4a-line-3">const string &favCol = colour;</button>
+    <button class="link d4a-link" id="code4a-line-3">const string &favCol = primeCol;</button>
     <button class="link d4a-link" id="code4a-line-4">cout << "primeCol: " << primeCol << endl;</button>
     <button class="link d4a-link" id="code4a-line-5">cout << "favCol: " << favCol << endl;</button>
     <button class="link d4a-link" id="code4a-line-6">primeCol = "blue";     <span style="color: #457D46">//OK</span></button>

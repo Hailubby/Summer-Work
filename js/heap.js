@@ -1217,7 +1217,7 @@ $(document).ready(function () {
         }, 800);
 
         $("#d2b-faveNum").delay(1000).show(400);
-        $(".table .d2b-heap1").delay(1200).animate({backgroundColor: '#F5F5F5'},500);
+        $(".table .d2b-heap1").delay(1200).animate({backgroundColor: '#D5D5D5'},500);
         $("#d2b-pointer-addr").delay(1600).animate({color: '#532A78', fontWeight: 'bold'}, 150);
         $("#d2b-faveNum-val").animate({color: '#532A78', fontWeight: 'bold'}, 0);
         $("#d2b-faveNum-val").html("0x001d54f8");
@@ -1549,7 +1549,7 @@ $(document).ready(function () {
         }, 800);
 
         $("#d2c-faveNum").delay(1000).show(400);
-        $(".table .d2c-heap1").delay(1200).animate({backgroundColor: '#F5F5F5'},500);
+        $(".table .d2c-heap1").delay(1200).animate({backgroundColor: '#D5D5D5'},500);
         $("#d2c-pointer-addr1").delay(1600).animate({color: '#532A78', fontWeight: 'bold'}, 150);
         $("#d2c-faveNum-val").html('0x001d54f0');
         $("#d2c-faveNum-val").delay(1600).show(400);
@@ -1589,7 +1589,7 @@ $(document).ready(function () {
             $("#d2c-faveNum-val").html('0x001d54fc');
             $("#d2c-faveNum-val").animate({color: '#532A78', fontWeight: 'bold'}, 150);
         }, 1800);
-        $(".table .d2c-heap2").delay(2000).animate({backgroundColor: '#F5F5F5'},500);
+        $(".table .d2c-heap2").delay(2000).animate({backgroundColor: '#D5D5D5'},500);
         $("#d2c-pointer-addr2").delay(2500).animate({color: '#532A78', fontWeight: 'bold'}, 150);
         $("#d2c-heap-faveNum-val2").delay(2700).show(400);
     };
