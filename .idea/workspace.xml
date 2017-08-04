@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad0f94f2-46b8-4486-b677-0aac905073c7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classesIntro.html" afterPath="$PROJECT_DIR$/html/classesIntro.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/classesIntro.js" afterPath="$PROJECT_DIR$/js/classesIntro.js" />
     </list>
@@ -24,7 +23,7 @@
     <favorites_list name="Summer research work" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43888304">
+    <splitter split-orientation="horizontal" split-proportion="0.4915701">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="constants.html" pinned="false" current-in-tab="false">
@@ -62,8 +61,8 @@
           <file leaf-file-name="classesIntro.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/html/classesIntro.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="25">
-                  <caret line="545" column="63" selection-start-line="545" selection-start-column="63" selection-end-line="545" selection-end-column="63" />
+                <state relative-caret-position="246">
+                  <caret line="575" column="111" selection-start-line="575" selection-start-column="111" selection-end-line="575" selection-end-column="111" />
                   <folding>
                     <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -167,21 +166,10 @@
           <file leaf-file-name="classesIntro.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/classesIntro.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="505">
+                <state relative-caret-position="7090">
                   <caret line="1019" column="49" selection-start-line="1019" selection-start-column="49" selection-end-line="1019" selection-end-column="49" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <marker date="1501844465231" expanded="true" signature="75027:75554" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="75145:75531" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="75262:75504" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="75389:75473" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="79881:81016" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="80539:80696" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="81093:81584" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="81455:81514" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="81661:81968" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="82045:83088" ph="{...}" />
-                    <marker date="1501844465231" expanded="true" signature="82321:83077" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -194,8 +182,8 @@
           <file leaf-file-name="classesIntro.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/classesIntro.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="666">
-                  <caret line="1694" column="8" selection-start-line="1694" selection-start-column="8" selection-end-line="1694" selection-end-column="8" />
+                <state relative-caret-position="309">
+                  <caret line="1718" column="18" selection-start-line="1718" selection-start-column="8" selection-end-line="1718" selection-end-column="18" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -246,8 +234,8 @@
         <option value="$PROJECT_DIR$/js/constants.js" />
         <option value="$PROJECT_DIR$/html/constants.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/html/classesIntro.html" />
         <option value="$PROJECT_DIR$/js/classesIntro.js" />
+        <option value="$PROJECT_DIR$/html/classesIntro.html" />
       </list>
     </option>
   </component>
@@ -400,12 +388,12 @@
       <workItem from="1489614613082" duration="2049000" />
       <workItem from="1490308333867" duration="4000" />
       <workItem from="1501800941103" duration="6004000" />
-      <workItem from="1501839609697" duration="4284000" />
+      <workItem from="1501839609697" duration="4768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366944000" />
+    <option name="totallyTimeSpent" value="367428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -515,29 +503,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/classesIntro.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
+        <state relative-caret-position="7090">
           <caret line="1019" column="49" selection-start-line="1019" selection-start-column="49" selection-end-line="1019" selection-end-column="49" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1501844465231" expanded="true" signature="75027:75554" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="75145:75531" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="75262:75504" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="75389:75473" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="79881:81016" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="80539:80696" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="81093:81584" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="81455:81514" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="81661:81968" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="82045:83088" ph="{...}" />
-            <marker date="1501844465231" expanded="true" signature="82321:83077" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/classesIntro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="545" column="63" selection-start-line="545" selection-start-column="63" selection-end-line="545" selection-end-column="63" />
+        <state relative-caret-position="246">
+          <caret line="575" column="111" selection-start-line="575" selection-start-column="111" selection-end-line="575" selection-end-column="111" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

@@ -1692,7 +1692,7 @@ $(document).ready(function () {
         $(".table .stack-class-3a-2").animate({backgroundColor: '#F5F5F5'}, 500);
         $(".table .stack-class-3a-3").animate({backgroundColor: '#F5F5F5'}, 500);
         $(".table .stack-class-3a-4").animate({backgroundColor: '#F5F5F5'}, 500);
-        
+
         $(".table .d3a-stack-bottom").delay(50).animate({borderBottomWidth: '2px', borderBottomColor: 'black'},30);
         $(".table .d3a-stack-top").delay(50).animate({borderTopWidth: '2px', borderTopColor: 'black'},30);
         $(".table .d3a-stack-left").delay(50).animate({borderLeftWidth: '2px', borderLeftColor: 'black'},30);
@@ -1739,8 +1739,8 @@ $(document).ready(function () {
         $("#code3a-line-3").animate({backgroundColor: '#ffff00'}, 1000);
 
         setTimeout(function(){
-            $("#d3a-pointer-top").addClass("stack-pointer-top");
-            $("#d3a-pointer-bot").addClass("stack-pointer-bottom");
+            $("#d3a-pointer-top1").addClass("stack-pointer-top");
+            $("#d3a-pointer-bot1").addClass("stack-pointer-bottom");
         }, 800);
 
         $("#d3a-marge").delay(1000).show(400);
