@@ -102,7 +102,11 @@ $(document).ready(function () {
             $("#"+currAnimId).show();
             $("#"+currAnimId+"-btn").addClass("active");
 
-            $("#next").removeClass("disabled");
+            if ($(".anim-panel-container > div:visible").next().length == 0) {
+                $("#next").addClass("disabled");
+            } else{
+                $("#next").removeClass("disabled");
+            }
             $("#prev").removeClass("disabled");
         }
     });
